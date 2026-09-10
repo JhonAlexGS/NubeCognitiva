@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# TESTIMONIOS — español.
+#
+# ⚠️  Los tres testimonios de abajo son EJEMPLOS. Reemplázalos por reseñas
+#     reales y borra la línea `placeholder: true` de cada uno: mientras esté
+#     presente, la tarjeta muestra una etiqueta de «contenido de ejemplo».
+#
+# Campos: quote (texto), name, role, company, link (opcional), initials.
+# ---------------------------------------------------------------------------
+
+eyebrow: Testimonios
+title: Lo que dicen quienes han trabajado conmigo
+lead: >-
+  Espacio reservado para reseñas de colegas, jefes y compañeros de proyecto.
+
+placeholderLabel: Contenido de ejemplo
+
+items:
+  - initials: NA
+    name: Nombre Apellido
+    role: Cargo de la persona
+    company: Empresa o universidad
+    link: ''
+    placeholder: true
+    quote: >-
+      Aquí va la reseña de un jefe o colega. Sustituye este texto por sus
+      palabras reales: qué construyeron juntos, qué aportó Jhon al equipo y qué
+      resultado tuvo el proyecto.
+
+  - initials: NA
+    name: Nombre Apellido
+    role: Cargo de la persona
+    company: Empresa o universidad
+    link: ''
+    placeholder: true
+    quote: >-
+      Un segundo testimonio. Funciona mejor si menciona algo concreto: una
+      entrega difícil, una decisión técnica acertada o cómo se comportó el
+      equipo bajo presión.
+
+  - initials: NA
+    name: Nombre Apellido
+    role: Cargo de la persona
+    company: Empresa o universidad
+    link: ''
+    placeholder: true
+    quote: >-
+      Un tercer testimonio para cerrar la sección. Si tienes menos de tres
+      reseñas, borra los bloques que sobren: la grilla se ajusta sola.

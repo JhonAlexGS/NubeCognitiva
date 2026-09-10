@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# STACK TÉCNICO — español.
+# Cada bloque de `groups` es una tarjeta. Añade o quita tecnologías dentro de
+# `items` sin tocar el código.
+# `icon` acepta: terminal, layers, devops, cloud, server, database, tool, cpu.
+# ---------------------------------------------------------------------------
+
+eyebrow: Stack técnico
+title: Las herramientas con las que construyo
+lead: >-
+  Un stack que cubre el recorrido completo: del lenguaje y el framework al
+  contenedor, la nube y el tablero que mide si todo eso sirvió para algo.
+
+groups:
+  - icon: terminal
+    title: Lenguajes
+    items: [Python, JavaScript, TypeScript, Java, C++, SQL, HTML/CSS, R, Matlab, HCL]
+
+  - icon: layers
+    title: Frameworks
+    items: [React, Express.js, Node.js, Spring Boot, TensorFlow, scikit-learn, FastAPI]
+
+  - icon: devops
+    title: DevOps y CI/CD
+    items: [Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, SonarQube, Azure Pipelines]
+
+  - icon: cloud
+    title: Cloud · AWS
+    items: [S3, EC2, ECR, ECS, RDS, Athena, QuickSight, Lambda, SageMaker, Glue, Cloud9]
+
+  - icon: server
+    title: Cloud · Azure
+    items:
+      - Virtual Machines
+      - Blob Storage
+      - SQL Database
+      - Functions
+      - AKS
+      - Active Directory
+      - Data Factory
+      - Synapse Analytics
+      - Databricks
+      - Machine Learning
+      - DevOps
+
+  - icon: database
+    title: Bases de datos
+    items: [MongoDB, MySQL, MariaDB, PostgreSQL, Elastic Search, Redis]
+
+  - icon: tool
+    title: Herramientas
+    items:
+      - Power BI
+      - Wireshark
+      - Postman
+      - Insomnia
+      - GNU Radio
+      - GNSS-SDR
+      - Jupyter
+      - PyCharm
+      - VS Code
+      - NetBeans
+
+languagesTitle: Idiomas
+languages:
+  - name: Español
+    level: Nativo
+  - name: Inglés
+    level: B1

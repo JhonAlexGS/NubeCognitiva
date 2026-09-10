@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# Experiencia laboral en español (se muestra como línea de tiempo).
+# Para añadir un empleo, copia un bloque completo respetando la indentación.
+# ---------------------------------------------------------------------------
+
+- company: Coally
+  role: Full Stack Developer
+  location: Bogotá, Colombia
+  period: Ene 2024 – Dic 2025
+  current: false
+  highlights:
+    - Diseño de un sistema CRUD para la gestión de vehículos de concesionaria con JavaScript, Express.js y MongoDB.
+    - Configuración e integración de endpoints API RESTful con autenticación por tokens JWT.
+    - Gestión del flujo de archivos con integración a HubSpot.
+    - Implementación de un sistema que unifica el OAuth2 de distintas plataformas.
+  stack: [JavaScript, Express.js, MongoDB, JWT, HubSpot, OAuth2]
+
+- company: BookLick
+  role: Full Stack Developer
+  location: Bogotá, Colombia
+  period: Ene 2023 – Dic 2024
+  current: false
+  highlights:
+    - Desarrollo sobre MongoDB, MySQL y PostgreSQL con Python y TypeScript en AWS.
+    - Análisis estadístico con Power BI para medir el uso de los servicios de la plataforma.
+    - Integración de recursos al motor de búsqueda con PostgreSQL y Elastic Search.
+  stack: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]
+
+- company: MinTIC · MisiónTIC
+  role: Monitor y Centro de Apoyo
+  location: Bogotá, Colombia
+  period: Ene 2022 – Dic 2023
+  current: false
+  highlights:
+    - Acompañamiento en programación y desarrollo de proyectos con máquinas virtuales Oracle, sitios web y SQL.
+  stack: [SQL, Oracle VM, Web]
+
+- company: NTT Data
+  role: Programador Junior
+  location: Bogotá, Colombia
+  period: Ene 2022 – Dic 2022
+  current: false
+  highlights:
+    - Desarrollo, revisión y supervisión de nuevas funcionalidades del chatbot de la compañía Zurich.
+  stack: [Chatbot, QA]
