@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{l as t,u as n}from"./motion-BBEiy-c9.js";import{c as r,n as i,o as a,p as o}from"./index-DG4w0vBs.js";import{n as s,r as c,t as l}from"./Section-2Eh_Gj4q.js";import{t as u}from"./SpotlightCard-BZFM_T-y.js";var d=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{l as t,u as n}from"./motion-BBEiy-c9.js";import{c as r,n as i,o as a,p as o}from"./index-wZOWaAzT.js";import{n as s,r as c,t as l}from"./Section-z88_yggY.js";import{t as u}from"./SpotlightCard-DN7IkG9h.js";var d=`# ---------------------------------------------------------------------------\r
 # TESTIMONIALS — English.\r
 #\r
 # ⚠️  The three testimonials below are EXAMPLES. Replace them with real\r
