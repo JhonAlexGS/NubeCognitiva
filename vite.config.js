@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/NubeCognitiva/',
   plugins: [react(), tailwindcss()],
   build: {
     // Las secciones ya se dividen con React.lazy(); aquí sólo separamos las

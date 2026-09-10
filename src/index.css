@@ -100,6 +100,13 @@
     --blob-opacity: 0.5;
     --grid-opacity: 0.045;
     --noise-opacity: 0.02;
+
+    /* Pozos de luz del fondo — misma familia azul que el modo oscuro, con más
+       alfa porque aquí `--blob-opacity` los atenúa a la mitad. */
+    --blob-top: rgb(37 99 235 / 0.26);
+    --blob-left: rgb(30 64 175 / 0.2);
+    --blob-right: rgb(99 102 241 / 0.16);
+    --blob-bottom: rgb(59 130 246 / 0.12);
   }
 
   .dark {
@@ -153,6 +160,14 @@
     --blob-opacity: 1;
     --grid-opacity: 0.02;
     --noise-opacity: 0.015;
+
+    /* Pozos de luz del fondo — paleta D «Nocturno» (ver el catálogo al final
+       del archivo). Cambiar estas cuatro líneas cambia por completo el
+       ambiente del modo oscuro. */
+    --blob-top: rgb(37 99 235 / 0.24);
+    --blob-left: rgb(30 64 175 / 0.2);
+    --blob-right: rgb(99 102 241 / 0.14);
+    --blob-bottom: rgb(59 130 246 / 0.1);
   }
 
   html {
@@ -373,3 +388,36 @@
     background-position: -200% center;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Paletas del fondo ambiental (modo oscuro)                            */
+/*                                                                      */
+/* Para cambiar el ambiente, copia los cuatro `--blob-*` de la paleta    */
+/* que prefieras y pégalos dentro del bloque `.dark { ... }` de arriba,  */
+/* reemplazando los que ya están. El color de acento (#5E6AD2) no        */
+/* cambia: sigue siendo el de botones, enlaces y titulares.              */
+/*                                                                      */
+/* A — «Índigo» · monocromático, el más sobrio y fiel al estilo Linear   */
+/*   --blob-top: rgb(94 106 210 / 0.28);                                 */
+/*   --blob-left: rgb(129 140 248 / 0.14);                               */
+/*   --blob-right: rgb(76 87 196 / 0.14);                                */
+/*   --blob-bottom: rgb(94 106 210 / 0.10);                              */
+/*                                                                      */
+/* B — «Señal» · índigo + cian · aire de telecomunicaciones             */
+/*   --blob-top: rgb(94 106 210 / 0.26);                                 */
+/*   --blob-left: rgb(56 189 248 / 0.13);                                */
+/*   --blob-right: rgb(34 211 238 / 0.10);                               */
+/*   --blob-bottom: rgb(94 106 210 / 0.10);                              */
+/*                                                                      */
+/* C — «Terminal» · índigo + esmeralda + cian · más técnico              */
+/*   --blob-top: rgb(94 106 210 / 0.24);                                 */
+/*   --blob-left: rgb(16 185 129 / 0.11);                                */
+/*   --blob-right: rgb(56 189 248 / 0.13);                               */
+/*   --blob-bottom: rgb(20 184 166 / 0.09);                              */
+/*                                                                      */
+/* D — «Nocturno» · azules profundos (EN USO) · el más sobrio           */
+/*   --blob-top: rgb(37 99 235 / 0.24);                                  */
+/*   --blob-left: rgb(30 64 175 / 0.20);                                 */
+/*   --blob-right: rgb(99 102 241 / 0.14);                               */
+/*   --blob-bottom: rgb(59 130 246 / 0.10);                              */
+/* ------------------------------------------------------------------ */
