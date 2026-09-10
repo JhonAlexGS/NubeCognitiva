@@ -71,7 +71,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_389px] lg:gap-14"
+          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-14"
         >
           {/* Retrato. El parallax va en el contenedor externo y la animación de
               entrada en el interno: si compartieran el mismo `y`, uno anularía
