@@ -8,6 +8,10 @@
 badge: Disponible para nuevos retos
 role: Ingeniero de Sistemas y Telecomunicaciones · MSc en Inteligencia Artificial
 
+# Texto alternativo del retrato (lo leen los lectores de pantalla).
+# La imagen en sí se cambia reemplazando `public/perfil.jpg`.
+photoAlt: Retrato de Jhon Alexander García Sierra
+
 # El titular se anima palabra por palabra. `headlineAccent` se pinta con el
 # degradado de acento.
 headline: Del cable a la nube

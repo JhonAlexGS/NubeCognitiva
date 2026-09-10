@@ -10,6 +10,14 @@ email: alexgsierra22@gmail.com
 phone: "+57 318 211 1063"
 location: Bogotá, Colombia
 
+# Retrato del hero. El archivo vive en la carpeta `public/`, así que para
+# cambiarlo basta con reemplazar `public/perfil.jpg` (no hace falta tocar código).
+# Recomendado: imagen cuadrada de 800×800 px o más; la actual es de 389×389 y
+# por eso se muestra a su tamaño nativo, sin ampliarla.
+photo: perfil.jpg
+photoWidth: 389
+photoHeight: 389
+
 # Redes que se muestran en el header, el footer y la sección de contacto.
 # `icon` acepta: github, linkedin, email, phone, location
 social:
