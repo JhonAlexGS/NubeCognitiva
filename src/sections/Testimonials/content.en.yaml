@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# TESTIMONIALS — English.
+#
+# ⚠️  The three testimonials below are EXAMPLES. Replace them with real
+#     reviews and delete the `placeholder: true` line from each one: while it
+#     is present the card shows an "example content" badge.
+#
+# Fields: quote (text), name, role, company, link (optional), initials.
+# ---------------------------------------------------------------------------
+
+eyebrow: Testimonials
+title: What people who worked with me say
+lead: >-
+  Reserved space for reviews from colleagues, managers and project teammates.
+
+placeholderLabel: Example content
+
+items:
+  - initials: NA
+    name: First Last
+    role: Their job title
+    company: Company or university
+    link: ''
+    placeholder: true
+    quote: >-
+      This is where a manager's or colleague's review goes. Replace this text
+      with their actual words: what you built together, what Jhon brought to the
+      team and how the project turned out.
+
+  - initials: NA
+    name: First Last
+    role: Their job title
+    company: Company or university
+    link: ''
+    placeholder: true
+    quote: >-
+      A second testimonial. It works better when it mentions something concrete:
+      a difficult release, a good technical call or how the team behaved under
+      pressure.
+
+  - initials: NA
+    name: First Last
+    role: Their job title
+    company: Company or university
+    link: ''
+    placeholder: true
+    quote: >-
+      A third testimonial to close the section. If you have fewer than three
+      reviews, delete the extra blocks: the grid adjusts on its own.

@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# FORMULARIO DE CONTACTO — español.
+# Etiquetas, textos de ayuda y mensajes de validación. Cambia cualquier frase
+# sin tocar el código: el formulario los lee directamente de este archivo.
+# ---------------------------------------------------------------------------
+
+title: Escríbeme
+
+fields:
+  name:
+    label: Nombre
+    placeholder: Cómo te llamas
+    required: Escribe tu nombre.
+    min: El nombre debe tener al menos 2 caracteres.
+
+  email:
+    label: Email
+    placeholder: nombre@correo.com
+    required: Escribe tu email.
+    invalid: Ese email no parece válido. Revísalo, por favor.
+
+  message:
+    label: Mensaje
+    placeholder: Cuéntame en qué estás trabajando…
+    required: Escribe tu mensaje.
+    min: El mensaje debe tener al menos 10 caracteres.
+    max: El mensaje no puede superar los 1500 caracteres.
+
+submit: Enviar mensaje
+submitting: Enviando…
+
+success:
+  title: Mensaje enviado
+  body: Gracias por escribir. Te respondo lo antes posible.
+  again: Enviar otro mensaje
+
+# Se muestra sólo si el envío falla de verdad.
+error:
+  title: No se pudo enviar el mensaje
+  body: Revisa tu conexión e inténtalo de nuevo, o escríbeme directamente por correo.
+  retry: Reintentar
+
+# Aviso que aparece cuando el sitio aún no tiene un servicio de envío
+# configurado (variable VITE_CONTACT_ENDPOINT): el formulario abre el cliente
+# de correo con el mensaje ya escrito.
+mailtoNotice: Se abrirá tu cliente de correo con el mensaje listo para enviar.

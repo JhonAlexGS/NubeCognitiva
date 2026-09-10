@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# Textos de la interfaz en ESPAÑOL (navegación, botones, footer, accesibilidad).
+# El contenido de cada sección vive en `src/sections/<Seccion>/content.es.*`.
+# ---------------------------------------------------------------------------
+
+nav:
+  about: Sobre mí
+  projects: Proyectos
+  skills: Stack
+  education: Formación
+  testimonials: Testimonios
+  contact: Contacto
+
+actions:
+  contact: Contáctame
+  viewProjects: Ver proyectos
+  viewProject: Ver proyecto
+  backToTop: Volver arriba
+  openMenu: Abrir menú
+  closeMenu: Cerrar menú
+  toggleTheme: Cambiar tema
+  toggleThemeToLight: Activar modo claro
+  toggleThemeToDark: Activar modo oscuro
+  toggleLanguage: Cambiar idioma
+  skipToContent: Saltar al contenido
+
+language:
+  current: Español
+  short: ES
+  other: English
+  otherShort: EN
+
+footer:
+  tagline: Ingeniería de telecomunicaciones, inteligencia artificial y cloud.
+  rights: Todos los derechos reservados.
+  builtWith: Hecho con React, Vite, Tailwind CSS y Framer Motion.
+  navTitle: Navegación
+  connectTitle: Conectemos
+
+errors:
+  sectionTitle: No se pudo mostrar esta sección
+  sectionBody: Ocurrió un error al cargar el contenido. Intenta recargar la página.
+  retry: Reintentar

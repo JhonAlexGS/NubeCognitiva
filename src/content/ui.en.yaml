@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# Interface strings in ENGLISH (navigation, buttons, footer, accessibility).
+# Each section's own copy lives in `src/sections/<Section>/content.en.*`.
+# ---------------------------------------------------------------------------
+
+nav:
+  about: About
+  projects: Projects
+  skills: Stack
+  education: Education
+  testimonials: Testimonials
+  contact: Contact
+
+actions:
+  contact: Get in touch
+  viewProjects: View projects
+  viewProject: View project
+  backToTop: Back to top
+  openMenu: Open menu
+  closeMenu: Close menu
+  toggleTheme: Toggle theme
+  toggleThemeToLight: Switch to light mode
+  toggleThemeToDark: Switch to dark mode
+  toggleLanguage: Change language
+  skipToContent: Skip to content
+
+language:
+  current: English
+  short: EN
+  other: Español
+  otherShort: ES
+
+footer:
+  tagline: Telecommunications engineering, artificial intelligence and cloud.
+  rights: All rights reserved.
+  builtWith: Built with React, Vite, Tailwind CSS and Framer Motion.
+  navTitle: Navigation
+  connectTitle: Let's connect
+
+errors:
+  sectionTitle: This section could not be displayed
+  sectionBody: Something went wrong while loading the content. Try reloading the page.
+  retry: Retry

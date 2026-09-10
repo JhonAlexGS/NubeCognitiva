@@ -1,0 +1,375 @@
+@import 'tailwindcss';
+
+/* Modo oscuro por clase en <html> (lo controla ThemeProvider). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — Linear / Modern                                      */
+/* Los valores viven en :root / .dark para poder cambiar de tema;       */
+/* @theme inline los expone como utilidades de Tailwind.                */
+/* ------------------------------------------------------------------ */
+@theme inline {
+  --color-canvas-deep: var(--canvas-deep);
+  --color-canvas-base: var(--canvas-base);
+  --color-canvas-elevated: var(--canvas-elevated);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-glow: var(--accent-glow);
+
+  --color-line: var(--line);
+  --color-line-hover: var(--line-hover);
+  --color-line-accent: var(--line-accent);
+
+  --shadow-card: var(--elevation-card);
+  --shadow-card-hover: var(--elevation-card-hover);
+  --shadow-cta: var(--elevation-cta);
+  --shadow-inner-top: var(--elevation-inner-top);
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-float-slow: float 13s ease-in-out infinite;
+  --animate-glow: glow 7s ease-in-out infinite;
+  --animate-shimmer: shimmer 6s linear infinite;
+}
+
+@theme {
+  --font-sans: 'Inter', 'Geist Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+
+@layer base {
+  :root {
+    /* Tema claro */
+    --canvas-deep: #e7e8ef;
+    --canvas-base: #f7f7fa;
+    --canvas-elevated: #ffffff;
+
+    --surface: rgb(255 255 255 / 0.72);
+    --surface-hover: rgb(255 255 255 / 0.95);
+
+    --ink: #101014;
+    --ink-muted: #575d6b;
+    --ink-subtle: rgb(16 16 20 / 0.55);
+
+    --accent: #4c57c4;
+    --accent-bright: #5e6ad2;
+    --accent-glow: rgb(76 87 196 / 0.22);
+    /* Punto más claro del brillo animado del titular: se mantiene legible
+       sobre fondo claro (contraste > 3:1 para texto de gran tamaño). */
+    --accent-shimmer: #6f7ad9;
+
+    --line: rgb(16 16 20 / 0.08);
+    --line-hover: rgb(16 16 20 / 0.16);
+    --line-accent: rgb(76 87 196 / 0.3);
+
+    --page-gradient: radial-gradient(
+      ellipse at top,
+      #ffffff 0%,
+      #f7f7fa 50%,
+      #e7e8ef 100%
+    );
+    --card-gradient: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.9),
+      rgb(255 255 255 / 0.55)
+    );
+    --heading-gradient: linear-gradient(
+      to bottom,
+      #101014 0%,
+      rgb(16 16 20 / 0.92) 60%,
+      rgb(16 16 20 / 0.62) 100%
+    );
+
+    --elevation-card: 0 0 0 1px rgb(16 16 20 / 0.06), 0 2px 20px rgb(16 16 20 / 0.06),
+      0 0 40px rgb(16 16 20 / 0.03);
+    --elevation-card-hover: 0 0 0 1px rgb(16 16 20 / 0.1), 0 8px 40px rgb(16 16 20 / 0.1),
+      0 0 80px rgb(76 87 196 / 0.1);
+    --elevation-cta: 0 0 0 1px rgb(76 87 196 / 0.55), 0 4px 12px rgb(76 87 196 / 0.28),
+      inset 0 1px 0 0 rgb(255 255 255 / 0.35);
+    --elevation-inner-top: inset 0 1px 0 0 rgb(255 255 255 / 0.6);
+
+    --blob-opacity: 0.5;
+    --grid-opacity: 0.045;
+    --noise-opacity: 0.02;
+  }
+
+  .dark {
+    /* Tema oscuro (referencia del design system) */
+    --canvas-deep: #020203;
+    --canvas-base: #050506;
+    --canvas-elevated: #0a0a0c;
+
+    --surface: rgb(255 255 255 / 0.05);
+    --surface-hover: rgb(255 255 255 / 0.08);
+
+    --ink: #ededef;
+    --ink-muted: #8a8f98;
+    --ink-subtle: rgb(255 255 255 / 0.6);
+
+    --accent: #5e6ad2;
+    --accent-bright: #6872d9;
+    --accent-glow: rgb(94 106 210 / 0.3);
+    --accent-shimmer: #a5adf0;
+
+    --line: rgb(255 255 255 / 0.06);
+    --line-hover: rgb(255 255 255 / 0.1);
+    --line-accent: rgb(94 106 210 / 0.3);
+
+    --page-gradient: radial-gradient(
+      ellipse at top,
+      #0a0a0f 0%,
+      #050506 50%,
+      #020203 100%
+    );
+    --card-gradient: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.08),
+      rgb(255 255 255 / 0.02)
+    );
+    --heading-gradient: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      rgb(255 255 255 / 0.95) 55%,
+      rgb(255 255 255 / 0.7) 100%
+    );
+
+    --elevation-card: 0 0 0 1px rgb(255 255 255 / 0.06), 0 2px 20px rgb(0 0 0 / 0.4),
+      0 0 40px rgb(0 0 0 / 0.2);
+    --elevation-card-hover: 0 0 0 1px rgb(255 255 255 / 0.1), 0 8px 40px rgb(0 0 0 / 0.5),
+      0 0 80px rgb(94 106 210 / 0.1);
+    --elevation-cta: 0 0 0 1px rgb(94 106 210 / 0.5), 0 4px 12px rgb(94 106 210 / 0.3),
+      inset 0 1px 0 0 rgb(255 255 255 / 0.2);
+    --elevation-inner-top: inset 0 1px 0 0 rgb(255 255 255 / 0.1);
+
+    --blob-opacity: 1;
+    --grid-opacity: 0.02;
+    --noise-opacity: 0.015;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* El header fijo no debe tapar la sección al navegar por anclas. */
+    scroll-padding-top: 5.5rem;
+    /* `clip` evita el scroll horizontal sin romper `position: sticky`. */
+    overflow-x: clip;
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: var(--canvas-base);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--canvas-base),
+      0 0 0 4px var(--accent);
+    border-radius: 0.5rem;
+  }
+
+  /* Accesibilidad: respeta la preferencia de movimiento reducido. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilidades y patrones compartidos                                    */
+/* ------------------------------------------------------------------ */
+@layer components {
+  /* Contenedor estándar de página (evita desbordes en móvil). */
+  .nc-container {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .nc-container {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Titulares con relleno degradado (firma del design system). */
+  .nc-heading-gradient {
+    background-image: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Texto de acento con brillo animado. */
+  .nc-accent-gradient {
+    background-image: linear-gradient(
+      to right,
+      var(--accent) 0%,
+      var(--accent-bright) 25%,
+      var(--accent-shimmer) 50%,
+      var(--accent-bright) 75%,
+      var(--accent) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* Superficie base de tarjetas: cristal + hairline + brillo superior. */
+  .nc-card {
+    position: relative;
+    isolation: isolate;
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    background-image: var(--card-gradient);
+    box-shadow: var(--elevation-card);
+    transition:
+      box-shadow 300ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)),
+      border-color 300ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1));
+  }
+
+  .nc-card::before {
+    content: '';
+    position: absolute;
+    inset-inline: 1rem;
+    top: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      var(--line-hover),
+      transparent
+    );
+    pointer-events: none;
+  }
+
+  .nc-card:hover {
+    border-color: var(--line-hover);
+    box-shadow: var(--elevation-card-hover);
+  }
+
+  /* Línea divisoria degradada entre secciones. */
+  .nc-divider {
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      var(--line-hover),
+      transparent
+    );
+  }
+
+  /* Etiqueta monoespaciada de sección. */
+  .nc-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* Grilla técnica de fondo. */
+  .nc-grid-overlay {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: var(--grid-opacity);
+  }
+
+  /* Textura de ruido: evita el banding de los degradados. */
+  .nc-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: var(--noise-opacity);
+  }
+
+  /* Barrido de luz en botones primarios. */
+  .nc-shine::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image: linear-gradient(
+      110deg,
+      transparent 25%,
+      rgb(255 255 255 / 0.22) 50%,
+      transparent 75%
+    );
+    background-size: 220% 100%;
+    background-position: 200% 0;
+    opacity: 0;
+    transition:
+      opacity 200ms ease-out,
+      background-position 650ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1));
+    pointer-events: none;
+  }
+
+  .nc-shine:hover::after {
+    opacity: 1;
+    background-position: -100% 0;
+  }
+
+  /* Barra de scroll acorde al tema. */
+  .nc-scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-hover) transparent;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotate(1deg);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% center;
+  }
+}

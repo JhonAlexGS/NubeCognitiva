@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------
+# PROYECTOS DESTACADOS — español.
+# `items` es la lista de tarjetas. Para añadir un proyecto, copia un bloque
+# completo respetando la indentación.
+#
+# Campos de cada proyecto:
+#   title    → nombre del proyecto
+#   kicker   → categoría corta que se muestra arriba
+#   period   → fechas
+#   summary  → descripción (admite **negritas** de Markdown)
+#   metrics  → cifras destacadas (opcional, máximo 2)
+#   tags     → tecnologías
+#   icon     → cpu, radio, code, database, cloud, shield, server, terminal...
+#   size     → hero | tall | wide  (controla el tamaño en la grilla)
+#   url      → enlace público; déjalo vacío si el proyecto no es público
+# ---------------------------------------------------------------------------
+
+eyebrow: Proyectos destacados
+title: Investigación aplicada y producto en producción
+lead: >-
+  Del laboratorio de redes industriales al backend que atiende usuarios reales.
+  Estos son los proyectos que mejor resumen cómo trabajo.
+
+items:
+  - id: scada-ids
+    title: Sistema de detección de intrusiones para SCADA
+    kicker: Tesis de maestría · Ciberseguridad industrial
+    period: Ene 2024 – Jun 2026
+    icon: shield
+    size: hero
+    url: ''
+    summary: >-
+      Clasificador de **machine learning y deep learning** para tráfico
+      **ModBus TCP/IP**, entrenado para distinguir maniobras legítimas de
+      ataques en infraestructura crítica. El modelo se desplegó en contenedores
+      sobre una **Raspberry Pi 5**, demostrando que la detección puede correr en
+      el borde de la red industrial y no sólo en un servidor de laboratorio.
+    metrics:
+      - value: 99.49%
+        label: Accuracy
+      - value: +15.28 pp
+        label: Sobre el estado del arte
+    tags: [Python, TensorFlow, scikit-learn, Docker, ModBus TCP/IP, Raspberry Pi 5]
+
+  - id: gnss-sdr
+    title: Estimación espectral de señales GNSS con SDR
+    kicker: Investigación · Publicación IEEE 2023
+    period: Ene 2020 – Dic 2023
+    icon: radio
+    size: tall
+    url: ''
+    summary: >-
+      Metodología para la adquisición de señales **GNSS** mediante **radio
+      definida por software**, aplicando técnicas de estimación espectral no
+      convencional. Resultados publicados en **IEEE (2023)** dentro del semillero
+      de investigación IoT.
+    metrics:
+      - value: IEEE 2023
+        label: Publicación
+    tags: [GNU Radio, GNSS-SDR, Matlab, Procesamiento de señales]
+
+  - id: coally
+    title: Plataforma Coally
+    kicker: Full Stack · Producto
+    period: Ene 2024 – Dic 2025
+    icon: code
+    size: wide
+    url: ''
+    summary: >-
+      Sistema **CRUD** para la gestión de vehículos de concesionaria, endpoints
+      **RESTful** con autenticación **JWT**, flujo de archivos integrado con
+      **HubSpot** y una capa que unifica el **OAuth2** de distintas plataformas.
+    tags: [JavaScript, Express.js, MongoDB, JWT, OAuth2, HubSpot]
+
+  - id: booklick
+    title: Motor de búsqueda de BookLick
+    kicker: Full Stack · Datos
+    period: Ene 2023 – Dic 2024
+    icon: database
+    size: wide
+    url: ''
+    summary: >-
+      Integración de recursos al motor de búsqueda con **PostgreSQL** y
+      **Elastic Search** sobre **AWS**, más tableros en **Power BI** para medir
+      el uso real de los servicios de la plataforma.
+    tags: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]

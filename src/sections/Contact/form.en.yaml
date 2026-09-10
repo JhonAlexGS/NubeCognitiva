@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# CONTACT FORM — English.
+# Labels, helper text and validation messages. Change any sentence without
+# touching the code: the form reads them straight from this file.
+# ---------------------------------------------------------------------------
+
+title: Write to me
+
+fields:
+  name:
+    label: Name
+    placeholder: Your name
+    required: Please enter your name.
+    min: The name must be at least 2 characters long.
+
+  email:
+    label: Email
+    placeholder: name@email.com
+    required: Please enter your email.
+    invalid: That email does not look valid. Please check it.
+
+  message:
+    label: Message
+    placeholder: Tell me what you are working on…
+    required: Please enter your message.
+    min: The message must be at least 10 characters long.
+    max: The message cannot be longer than 1500 characters.
+
+submit: Send message
+submitting: Sending…
+
+success:
+  title: Message sent
+  body: Thanks for writing. I will get back to you as soon as I can.
+  again: Send another message
+
+# Shown only if the submission actually fails.
+error:
+  title: The message could not be sent
+  body: Check your connection and try again, or email me directly.
+  retry: Retry
+
+# Notice shown while the site has no sending service configured
+# (VITE_CONTACT_ENDPOINT): the form opens your email client with the message
+# already written.
+mailtoNotice: Your email client will open with the message ready to send.

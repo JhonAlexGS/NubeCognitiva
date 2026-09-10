@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------
+# TECH STACK — English.
+# Every block inside `groups` is a card. Add or remove technologies inside
+# `items` without touching any code.
+# `icon` accepts: terminal, layers, devops, cloud, server, database, tool, cpu.
+# ---------------------------------------------------------------------------
+
+eyebrow: Tech stack
+title: The tools I build with
+lead: >-
+  A stack that covers the whole journey: from the language and the framework to
+  the container, the cloud and the dashboard that tells you whether any of it
+  worked.
+
+groups:
+  - icon: terminal
+    title: Languages
+    items: [Python, JavaScript, TypeScript, Java, C++, SQL, HTML/CSS, R, Matlab, HCL]
+
+  - icon: layers
+    title: Frameworks
+    items: [React, Express.js, Node.js, Spring Boot, TensorFlow, scikit-learn, FastAPI]
+
+  - icon: devops
+    title: DevOps and CI/CD
+    items: [Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, SonarQube, Azure Pipelines]
+
+  - icon: cloud
+    title: Cloud · AWS
+    items: [S3, EC2, ECR, ECS, RDS, Athena, QuickSight, Lambda, SageMaker, Glue, Cloud9]
+
+  - icon: server
+    title: Cloud · Azure
+    items:
+      - Virtual Machines
+      - Blob Storage
+      - SQL Database
+      - Functions
+      - AKS
+      - Active Directory
+      - Data Factory
+      - Synapse Analytics
+      - Databricks
+      - Machine Learning
+      - DevOps
+
+  - icon: database
+    title: Databases
+    items: [MongoDB, MySQL, MariaDB, PostgreSQL, Elastic Search, Redis]
+
+  - icon: tool
+    title: Tools
+    items:
+      - Power BI
+      - Wireshark
+      - Postman
+      - Insomnia
+      - GNU Radio
+      - GNSS-SDR
+      - Jupyter
+      - PyCharm
+      - VS Code
+      - NetBeans
+
+languagesTitle: Languages
+languages:
+  - name: Spanish
+    level: Native
+  - name: English
+    level: B1

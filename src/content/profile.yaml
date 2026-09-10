@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Datos de contacto y redes sociales (iguales en español e inglés).
+# Editable sin tocar código: cambia los valores y listo.
+# ---------------------------------------------------------------------------
+
+name: Jhon Alexander García Sierra
+initials: JG
+brand: NubeCognitiva
+email: alexgsierra22@gmail.com
+phone: "+57 318 211 1063"
+location: Bogotá, Colombia
+
+# Redes que se muestran en el header, el footer y la sección de contacto.
+# `icon` acepta: github, linkedin, email, phone, location
+social:
+  - id: github
+    icon: github
+    label: GitHub
+    handle: github.com/JhonAlexGS
+    url: https://github.com/JhonAlexGS
+    showInHeader: true
+
+  - id: linkedin
+    icon: linkedin
+    label: LinkedIn
+    handle: in/jhonalexandergarciasierra
+    url: https://linkedin.com/in/jhonalexandergarciasierra
+    showInHeader: true
+
+  - id: email
+    icon: email
+    label: Email
+    handle: alexgsierra22@gmail.com
+    url: mailto:alexgsierra22@gmail.com
+    showInHeader: false
