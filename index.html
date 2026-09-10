@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/NubeCognitiva/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#050506" />
+    <meta
+      name="description"
+      content="Portafolio de Jhon Alexander García Sierra — Ingeniero de Sistemas y Telecomunicaciones, MSc en Inteligencia Artificial. Full Stack, Cloud e IA."
+    />
+    <meta name="author" content="Jhon Alexander García Sierra" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jhon Alexander García Sierra — NubeCognitiva" />
+    <meta
+      property="og:description"
+      content="Del cable a la nube: ingeniería de telecomunicaciones + IA + cloud."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Jhon Alexander García Sierra — NubeCognitiva</title>
+
+    <script>
+      // Aplica tema e idioma guardados antes del primer paint para evitar parpadeo.
+      ;(function () {
+        try {
+          var theme = localStorage.getItem('nc-theme')
+          if (!theme) {
+            theme = window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark'
+          }
+          document.documentElement.classList.toggle('dark', theme === 'dark')
+          document.documentElement.style.colorScheme = theme
+
+          var lang = localStorage.getItem('nc-lang')
+          if (lang) document.documentElement.lang = lang
+        } catch (e) {
+          /* localStorage bloqueado: se usa el tema oscuro por defecto */
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="/NubeCognitiva/assets/index-DG4w0vBs.js"></script>
+    <link rel="modulepreload" crossorigin href="/NubeCognitiva/assets/rolldown-runtime-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="/NubeCognitiva/assets/motion-BBEiy-c9.js">
+    <link rel="modulepreload" crossorigin href="/NubeCognitiva/assets/vendor-UeA7XSow.js">
+    <link rel="modulepreload" crossorigin href="/NubeCognitiva/assets/markdown-BlAtrhpf.js">
+    <link rel="stylesheet" crossorigin href="/NubeCognitiva/assets/index-BP16bQ-d.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
