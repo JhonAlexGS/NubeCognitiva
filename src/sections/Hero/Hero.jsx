@@ -62,7 +62,9 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-24 lg:pb-32"
+      // `bg-canvas-deep/60` es el mismo velo oscuro que lleva el pie de página:
+      // asienta la primera pantalla sobre el fondo ambiental.
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-canvas-deep/60 pt-28 pb-16 md:pt-32 md:pb-24 lg:pb-32"
     >
       <motion.div style={parallax} className="nc-container">
         <motion.div
