@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-CkrQgw5Y.js";import{n as p,r as m,t as h}from"./Section-CJTiMtBo.js";import{t as g}from"./SpotlightCard-Hbm7SJvY.js";var _=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-BZr4UlJk.js";import{n as p,r as m,t as h}from"./Section-A87VuoMJ.js";import{t as g}from"./SpotlightCard-1sJ8z9i8.js";var _=`# ---------------------------------------------------------------------------\r
 # TESTIMONIALS — English.\r
 #\r
 # ⚠️  A CARD ONLY SHOWS UP ON THE SITE ONCE IT HAS A \`quote\`.\r
@@ -47,7 +47,7 @@ items:\r
     photo: 'testimonios/felipe-osorio.jpeg'\r
     phone: "+57 322 459 0060"\r
     email: ''\r
-    quote: "I worked with Jhon on our undergraduate thesis, and later we also overlapped in our master's program. He's one of the most consistent and meticulous people I know: always seeking to fully understand a problem before jumping into solving it. His analytical skills and his commitment to quality work were key to pulling off demanding projects."\r
+    quote: "I had the privilege of working with Jhon García, and I can't say enough about his ability and commitment in the field of programming and telecommunications. Jhon is a highly effective professional, capable of identifying and solving complex problems with exceptional creativity and precision. His solutions-oriented approach and his ability to adapt to any challenge are admirable. Beyond his technical knowledge, Jhon has a great capacity for teamwork and sharing his knowledge, which always enriches the team and facilitates collaboration. Anyone who has the opportunity to work with him will have a great asset on their hands."\r
 \r
   - name: Marco Tulio Terán de la Oz\r
     initials: MT\r
@@ -129,7 +129,7 @@ items:\r
     photo: 'testimonios/felipe-osorio.jpeg'\r
     phone: "+57 322 459 0060"\r
     email: ''\r
-    quote: 'Trabajé con Jhon en nuestra tesis de pregrado y luego coincidimos también en la maestría. Es una de las personas más constantes y meticulosas que conozco: siempre buscando entender el problema a fondo antes de lanzarse a resolverlo. Su capacidad analítica y su compromiso con la calidad del trabajo fueron clave para sacar adelante proyectos exigentes.'\r
+    quote: 'Tuve el privilegio de trabajar con Jhon García, y no puedo decir suficiente sobre su capacidad y compromiso en el área de programación y telecomunicaciones. Jhon es un profesional altamente eficaz, capaz de identificar y resolver problemas complejos con una creatividad y precisión excepcionales. Su enfoque orientado a soluciones y su habilidad para adaptarse a cualquier reto son admirables. Además de su conocimiento técnico, Jhon tiene una gran capacidad para trabajar en equipo y compartir sus conocimientos, lo cual siempre enriquece al equipo y facilita la colaboración. Cualquiera que tenga la oportunidad de trabajar con él tendrá a un gran activo en sus manos.'\r
 \r
   - name: Marco Tulio Terán de la Oz\r
     initials: MT\r

@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{d as i,m as a,n as o,s,u as c}from"./index-CkrQgw5Y.js";import{n as l,r as u,t as d}from"./Section-CJTiMtBo.js";import{t as f}from"./SpotlightCard-Hbm7SJvY.js";var p=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{d as i,m as a,n as o,s,u as c}from"./index-BZr4UlJk.js";import{n as l,r as u,t as d}from"./Section-A87VuoMJ.js";import{t as f}from"./SpotlightCard-1sJ8z9i8.js";var p=`# ---------------------------------------------------------------------------\r
 # TECH STACK — English.\r
 # Every block inside \`groups\` is a card. Add or remove technologies inside\r
 # \`items\` without touching any code.\r
