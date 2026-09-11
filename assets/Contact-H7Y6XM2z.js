@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{a,c as o,d as s,l as c,m as l,n as u,o as d,r as f,s as p,t as m,u as h}from"./index-tkwvaLF7.js";import{n as g,r as _,t as v}from"./Section-DByWhfWM.js";import{a as y,i as b,n as x,r as S,t as C}from"./forms-DVNCz3tj.js";var w=`---\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{a,c as o,d as s,l as c,m as l,n as u,o as d,r as f,s as p,t as m,u as h}from"./index-BhP0bjGQ.js";import{n as g,r as _,t as v}from"./Section-YHuZ4pgs.js";import{a as y,i as b,n as x,r as S,t as C}from"./forms-DVNCz3tj.js";var w=`---\r
 # ---------------------------------------------------------------------------\r
 # CONTACT — English (narrative copy).\r
 # Form labels and messages live in \`form.en.yaml\`.\r
