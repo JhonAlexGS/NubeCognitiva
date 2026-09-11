@@ -1,8 +1,9 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Section, SectionHeading } from '../../components/ui/Section'
 import { useLang } from '../../hooks/useLang'
 import { pickYaml } from '../../lib/content'
 import { TestimonialCard } from './TestimonialCard/TestimonialCard'
+import { TestimonialModal } from './TestimonialModal/TestimonialModal'
 
 // Contenido editable de esta sección: `content.es.yaml` / `content.en.yaml`.
 const CONTENT = import.meta.glob('./content.*.yaml', {
@@ -52,6 +53,9 @@ export default function Testimonials() {
   )
   const anchos = useMemo(() => anchoDeCadaTarjeta(items.length), [items.length])
 
+  // Índice de la reseña abierta en el diálogo; `null` cuando está cerrado.
+  const [abierta, setAbierta] = useState(null)
+
   // Sin ninguna reseña publicable, la sección entera desaparece.
   if (items.length === 0) return null
 
@@ -76,10 +80,18 @@ export default function Testimonials() {
               placeholderLabel={content.placeholderLabel}
               index={index}
               className={`${anchos[index]} ${cierraFilaEnTablet ? 'md:col-span-2' : ''}`}
+              onOpen={() => setAbierta(index)}
             />
           )
         })}
       </div>
+
+      <TestimonialModal
+        testimonial={abierta === null ? null : items[abierta]}
+        open={abierta !== null}
+        onClose={() => setAbierta(null)}
+        placeholderLabel={content.placeholderLabel}
+      />
     </Section>
   )
 }
