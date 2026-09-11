@@ -3,6 +3,11 @@
 # Every block inside `groups` is a card. Add or remove technologies inside
 # `items` without touching any code.
 # `icon` accepts: terminal, layers, devops, cloud, server, database, tool, cpu.
+#
+# `size` controls the card width on desktop (6-column grid):
+#   narrow = 2 columns · half = 3 columns · wide = 4 columns
+# Keep each row's sizes adding up to 6 so no gaps are left behind.
+# Current split: 2+2+2 · 3+3 · 2+4
 # ---------------------------------------------------------------------------
 
 eyebrow: Tech stack
@@ -14,22 +19,27 @@ lead: >-
 
 groups:
   - icon: terminal
+    size: narrow
     title: Languages
     items: [Python, JavaScript, TypeScript, Java, C++, SQL, HTML/CSS, R, Matlab, HCL]
 
   - icon: layers
+    size: narrow
     title: Frameworks
     items: [React, Express.js, Node.js, Spring Boot, TensorFlow, scikit-learn, FastAPI]
 
   - icon: devops
+    size: narrow
     title: DevOps and CI/CD
     items: [Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, SonarQube, Azure Pipelines]
 
   - icon: cloud
+    size: half
     title: Cloud · AWS
     items: [S3, EC2, ECR, ECS, RDS, Athena, QuickSight, Lambda, SageMaker, Glue, Cloud9]
 
   - icon: server
+    size: half
     title: Cloud · Azure
     items:
       - Virtual Machines
@@ -45,10 +55,12 @@ groups:
       - DevOps
 
   - icon: database
+    size: narrow
     title: Databases
     items: [MongoDB, MySQL, MariaDB, PostgreSQL, Elastic Search, Redis]
 
   - icon: tool
+    size: wide
     title: Tools
     items:
       - Power BI

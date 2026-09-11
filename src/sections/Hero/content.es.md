@@ -14,8 +14,8 @@ photoAlt: Retrato de Jhon Alexander García Sierra
 
 # El titular se anima palabra por palabra. `headlineAccent` se pinta con el
 # degradado de acento.
-headline: Del cable a la nube
-headlineAccent: telecomunicaciones, IA y arquitecturas cloud
+headline: "Ingeniería que aprende:"
+headlineAccent: de la señal al modelo en producción
 
 # Métricas destacadas (máximo 3 para que no se rompa en móvil).
 stats:

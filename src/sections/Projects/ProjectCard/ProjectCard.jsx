@@ -21,7 +21,14 @@ export function ProjectCard({ project, index = 0 }) {
   const { t } = useTranslation()
   const Icon = ICONS[project.icon] ?? ICONS.layers
   const isHero = project.size === 'hero'
-  const hasLink = Boolean(project.url)
+  // Un proyecto puede tener varios enlaces (repo, publicación, demo). Se admite
+  // también el campo `url` suelto de la versión anterior del YAML.
+  const links =
+    project.links?.length > 0
+      ? project.links
+      : project.url
+        ? [{ label: t('actions.viewProject'), url: project.url }]
+        : []
 
   return (
     <Reveal
@@ -82,16 +89,22 @@ export function ProjectCard({ project, index = 0 }) {
           </ul>
         ) : null}
 
-        {hasLink ? (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-bright"
-          >
-            {t('actions.viewProject')}
-            <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
-          </a>
+        {links.length > 0 ? (
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1">
+            {links.map((link) => (
+              <li key={link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-bright"
+                >
+                  {link.label}
+                  <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
+                </a>
+              </li>
+            ))}
+          </ul>
         ) : null}
       </SpotlightCard>
     </Reveal>

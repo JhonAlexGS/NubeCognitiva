@@ -28,8 +28,10 @@ export function SectionHeading({ eyebrow, title, lead, align = 'left' }) {
         </span>
       ) : null}
 
+      {/* El encabezado de sección queda un escalón por debajo del titular del
+          hero: la jerarquía de la página depende de esa diferencia. */}
       {title ? (
-        <h2 className="nc-heading-gradient text-3xl font-semibold tracking-tight text-balance md:text-4xl lg:text-5xl">
+        <h2 className="nc-heading-gradient text-3xl font-semibold tracking-tight text-balance md:text-4xl">
           {title}
         </h2>
       ) : null}

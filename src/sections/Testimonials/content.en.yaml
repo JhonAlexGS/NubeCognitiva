@@ -1,49 +1,83 @@
 # ---------------------------------------------------------------------------
 # TESTIMONIALS — English.
 #
-# ⚠️  The three testimonials below are EXAMPLES. Replace them with real
-#     reviews and delete the `placeholder: true` line from each one: while it
-#     is present the card shows an "example content" badge.
+# ⚠️  A CARD ONLY SHOWS UP ON THE SITE ONCE IT HAS A `quote`.
+#     The five people below are your real references with their details already
+#     loaded, but `quote` is empty: until you paste their words, the section
+#     stays hidden. That is deliberate — this way a real person never appears
+#     signing a text they did not write.
 #
-# Fields: quote (text), name, role, company, link (optional), initials.
+# Fields per testimonial:
+#   quote        → what that person says about you. WITHOUT IT, NOTHING SHOWS.
+#   name         → full name
+#   role         → job title
+#   company      → company or university (may be left empty)
+#   relationship → how they know you
+#   link         → LinkedIn, portfolio or personal site; empty if none.
+#                  The icon picks itself: LinkedIn or a generic link.
+#   initials     → shown in the avatar when there is no photo
+#   photo        → file inside `public/`, e.g. `testimonios/juan.jpg`
+#                  Recommended: square, at least 200×200 px
+#   phone        → NOT published. See the note below.
+#   email        → NOT published. See the note below.
+#
+# 🔒  Phone and email are kept here as your own contact sheet, but the page
+#     deliberately does NOT render them. They are third-party data and
+#     publishing them on an open site exposes those people to spam.
+#
+# 💡  To preview the section before you have the reviews, add
+#     `placeholder: true` to a card and give it a test `quote`: it will show
+#     with an "example content" badge.
 # ---------------------------------------------------------------------------
 
 eyebrow: Testimonials
 title: What people who worked with me say
 lead: >-
-  Reserved space for reviews from colleagues, managers and project teammates.
+  Reviews from colleagues, managers and project teammates.
 
 placeholderLabel: Example content
 
 items:
-  - initials: NA
-    name: First Last
-    role: Their job title
-    company: Company or university
-    link: ''
-    placeholder: true
-    quote: >-
-      This is where a manager's or colleague's review goes. Replace this text
-      with their actual words: what you built together, what Jhon brought to the
-      team and how the project turned out.
+  - name: Juan Felipe Osorio Téllez
+    initials: JO
+    role: Systems and Telecommunications Engineer
+    company: Universidad Sergio Arboleda
+    relationship: Thesis partner
+    link: https://www.linkedin.com/in/juan-felipe-osorio-tellez-3b35a31b6/
+    photo: 'testimonios/felipe-osorio.jpeg'
+    phone: "+57 322 459 0060"
+    email: ''
+    quote: "I worked with Jhon on our undergraduate thesis, and later we also overlapped in our master's program. He's one of the most consistent and meticulous people I know: always seeking to fully understand a problem before jumping into solving it. His analytical skills and his commitment to quality work were key to pulling off demanding projects."
 
-  - initials: NA
-    name: First Last
-    role: Their job title
-    company: Company or university
-    link: ''
-    placeholder: true
-    quote: >-
-      A second testimonial. It works better when it mentions something concrete:
-      a difficult release, a good technical call or how the team behaved under
-      pressure.
+  - name: Marco Tulio Terán de la Oz
+    initials: MT
+    role: Assistant professor and HW/SW designer
+    company: Universidad Sergio Arboleda
+    relationship: Thesis advisor
+    link: https://marcoteran.github.io/
+    photo: ''
+    phone: "+57 300 509 5849"
+    email: ''
+    quote: ''
 
-  - initials: NA
-    name: First Last
-    role: Their job title
-    company: Company or university
+  - name: Jonattan Infante Vargas
+    initials: JI
+    role: Software Engineer · Systems and Telecommunications Engineer
+    company: BookLick
+    relationship: Manager at BookLick
+    link: https://www.linkedin.com/in/jonattaninfante/
+    photo: 'testimonios/jonathan-infante.png'
+    phone: "+57 305 708 7887"
+    email: ''
+    quote: "As Jhon's manager at BookLick, I got to see firsthand his technical ability and his autonomy in solving complex problems, from database integration to data analysis with Power BI. He's a reliable, proactive developer who's always willing to go the extra mile to deliver a good result."
+
+  - name: Gustavo Foscarini
+    initials: GF
+    role: Software Developer
+    company: Coally
+    relationship: Manager and teammate
     link: ''
-    placeholder: true
-    quote: >-
-      A third testimonial to close the section. If you have fewer than three
-      reviews, delete the extra blocks: the grid adjusts on its own.
+    photo: 'testimonios/gustavo-foscarini.jpeg'
+    phone: "+54 911 6850 7415"
+    email: ''
+    quote: 'I had the opportunity to work with him at Coally as a developer, and he stood out for his technical solidity, commitment, and ability to solve problems efficiently. He always showed excellent willingness for teamwork, consistently contributing ideas and improvements. He is a reliable professional and a great teammate.'

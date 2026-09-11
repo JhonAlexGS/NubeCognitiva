@@ -15,6 +15,14 @@ const CONTENT = import.meta.glob('./content.*.yaml', {
   eager: true,
 })
 
+// Rejilla bento de 6 columnas en escritorio: el ancho de cada tarjeta lo
+// decide su campo `size` en el YAML, igual que en la sección de proyectos.
+const SIZES = {
+  narrow: 'lg:col-span-2',
+  half: 'lg:col-span-3',
+  wide: 'lg:col-span-4',
+}
+
 export default function Skills() {
   const lang = useLang()
   const content = useMemo(() => pickYaml(CONTENT, lang) ?? {}, [lang])
@@ -24,11 +32,19 @@ export default function Skills() {
     <Section id="skills">
       <SectionHeading eyebrow={content.eyebrow} title={content.title} lead={content.lead} />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-6">
         {groups.map((group, index) => {
           const Icon = getIcon(group.icon)
+          // Con un número impar de tarjetas, la última quedaría sola en su fila
+          // de dos columnas; se estira para cerrar el hueco.
+          const cierraFila = index === groups.length - 1 && groups.length % 2 === 1
           return (
-            <Reveal key={group.title} variants={scaleIn} delay={index * 0.06} className="min-w-0">
+            <Reveal
+              key={group.title}
+              variants={scaleIn}
+              delay={index * 0.06}
+              className={`min-w-0 ${SIZES[group.size] ?? SIZES.narrow} ${cierraFila ? 'sm:col-span-2' : ''}`}
+            >
               <SpotlightCard className="flex h-full flex-col gap-4 p-6">
                 <div className="flex items-center gap-3">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent">

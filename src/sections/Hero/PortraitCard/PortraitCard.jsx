@@ -49,7 +49,7 @@ export function PortraitCard({ src, alt, location, width, height }) {
       // Alineado a la izquierda como el resto del hero, no centrado.
       // El desplazamiento vertical es un `translate`, no un margen: sube el
       // retrato sin alterar la altura de la fila ni mover nada más.
-      className="relative w-full max-w-[12.5rem] sm:max-w-[15rem] lg:max-w-[420px] lg:-translate-y-10"
+      className="relative w-full max-w-[15rem] lg:max-w-[420px] lg:-translate-y-10"
       style={{ perspective: 1200 }}
     >
       <motion.div

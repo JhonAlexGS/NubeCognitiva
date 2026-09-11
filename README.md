@@ -1,4 +1,4 @@
-# NubeCognitiva — Portafolio de Jhon Alexander García Sierra
+# CognitiveNimbus — Portafolio de Jhon Alexander García Sierra
 
 Portafolio personal construido con **React + Vite**, **Tailwind CSS v4**,
 **Framer Motion**, **react-i18next**, **react-hook-form + Zod** y **react-icons**.
@@ -55,7 +55,9 @@ src/
     About/
       About.jsx
       content.es.md  content.en.md          ← perfil y pilares
-      experience.es.yaml  experience.en.yaml ← lista de empleos
+    Experience/
+      Experience.jsx
+      content.es.yaml  content.en.yaml      ← lista de empleos
       ExperienceTimeline/ExperienceTimeline.jsx   (usa el YAML del padre)
     Projects/
       Projects.jsx

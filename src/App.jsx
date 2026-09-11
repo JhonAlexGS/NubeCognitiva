@@ -9,6 +9,7 @@ import Hero from './sections/Hero/Hero'
 // El hero se carga con la página; el resto se divide en chunks (code splitting)
 // para que la primera pintura sea lo más ligera posible.
 const About = lazy(() => import('./sections/About/About'))
+const Experience = lazy(() => import('./sections/Experience/Experience'))
 const Projects = lazy(() => import('./sections/Projects/Projects'))
 const Skills = lazy(() => import('./sections/Skills/Skills'))
 const Education = lazy(() => import('./sections/Education/Education'))
@@ -41,6 +42,9 @@ export default function App() {
 
         <LazySection>
           <About />
+        </LazySection>
+        <LazySection>
+          <Experience />
         </LazySection>
         <LazySection>
           <Projects />

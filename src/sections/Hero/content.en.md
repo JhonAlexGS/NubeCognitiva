@@ -13,8 +13,8 @@ role: Systems & Telecommunications Engineer · MSc in Artificial Intelligence
 photoAlt: Portrait of Jhon Alexander García Sierra
 
 # The headline animates word by word. `headlineAccent` gets the accent gradient.
-headline: From the wire to the cloud
-headlineAccent: telecommunications, AI and cloud architecture
+headline: "Engineering that learns:"
+headlineAccent: from the signal to the model in production
 
 # Highlighted metrics (three at most so mobile does not break).
 stats:

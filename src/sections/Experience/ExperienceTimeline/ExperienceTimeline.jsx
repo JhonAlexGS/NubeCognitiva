@@ -2,8 +2,8 @@ import { Reveal } from '../../../components/ui/Reveal'
 import { fadeUp } from '../../../lib/motion'
 
 /**
- * Sub-componente de «Sobre mí»: no tiene contenido propio.
- * Recibe la lista ya parseada desde `About/experience.<idioma>.yaml`.
+ * Sub-componente de «Experiencia»: no tiene contenido propio.
+ * Recibe la lista ya parseada desde `Experience/content.<idioma>.yaml`.
  */
 export function ExperienceTimeline({ jobs }) {
   return (
@@ -28,10 +28,10 @@ export function ExperienceTimeline({ jobs }) {
             <span className="font-mono text-[0.6875rem] tracking-widest text-accent uppercase">
               {job.period}
             </span>
-            <h4 className="text-lg font-semibold tracking-tight text-ink">
+            <h3 className="text-lg font-semibold tracking-tight text-ink">
               {job.role}
               <span className="text-ink-muted"> · {job.company}</span>
-            </h4>
+            </h3>
             <p className="text-xs text-ink-subtle">{job.location}</p>
           </div>
 

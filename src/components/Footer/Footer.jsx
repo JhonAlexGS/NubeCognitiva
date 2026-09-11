@@ -1,13 +1,17 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { EASE_EXPO } from '../../lib/motion'
-import { NAV_ITEMS } from '../../lib/navigation'
+import { usePresentSections } from '../../hooks/usePresentSections'
+import { NAV_IDS, NAV_ITEMS } from '../../lib/navigation'
 import { profile, socialLinks } from '../../lib/profile'
 import { getIcon } from '../ui/icons'
 
 export function Footer() {
   const { t } = useTranslation()
   const year = new Date().getFullYear()
+  // Mismo criterio que el menú: no enlazamos secciones que no existen.
+  const presentes = usePresentSections(NAV_IDS)
+  const enlaces = NAV_ITEMS.filter((item) => presentes.includes(item.id))
 
   return (
     <footer className="relative border-t border-line bg-canvas-deep/60">
@@ -26,7 +30,7 @@ export function Footer() {
         <nav aria-label={t('footer.navTitle')} className="flex flex-col gap-3">
           <h2 className="nc-eyebrow">{t('footer.navTitle')}</h2>
           <ul className="flex flex-col gap-2">
-            {NAV_ITEMS.map((item) => (
+            {enlaces.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
