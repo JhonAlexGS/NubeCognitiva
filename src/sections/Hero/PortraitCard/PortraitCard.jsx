@@ -8,9 +8,10 @@ import { EASE_EXPO } from '../../../lib/motion'
  * Recibe la ruta y el texto alternativo desde el padre (`profile.yaml` y
  * `Hero/content.<idioma>.md`).
  *
- * El retrato es un PNG recortado, así que no lleva marco: la silueta va
- * directamente sobre un disco de luz, como si estuviera iluminada desde
- * detrás. Efectos: inclinación 3D siguiendo al cursor y resplandor que late.
+ * El retrato es un PNG recortado, así que no lleva ni marco ni disco: la
+ * silueta va directamente sobre el fondo de la página, con un resplandor
+ * difuso detrás que la separa sin dibujarle una forma alrededor.
+ * Efectos: inclinación 3D siguiendo al cursor y resplandor que late.
  */
 
 // El corte del PNG termina en seco a la altura de los hombros; este degradado
@@ -46,7 +47,9 @@ export function PortraitCard({ src, alt, location, width, height }) {
   return (
     <div
       // Alineado a la izquierda como el resto del hero, no centrado.
-      className="relative w-full max-w-[12.5rem] sm:max-w-[15rem] lg:max-w-[420px]"
+      // El desplazamiento vertical es un `translate`, no un margen: sube el
+      // retrato sin alterar la altura de la fila ni mover nada más.
+      className="relative w-full max-w-[12.5rem] sm:max-w-[15rem] lg:max-w-[420px] lg:-translate-y-10"
       style={{ perspective: 1200 }}
     >
       <motion.div
@@ -63,12 +66,6 @@ export function PortraitCard({ src, alt, location, width, height }) {
         <span
           aria-hidden="true"
           className="animate-glow pointer-events-none absolute inset-[6%] rounded-full bg-accent/30 blur-[70px]"
-        />
-
-        {/* Disco de cristal: da estructura y hace que la cabeza sobresalga */}
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute top-[13%] left-1/2 aspect-square w-[86%] -translate-x-1/2 rounded-full border border-line bg-gradient-to-b from-surface to-transparent shadow-inner-top transition-colors duration-300 group-hover:border-line-accent"
         />
 
         <img

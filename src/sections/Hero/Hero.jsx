@@ -65,14 +65,17 @@ export default function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-24 lg:pb-32"
     >
       <motion.div style={parallax} className="nc-container">
-        {/* Dos columnas en escritorio: texto a la izquierda, retrato a la
-            derecha. En móvil se apila y el retrato encabeza la sección. */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={container}
-          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-14"
+          className="flex flex-col gap-10 lg:gap-12"
         >
+          {/* Dos columnas en escritorio: texto a la izquierda, retrato a la
+              derecha. En móvil se apila y el retrato encabeza la sección.
+              Las métricas quedan fuera de esta rejilla para poder ocupar todo
+              el ancho, por debajo de ambas columnas. */}
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-14">
           {/* Retrato. El parallax va en el contenedor externo y la animación de
               entrada en el interno: si compartieran el mismo `y`, uno anularía
               al otro. */}
@@ -155,26 +158,27 @@ export default function Hero() {
                 {t('actions.viewProjects')}
               </Button>
             </motion.div>
-
-            {/* Métricas */}
-            <motion.dl
-              variants={item}
-              className="mt-2 grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3"
-            >
-              {(data.stats ?? []).map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col gap-1 bg-canvas-base/60 p-5 backdrop-blur-sm transition-colors duration-200 hover:bg-surface-hover"
-                >
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd className="font-mono text-2xl font-semibold tracking-tight text-ink">
-                    {stat.value}
-                  </dd>
-                  <p className="text-xs leading-relaxed text-ink-muted">{stat.label}</p>
-                </div>
-              ))}
-            </motion.dl>
           </div>
+          </div>
+
+          {/* Métricas: banda a todo el ancho, por debajo del texto y del retrato */}
+          <motion.dl
+            variants={item}
+            className="grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3"
+          >
+            {(data.stats ?? []).map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col gap-1 bg-canvas-base/60 p-5 backdrop-blur-sm transition-colors duration-200 hover:bg-surface-hover"
+              >
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-mono text-2xl font-semibold tracking-tight text-ink">
+                  {stat.value}
+                </dd>
+                <p className="text-xs leading-relaxed text-ink-muted">{stat.label}</p>
+              </div>
+            ))}
+          </motion.dl>
         </motion.div>
       </motion.div>
 
