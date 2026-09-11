@@ -5,6 +5,7 @@
 
 nav:
   about: About
+  experience: Experience
   projects: Projects
   skills: Stack
   education: Education
@@ -23,6 +24,9 @@ actions:
   toggleThemeToDark: Switch to dark mode
   toggleLanguage: Change language
   skipToContent: Skip to content
+  close: Close
+  readFull: Read in full
+  readFullOf: Read the full testimonial from {{name}}
 
 language:
   current: English

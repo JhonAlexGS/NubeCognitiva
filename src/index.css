@@ -200,6 +200,20 @@
     border-radius: 0.5rem;
   }
 
+  /* El navegador deja los <button> con la flecha normal —sólo los enlaces
+     cambian el cursor—, así que nada de lo que es un botón se notaba pulsable.
+     Se corrige una vez aquí para todo el sitio. */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
   /* Accesibilidad: respeta la preferencia de movimiento reducido. */
   @media (prefers-reduced-motion: reduce) {
     html {

@@ -1,7 +1,7 @@
 ---
 # ---------------------------------------------------------------------------
 # ABOUT content in English.
-# The job list lives in `experience.en.yaml` (same folder).
+# Work experience has its own section: `src/sections/Experience/`.
 # ---------------------------------------------------------------------------
 
 eyebrow: About me
@@ -25,8 +25,6 @@ pillars:
   - icon: radio
     title: Networks and signals
     text: Telecommunications, ModBus TCP/IP, GNSS and software defined radio.
-
-experienceTitle: Work experience
 ---
 
 I am a **Systems and Telecommunications Engineer** with a **master's degree in

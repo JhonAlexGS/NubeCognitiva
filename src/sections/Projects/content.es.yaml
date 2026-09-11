@@ -12,7 +12,10 @@
 #   tags     → tecnologías
 #   icon     → cpu, radio, code, database, cloud, shield, server, terminal...
 #   size     → hero | tall | wide  (controla el tamaño en la grilla)
-#   url      → enlace público; déjalo vacío si el proyecto no es público
+#   links    → lista de enlaces, cada uno con `label` y `url`.
+#              Puedes poner varios (repo, publicación, demo…) o ninguno:
+#              si la lista está vacía, la tarjeta simplemente no muestra
+#              botones. El `label` es el texto visible, cámbialo a tu gusto.
 # ---------------------------------------------------------------------------
 
 eyebrow: Proyectos destacados
@@ -28,7 +31,9 @@ items:
     period: Ene 2024 – Jun 2026
     icon: shield
     size: hero
-    url: ''
+    links:
+      - label: Ver el código
+        url: https://github.com/JhonAlexGS/CASO-DE-ESTUDIO-MODBUS-TCP-IP
     summary: >-
       Clasificador de **machine learning y deep learning** para tráfico
       **ModBus TCP/IP**, entrenado para distinguir maniobras legítimas de
@@ -48,7 +53,11 @@ items:
     period: Ene 2020 – Dic 2023
     icon: radio
     size: tall
-    url: ''
+    links:
+      - label: Ver el código
+        url: https://github.com/JhonKyG/SemilleroIoT_Spectral_Estimation
+      - label: Publicación IEEE
+        url: https://ieeexplore.ieee.org/document/10334282
     summary: >-
       Metodología para la adquisición de señales **GNSS** mediante **radio
       definida por software**, aplicando técnicas de estimación espectral no
@@ -65,7 +74,9 @@ items:
     period: Ene 2024 – Dic 2025
     icon: code
     size: wide
-    url: ''
+    links:
+      - label: Ver el sitio
+        url: https://coally.com/
     summary: >-
       Sistema **CRUD** para la gestión de vehículos de concesionaria, endpoints
       **RESTful** con autenticación **JWT**, flujo de archivos integrado con
@@ -78,7 +89,9 @@ items:
     period: Ene 2023 – Dic 2024
     icon: database
     size: wide
-    url: ''
+    links:
+      - label: Ver el sitio
+        url: https://booklick.co/
     summary: >-
       Integración de recursos al motor de búsqueda con **PostgreSQL** y
       **Elastic Search** sobre **AWS**, más tableros en **Power BI** para medir

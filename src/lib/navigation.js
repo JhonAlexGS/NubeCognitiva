@@ -5,6 +5,7 @@
 export const SECTION_IDS = [
   'hero',
   'about',
+  'experience',
   'projects',
   'skills',
   'education',
@@ -15,6 +16,7 @@ export const SECTION_IDS = [
 /** Enlaces que aparecen en el menú (el contacto tiene su propio botón CTA). */
 export const NAV_ITEMS = [
   { id: 'about', labelKey: 'nav.about' },
+  { id: 'experience', labelKey: 'nav.experience' },
   { id: 'projects', labelKey: 'nav.projects' },
   { id: 'skills', labelKey: 'nav.skills' },
   { id: 'education', labelKey: 'nav.education' },
@@ -22,3 +24,6 @@ export const NAV_ITEMS = [
 ]
 
 export const CONTACT_ANCHOR = '#contact'
+
+/** Ids de las secciones enlazadas desde el menú, para comprobar si existen. */
+export const NAV_IDS = NAV_ITEMS.map((item) => item.id)

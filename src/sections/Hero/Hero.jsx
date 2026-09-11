@@ -82,7 +82,9 @@ export default function Hero() {
           {photoUrl ? (
             <motion.div
               style={prefersReducedMotion ? undefined : { y: portraitY }}
-              className="order-first w-full lg:order-last"
+              // Oculto por debajo de 640px: en móvil el retrato empujaba todo el
+              // texto fuera de la primera pantalla y aportaba poco a ese tamaño.
+              className="order-first w-full max-sm:hidden lg:order-last"
             >
               <motion.div variants={item}>
                 <PortraitCard

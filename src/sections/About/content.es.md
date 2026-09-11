@@ -1,7 +1,7 @@
 ---
 # ---------------------------------------------------------------------------
 # Contenido de SOBRE MÍ en español.
-# La lista de empleos está en `experience.es.yaml` (misma carpeta).
+# La experiencia laboral tiene su propia sección: `src/sections/Experience/`.
 # ---------------------------------------------------------------------------
 
 eyebrow: Sobre mí
@@ -26,8 +26,6 @@ pillars:
   - icon: radio
     title: Redes y señales
     text: Telecomunicaciones, ModBus TCP/IP, GNSS y radio definida por software.
-
-experienceTitle: Experiencia laboral
 ---
 
 Soy **Ingeniero de Sistemas y Telecomunicaciones** con **Maestría en

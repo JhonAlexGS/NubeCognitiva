@@ -2,8 +2,9 @@ import { AnimatePresence, motion, useScroll, useMotionValueEvent } from 'framer-
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useActiveSection } from '../../hooks/useActiveSection'
+import { usePresentSections } from '../../hooks/usePresentSections'
 import { EASE_EXPO } from '../../lib/motion'
-import { CONTACT_ANCHOR, NAV_ITEMS, SECTION_IDS } from '../../lib/navigation'
+import { CONTACT_ANCHOR, NAV_IDS, NAV_ITEMS, SECTION_IDS } from '../../lib/navigation'
 import { headerSocialLinks, profile } from '../../lib/profile'
 import { LanguageToggle } from '../LanguageToggle/LanguageToggle'
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
@@ -15,6 +16,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const activeSection = useActiveSection(SECTION_IDS)
+  // Solo se enlazan las secciones que existen: las que se ocultan por falta de
+  // contenido tampoco aparecen en el menú.
+  const presentes = usePresentSections(NAV_IDS)
+  const enlaces = NAV_ITEMS.filter((item) => presentes.includes(item.id))
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (value) => setScrolled(value > 24))
@@ -72,9 +77,10 @@ export function Navbar() {
             </span>
           </a>
 
-          {/* Navegación de escritorio */}
-          <ul className="hidden items-center gap-1 lg:flex">
-            {NAV_ITEMS.map((item) => {
+          {/* Navegación de escritorio. Aparece en `xl` y no en `lg`: con seis
+              enlaces necesita 1057px y a 1024px solo hay 960 disponibles. */}
+          <ul className="hidden items-center gap-1 xl:flex">
+            {enlaces.map((item) => {
               const isActive = activeSection === item.id
               return (
                 <li key={item.id}>
@@ -126,9 +132,9 @@ export function Navbar() {
             <LanguageToggle />
             <ThemeToggle />
 
-            {/* `max-lg:hidden` (y no `hidden lg:inline-flex`) para ganarle al
+            {/* `max-xl:hidden` (y no `hidden xl:inline-flex`) para ganarle al
                 `inline-flex` que el botón trae por defecto. */}
-            <Button href={CONTACT_ANCHOR} size="sm" className="max-lg:hidden">
+            <Button href={CONTACT_ANCHOR} size="sm" className="max-xl:hidden">
               {t('actions.contact')}
             </Button>
 
@@ -141,7 +147,7 @@ export function Navbar() {
               aria-controls="mobile-menu"
               whileTap={{ scale: 0.94 }}
               transition={{ duration: 0.2, ease: EASE_EXPO }}
-              className="grid h-10 w-10 place-items-center rounded-lg border border-line bg-surface text-ink shadow-inner-top transition-colors duration-200 hover:bg-surface-hover lg:hidden"
+              className="grid h-10 w-10 place-items-center rounded-lg border border-line bg-surface text-ink shadow-inner-top transition-colors duration-200 hover:bg-surface-hover xl:hidden"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -173,10 +179,10 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2, ease: EASE_EXPO }}
-            className="border-b border-line bg-canvas-base/95 backdrop-blur-xl lg:hidden"
+            className="border-b border-line bg-canvas-base/95 backdrop-blur-xl xl:hidden"
           >
             <div className="nc-container flex flex-col gap-1 py-4">
-              {NAV_ITEMS.map((item) => (
+              {enlaces.map((item) => (
                 <a
                   key={item.id}
                   href={`#${item.id}`}

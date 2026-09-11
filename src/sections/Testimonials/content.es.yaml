@@ -1,49 +1,83 @@
 # ---------------------------------------------------------------------------
 # TESTIMONIOS — español.
 #
-# ⚠️  Los tres testimonios de abajo son EJEMPLOS. Reemplázalos por reseñas
-#     reales y borra la línea `placeholder: true` de cada uno: mientras esté
-#     presente, la tarjeta muestra una etiqueta de «contenido de ejemplo».
+# ⚠️  UNA TARJETA SOLO APARECE EN LA WEB CUANDO TIENE `quote`.
+#     Las cinco personas de abajo son tus referencias reales, con sus datos ya
+#     cargados, pero `quote` está vacío: hasta que no pegues sus palabras, la
+#     sección no se muestra. Es a propósito — así nunca aparece una persona
+#     real firmando un texto que no escribió.
 #
-# Campos: quote (texto), name, role, company, link (opcional), initials.
+# Campos de cada testimonio:
+#   quote        → lo que esa persona dice de ti. SIN ESTO NO SE PUBLICA.
+#   name         → nombre y apellidos
+#   role         → cargo
+#   company      → empresa o universidad (puede quedar vacío)
+#   relationship → vínculo contigo
+#   link         → LinkedIn, portafolio o web personal; vacío si no tiene.
+#                  El icono se elige solo: LinkedIn o enlace genérico.
+#   initials     → se muestran en el avatar cuando no hay foto
+#   photo        → archivo dentro de `public/`, por ejemplo `testimonios/juan.jpg`
+#                  Recomendado: cuadrada, mínimo 200×200 px
+#   phone        → NO se publica. Ver la nota de abajo.
+#   email        → NO se publica. Ver la nota de abajo.
+#
+# 🔒  El teléfono y el correo se guardan aquí como ficha de contacto tuya, pero
+#     la página NO los muestra a propósito. Son datos de terceros y publicarlos
+#     en una web abierta expone a esas personas a spam.
+#
+# 💡  Para ver cómo queda la sección antes de tener las reseñas, añade
+#     `placeholder: true` a una tarjeta y escríbele un `quote` de prueba: se
+#     mostrará con una etiqueta de «contenido de ejemplo».
 # ---------------------------------------------------------------------------
 
 eyebrow: Testimonios
 title: Lo que dicen quienes han trabajado conmigo
 lead: >-
-  Espacio reservado para reseñas de colegas, jefes y compañeros de proyecto.
+  Reseñas de colegas, jefes y compañeros de proyecto.
 
 placeholderLabel: Contenido de ejemplo
 
 items:
-  - initials: NA
-    name: Nombre Apellido
-    role: Cargo de la persona
-    company: Empresa o universidad
-    link: ''
-    placeholder: true
-    quote: >-
-      Aquí va la reseña de un jefe o colega. Sustituye este texto por sus
-      palabras reales: qué construyeron juntos, qué aportó Jhon al equipo y qué
-      resultado tuvo el proyecto.
+  - name: Juan Felipe Osorio Téllez
+    initials: JO
+    role: Ingeniero de Sistemas y Telecomunicaciones
+    company: Universidad Sergio Arboleda
+    relationship: Compañero de tesis
+    link: https://www.linkedin.com/in/juan-felipe-osorio-tellez-3b35a31b6/
+    photo: 'testimonios/felipe-osorio.jpeg'
+    phone: "+57 322 459 0060"
+    email: ''
+    quote: 'Trabajé con Jhon en nuestra tesis de pregrado y luego coincidimos también en la maestría. Es una de las personas más constantes y meticulosas que conozco: siempre buscando entender el problema a fondo antes de lanzarse a resolverlo. Su capacidad analítica y su compromiso con la calidad del trabajo fueron clave para sacar adelante proyectos exigentes.'
 
-  - initials: NA
-    name: Nombre Apellido
-    role: Cargo de la persona
-    company: Empresa o universidad
-    link: ''
-    placeholder: true
-    quote: >-
-      Un segundo testimonio. Funciona mejor si menciona algo concreto: una
-      entrega difícil, una decisión técnica acertada o cómo se comportó el
-      equipo bajo presión.
+  - name: Marco Tulio Terán de la Oz
+    initials: MT
+    role: Profesor asistente y diseñador de HW/SW
+    company: Universidad Sergio Arboleda
+    relationship: Director de tesis
+    link: https://marcoteran.github.io/
+    photo: ''
+    phone: "+57 300 509 5849"
+    email: ''
+    quote: ''
 
-  - initials: NA
-    name: Nombre Apellido
-    role: Cargo de la persona
-    company: Empresa o universidad
+  - name: Jonattan Infante Vargas
+    initials: JI
+    role: Software Engineer · Ingeniero de Sistemas y Telecomunicaciones
+    company: BookLick
+    relationship: Jefe de trabajo en BookLick
+    link: https://www.linkedin.com/in/jonattaninfante/
+    photo: 'testimonios/jonathan-infante.png'
+    phone: "+57 305 708 7887"
+    email: ''
+    quote: 'Como jefe de Jhon en BookLick, pude ver de cerca su capacidad técnica y su autonomía para resolver problemas complejos, desde integración de bases de datos hasta análisis de datos con Power BI. Es un desarrollador confiable, proactivo y siempre dispuesto a ir un paso más allá para entregar un buen resultado.'
+
+  - name: Gustavo Foscarini
+    initials: GF
+    role: Software Developer
+    company: Coally
+    relationship: Jefe y compañero de trabajo
     link: ''
-    placeholder: true
-    quote: >-
-      Un tercer testimonio para cerrar la sección. Si tienes menos de tres
-      reseñas, borra los bloques que sobren: la grilla se ajusta sola.
+    photo: 'testimonios/gustavo-foscarini.jpeg'
+    phone: "+54 911 6850 7415"
+    email: ''
+    quote: 'Tuve la oportunidad de trabajar con él en Coally como desarrollador y se destacó por su solidez técnica, compromiso y capacidad para resolver problemas de manera eficiente. Siempre mostró excelente predisposición para el trabajo en equipo, aportando ideas y mejoras constantes. Es un profesional confiable y un gran compañero.'

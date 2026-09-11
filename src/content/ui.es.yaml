@@ -5,6 +5,7 @@
 
 nav:
   about: Sobre mí
+  experience: Experiencia
   projects: Proyectos
   skills: Stack
   education: Formación
@@ -23,6 +24,9 @@ actions:
   toggleThemeToDark: Activar modo oscuro
   toggleLanguage: Cambiar idioma
   skipToContent: Saltar al contenido
+  close: Cerrar
+  readFull: Leer completo
+  readFullOf: Leer el testimonio completo de {{name}}
 
 language:
   current: Español

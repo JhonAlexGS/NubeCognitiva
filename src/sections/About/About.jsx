@@ -5,19 +5,12 @@ import { SpotlightCard } from '../../components/ui/SpotlightCard'
 import { getIcon } from '../../components/ui/icons'
 import { Markdown } from '../../components/ui/Markdown'
 import { useLang } from '../../hooks/useLang'
-import { pickMarkdown, pickYaml } from '../../lib/content'
+import { pickMarkdown } from '../../lib/content'
 import { scaleIn } from '../../lib/motion'
-import { ExperienceTimeline } from './ExperienceTimeline/ExperienceTimeline'
 
-// Contenido editable de esta sección:
-//  · `content.es.md` / `content.en.md`        → textos narrativos y pilares
-//  · `experience.es.yaml` / `experience.en.yaml` → lista de empleos
+// Contenido editable de esta sección: `content.es.md` / `content.en.md`.
+// La experiencia laboral vive en su propia sección: `src/sections/Experience/`.
 const CONTENT = import.meta.glob('./content.*.md', {
-  query: '?raw',
-  import: 'default',
-  eager: true,
-})
-const EXPERIENCE = import.meta.glob('./experience.*.yaml', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -26,7 +19,6 @@ const EXPERIENCE = import.meta.glob('./experience.*.yaml', {
 export default function About() {
   const lang = useLang()
   const { data, body } = useMemo(() => pickMarkdown(CONTENT, lang), [lang])
-  const jobs = useMemo(() => pickYaml(EXPERIENCE, lang, 'experience') ?? [], [lang])
 
   return (
     <Section id="about">
@@ -56,16 +48,6 @@ export default function About() {
             )
           })}
         </div>
-      </div>
-
-      {/* Línea de tiempo laboral */}
-      <div className="mt-16 lg:mt-24">
-        <Reveal>
-          <h3 className="mb-8 text-2xl font-semibold tracking-tight text-ink md:text-3xl">
-            {data.experienceTitle}
-          </h3>
-        </Reveal>
-        <ExperienceTimeline jobs={jobs} />
       </div>
     </Section>
   )
