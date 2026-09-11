@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-D6nBdo1S.js";import{n as p,r as m,t as h}from"./Section-BuqNc6Yc.js";import{t as g}from"./SpotlightCard-ntOQb40a.js";var _=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-M3WJgQ8R.js";import{n as p,r as m,t as h}from"./Section-CEh7NCqS.js";import{t as g}from"./SpotlightCard-CVllyTyf.js";var _=`# ---------------------------------------------------------------------------\r
 # TESTIMONIALS — English.\r
 #\r
 # ⚠️  A CARD ONLY SHOWS UP ON THE SITE ONCE IT HAS A \`quote\`.\r
@@ -55,7 +55,7 @@ items:\r
     company: University of the Andes\r
     relationship: Coally's teammate\r
     link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/\r
-    photo: ''\r
+    photo: 'testimonios/juan-castellanos.png'\r
     phone: "+57 320 9260584"\r
     email: ''\r
     quote: "Jhon is an active and proactive person who doesn't stop working until he finishes his duties. He is a very polished person and always tries to help his coworkers; he's also always fixing things whenever a coworker makes a mistake."\r
@@ -137,7 +137,7 @@ items:\r
     company: Universidad de los Andes\r
     relationship: Compañero de equipo en Coally\r
     link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/\r
-    photo: ''\r
+    photo: 'testimonios/juan-castellanos.png'\r
     phone: "+57 320 9260584"\r
     email: ''\r
     quote: 'Jhon es una persona activa y pro activa el cual no termina de trabajar sino hasta que él termine sus deberes es una persona muy pulida y siempre intenta ayudar a sus compañeros, también está arreglando siempre que algún compañero cometa un error '\r
