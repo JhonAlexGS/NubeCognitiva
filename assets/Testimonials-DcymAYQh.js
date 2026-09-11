@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-BZr4UlJk.js";import{n as p,r as m,t as h}from"./Section-A87VuoMJ.js";import{t as g}from"./SpotlightCard-1sJ8z9i8.js";var _=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,l as r,u as i}from"./motion-D4psEU6N.js";import{I as a,M as o}from"./vendor-CiaQW6Ys.js";import{d as s,i as c,l,m as u,n as d,s as f}from"./index-D6nBdo1S.js";import{n as p,r as m,t as h}from"./Section-BuqNc6Yc.js";import{t as g}from"./SpotlightCard-ntOQb40a.js";var _=`# ---------------------------------------------------------------------------\r
 # TESTIMONIALS — English.\r
 #\r
 # ⚠️  A CARD ONLY SHOWS UP ON THE SITE ONCE IT HAS A \`quote\`.\r
@@ -49,16 +49,16 @@ items:\r
     email: ''\r
     quote: "I had the privilege of working with Jhon García, and I can't say enough about his ability and commitment in the field of programming and telecommunications. Jhon is a highly effective professional, capable of identifying and solving complex problems with exceptional creativity and precision. His solutions-oriented approach and his ability to adapt to any challenge are admirable. Beyond his technical knowledge, Jhon has a great capacity for teamwork and sharing his knowledge, which always enriches the team and facilitates collaboration. Anyone who has the opportunity to work with him will have a great asset on their hands."\r
 \r
-  - name: Marco Tulio Terán de la Oz\r
-    initials: MT\r
-    role: Assistant professor and HW/SW designer\r
-    company: Universidad Sergio Arboleda\r
-    relationship: Thesis advisor\r
-    link: https://marcoteran.github.io/\r
+  - name: Juan Diego Castellanos Bonilla \r
+    initials: JC\r
+    role: Full stack senior \r
+    company: University of the Andes\r
+    relationship: Coally's teammate\r
+    link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/\r
     photo: ''\r
-    phone: "+57 300 509 5849"\r
+    phone: "+57 320 9260584"\r
     email: ''\r
-    quote: ''\r
+    quote: "Jhon is an active and proactive person who doesn't stop working until he finishes his duties. He is a very polished person and always tries to help his coworkers; he's also always fixing things whenever a coworker makes a mistake."\r
 \r
   - name: Jonattan Infante Vargas\r
     initials: JI\r
@@ -131,16 +131,16 @@ items:\r
     email: ''\r
     quote: 'Tuve el privilegio de trabajar con Jhon García, y no puedo decir suficiente sobre su capacidad y compromiso en el área de programación y telecomunicaciones. Jhon es un profesional altamente eficaz, capaz de identificar y resolver problemas complejos con una creatividad y precisión excepcionales. Su enfoque orientado a soluciones y su habilidad para adaptarse a cualquier reto son admirables. Además de su conocimiento técnico, Jhon tiene una gran capacidad para trabajar en equipo y compartir sus conocimientos, lo cual siempre enriquece al equipo y facilita la colaboración. Cualquiera que tenga la oportunidad de trabajar con él tendrá a un gran activo en sus manos.'\r
 \r
-  - name: Marco Tulio Terán de la Oz\r
-    initials: MT\r
-    role: Profesor asistente y diseñador de HW/SW\r
-    company: Universidad Sergio Arboleda\r
-    relationship: Director de tesis\r
-    link: https://marcoteran.github.io/\r
+  - name: Juan Diego Castellanos Bonilla \r
+    initials: JC\r
+    role: Full stack senior \r
+    company: Universidad de los Andes\r
+    relationship: Compañero de equipo en Coally\r
+    link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/\r
     photo: ''\r
-    phone: "+57 300 509 5849"\r
+    phone: "+57 320 9260584"\r
     email: ''\r
-    quote: ''\r
+    quote: 'Jhon es una persona activa y pro activa el cual no termina de trabajar sino hasta que él termine sus deberes es una persona muy pulida y siempre intenta ayudar a sus compañeros, también está arreglando siempre que algún compañero cometa un error '\r
 \r
   - name: Jonattan Infante Vargas\r
     initials: JI\r
