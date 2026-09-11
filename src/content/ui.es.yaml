@@ -7,6 +7,7 @@ nav:
   about: Sobre mí
   experience: Experiencia
   projects: Proyectos
+  lab: Laboratorio
   skills: Stack
   education: Formación
   testimonials: Testimonios
@@ -24,6 +25,9 @@ actions:
   toggleThemeToDark: Activar modo oscuro
   toggleLanguage: Cambiar idioma
   skipToContent: Saltar al contenido
+  carousel: Carrusel de proyectos. Usa las flechas del teclado para recorrerlo.
+  previous: Anterior
+  next: Siguiente
 
 language:
   current: Español

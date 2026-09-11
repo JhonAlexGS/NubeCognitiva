@@ -1,0 +1,96 @@
+# ---------------------------------------------------------------------------
+# LABORATORIO — español. Carrusel de proyectos.
+#
+# ⚠️  LOS SEIS DE ABAJO SON SUGERENCIAS, NO TRABAJO TUYO.
+#     Llevan `placeholder: true`, que pinta una etiqueta de «propuesta» sobre
+#     la portada. Cuando construyas uno de verdad —o lo cambies por otro que sí
+#     hayas hecho— borra esa línea y la etiqueta desaparece.
+#     No publiques ninguno sin quitar el `placeholder` sólo si es real: estarías
+#     atribuyéndote trabajo que no hiciste.
+#
+# Campos de cada proyecto:
+#   title    → nombre del proyecto
+#   summary  → descripción breve (2 o 3 líneas; se ve entera en la tarjeta)
+#   skills   → habilidades o tecnologías aprendidas
+#   image    → archivo dentro de `public/`, por ejemplo `proyectos/rag.svg`
+#              Proporción 16:9. Si lo dejas vacío sale un marco con el título.
+#   url      → enlace del proyecto (repo, demo, artículo…)
+#   linkLabel→ texto del botón
+#   placeholder → true mientras sea una propuesta y no un proyecto hecho
+# ---------------------------------------------------------------------------
+
+eyebrow: Laboratorio
+title: Lo que estoy construyendo
+lead: >-
+  Proyectos más pequeños donde pruebo ideas y aprendo herramientas nuevas.
+  Deslízate para verlos.
+
+proposalLabel: Propuesta
+defaultLinkLabel: Ver proyecto
+
+items:
+  - title: RAG sobre normativa de ciberseguridad industrial
+    placeholder: true
+    image: proyectos/rag.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Un asistente que responde preguntas sobre la IEC 62443 y guías de
+      seguridad OT citando el párrafo exacto de donde sale la respuesta. Une lo
+      que ya sé de redes industriales con recuperación aumentada.
+    skills: [Python, LangChain, pgvector, FastAPI, Embeddings]
+
+  - title: Clasificador de tráfico en tiempo real
+    placeholder: true
+    image: proyectos/trafico.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Llevar el modelo de la tesis de un dataset estático a un flujo en vivo:
+      capturar ModBus con Scapy, clasificar paquete a paquete y avisar antes de
+      que el ataque llegue al PLC.
+    skills: [Scapy, Kafka, TensorFlow, Docker, Streaming]
+
+  - title: Detector de anomalías en sensores IoT
+    placeholder: true
+    image: proyectos/anomalias.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Series temporales de sensores industriales analizadas con autoencoders
+      para encontrar lecturas raras sin haber etiquetado nada antes. Detección
+      no supervisada aplicada a mantenimiento predictivo.
+    skills: [scikit-learn, Autoencoders, Pandas, Series temporales]
+
+  - title: Pipeline de MLOps en AWS
+    placeholder: true
+    image: proyectos/mlops.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Reentrenar, versionar y desplegar el detector de intrusiones sin tocar
+      nada a mano: seguimiento de experimentos con MLflow, infraestructura con
+      Terraform y despliegue automático cuando el modelo mejora.
+    skills: [MLflow, Terraform, GitHub Actions, SageMaker, Docker]
+
+  - title: Buscador semántico de publicaciones GNSS
+    placeholder: true
+    image: proyectos/buscador.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Un buscador que entiende la intención y no sólo las palabras: encuentra
+      papers de GNSS y SDR por significado, combinando embeddings con la
+      búsqueda por texto de Elastic.
+    skills: [Embeddings, Elastic Search, PostgreSQL, Python]
+
+  - title: Observabilidad del IDS en la Raspberry Pi
+    placeholder: true
+    image: proyectos/observabilidad.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: Ver proyecto
+    summary: >-
+      Saber qué hace el detector cuando nadie lo mira: métricas de latencia,
+      uso de CPU y tasa de detección publicadas a Prometheus y dibujadas en un
+      panel de Grafana.
+    skills: [Prometheus, Grafana, Raspberry Pi, Docker Compose]

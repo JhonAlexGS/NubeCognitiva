@@ -359,6 +359,31 @@
     scrollbar-width: thin;
     scrollbar-color: var(--line-hover) transparent;
   }
+
+  /* Pista del carrusel: se desplaza con scroll nativo, pero sin barra visible
+     —los botones y los puntos ya indican la posición—. El foco del teclado sí
+     se marca, porque la pista es navegable con las flechas. */
+  .nc-carousel {
+    scrollbar-width: none;
+    scroll-padding-inline: 1.25rem;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nc-carousel {
+      scroll-behavior: auto;
+    }
+  }
+
+  .nc-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .nc-carousel {
+      scroll-padding-inline: 2rem;
+    }
+  }
 }
 
 @keyframes float {
