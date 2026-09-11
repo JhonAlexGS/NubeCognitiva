@@ -8,7 +8,8 @@ import { useLang } from '../../hooks/useLang'
 import { pickMarkdown } from '../../lib/content'
 import { EASE_EXPO } from '../../lib/motion'
 import { CONTACT_ANCHOR } from '../../lib/navigation'
-import { profile } from '../../lib/profile'
+import { photoUrl, profile } from '../../lib/profile'
+import { PortraitCard } from './PortraitCard/PortraitCard'
 
 // Contenido editable de esta sección: `content.es.md` / `content.en.md`.
 const CONTENT = import.meta.glob('./content.*.md', {
@@ -33,6 +34,8 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95])
   const y = useTransform(scrollYProgress, [0, 1], [0, 100])
+  // El retrato sube mientras el texto baja: dos planos a distinta velocidad.
+  const portraitY = useTransform(scrollYProgress, [0, 1], [0, -60])
 
   const parallax = prefersReducedMotion ? undefined : { opacity, scale, y }
 
@@ -66,73 +69,102 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="flex max-w-4xl flex-col items-start gap-6 md:gap-8"
+          className="flex flex-col gap-10 lg:gap-12"
         >
-          {/* Badge de disponibilidad */}
-          <motion.span
-            variants={item}
-            className="inline-flex items-center gap-2.5 rounded-full border border-line-accent bg-accent/10 py-1.5 pr-4 pl-3 font-mono text-[0.6875rem] tracking-widest text-accent uppercase shadow-inner-top"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            {data.badge}
-          </motion.span>
+          {/* Dos columnas en escritorio: texto a la izquierda, retrato a la
+              derecha. En móvil se apila y el retrato encabeza la sección.
+              Las métricas quedan fuera de esta rejilla para poder ocupar todo
+              el ancho, por debajo de ambas columnas. */}
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-14">
+          {/* Retrato. El parallax va en el contenedor externo y la animación de
+              entrada en el interno: si compartieran el mismo `y`, uno anularía
+              al otro. */}
+          {photoUrl ? (
+            <motion.div
+              style={prefersReducedMotion ? undefined : { y: portraitY }}
+              className="order-first w-full lg:order-last"
+            >
+              <motion.div variants={item}>
+                <PortraitCard
+                  src={photoUrl}
+                  alt={data.photoAlt}
+                  location={profile.location}
+                  width={profile.photoWidth}
+                  height={profile.photoHeight}
+                />
+              </motion.div>
+            </motion.div>
+          ) : null}
 
-          {/* Nombre + rol */}
-          <motion.div variants={item} className="flex flex-col gap-2">
-            <h1 className="text-sm font-medium tracking-tight text-ink md:text-base">
-              {profile.name}
-            </h1>
-            <p className="text-xs text-ink-muted md:text-sm">{data.role}</p>
-          </motion.div>
+          {/* Columna de texto */}
+          <div className="flex min-w-0 flex-col items-start gap-6 md:gap-8">
+            {/* Badge de disponibilidad */}
+            <motion.span
+              variants={item}
+              className="inline-flex items-center gap-2.5 rounded-full border border-line-accent bg-accent/10 py-1.5 pr-4 pl-3 font-mono text-[0.6875rem] tracking-widest text-accent uppercase shadow-inner-top"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
+              {data.badge}
+            </motion.span>
 
-          {/* Titular animado palabra por palabra */}
-          {/* El degradado se aplica palabra por palabra: cada `span` anima su
-              propia entrada, así que necesita su propio relleno recortado. */}
-          <p className="text-4xl leading-[1.05] font-semibold tracking-[-0.03em] text-balance md:text-6xl lg:text-7xl">
-            {headlineWords.map((word, index) => (
-              <motion.span
-                key={`${word}-${index}`}
-                variants={item}
-                className="nc-heading-gradient mr-[0.25em] inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
-            <br />
-            {accentWords.map((word, index) => (
-              <motion.span
-                key={`${word}-${index}`}
-                variants={item}
-                className="nc-accent-gradient mr-[0.25em] inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </p>
+            {/* Nombre + rol */}
+            <motion.div variants={item} className="flex flex-col gap-2">
+              <h1 className="text-sm font-medium tracking-tight text-ink md:text-base">
+                {profile.name}
+              </h1>
+              <p className="text-xs text-ink-muted md:text-sm">{data.role}</p>
+            </motion.div>
 
-          {/* Entradilla (cuerpo del Markdown) */}
-          <motion.div variants={item} className="max-w-2xl">
-            <Markdown>{body}</Markdown>
-          </motion.div>
+            {/* Titular animado palabra por palabra.
+                El degradado se aplica a cada `span` porque cada palabra anima
+                su propia entrada y necesita su propio relleno recortado. */}
+            <p className="text-4xl leading-[1.05] font-semibold tracking-[-0.03em] text-balance md:text-5xl">
+              {headlineWords.map((word, index) => (
+                <motion.span
+                  key={`${word}-${index}`}
+                  variants={item}
+                  className="nc-heading-gradient mr-[0.25em] inline-block"
+                >
+                  {word}
+                </motion.span>
+              ))}
+              <br />
+              {accentWords.map((word, index) => (
+                <motion.span
+                  key={`${word}-${index}`}
+                  variants={item}
+                  className="nc-accent-gradient mr-[0.25em] inline-block"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </p>
 
-          {/* Llamados a la acción */}
-          <motion.div variants={item} className="flex flex-wrap items-center gap-3">
-            <Button href={CONTACT_ANCHOR} size="lg">
-              {t('actions.contact')}
-              <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
-            </Button>
-            <Button href="#projects" variant="secondary" size="lg">
-              {t('actions.viewProjects')}
-            </Button>
-          </motion.div>
+            {/* Entradilla (cuerpo del Markdown) */}
+            <motion.div variants={item} className="max-w-2xl">
+              <Markdown>{body}</Markdown>
+            </motion.div>
 
-          {/* Métricas */}
+            {/* Llamados a la acción */}
+            <motion.div variants={item} className="flex flex-wrap items-center gap-3">
+              <Button href={CONTACT_ANCHOR} size="lg">
+                {t('actions.contact')}
+                <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
+              </Button>
+              <Button href="#projects" variant="secondary" size="lg">
+                {t('actions.viewProjects')}
+              </Button>
+            </motion.div>
+          </div>
+          </div>
+
+          {/* Métricas: banda a todo el ancho, por debajo del texto y del retrato */}
           <motion.dl
             variants={item}
-            className="mt-2 grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3"
+            className="grid w-full grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3"
           >
             {(data.stats ?? []).map((stat) => (
               <div

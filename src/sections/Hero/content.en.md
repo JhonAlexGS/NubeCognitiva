@@ -8,6 +8,10 @@
 badge: Open to new challenges
 role: Systems & Telecommunications Engineer · MSc in Artificial Intelligence
 
+# Alternative text for the portrait (read by screen readers).
+# The image itself is swapped by replacing `public/perfil.jpg`.
+photoAlt: Portrait of Jhon Alexander García Sierra
+
 # The headline animates word by word. `headlineAccent` gets the accent gradient.
 headline: From the wire to the cloud
 headlineAccent: telecommunications, AI and cloud architecture

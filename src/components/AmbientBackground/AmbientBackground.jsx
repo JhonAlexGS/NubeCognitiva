@@ -9,12 +9,26 @@ export function AmbientBackground() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
       style={{ backgroundImage: 'var(--page-gradient)' }}
     >
-      {/* Capa 3 — pozos de luz animados */}
+      {/* Capa 3 — pozos de luz animados.
+          Los colores salen de los tokens --blob-* de `src/index.css`, así que
+          la paleta del fondo se cambia desde un solo sitio. */}
       <div className="absolute inset-0" style={{ opacity: 'var(--blob-opacity)' }}>
-        <div className="animate-float absolute -top-[22rem] left-1/2 h-[44rem] w-[56rem] -translate-x-1/2 rounded-full bg-accent/25 blur-[150px] md:h-[56rem] md:w-[80rem]" />
-        <div className="animate-float-slow absolute top-1/4 -left-40 h-[32rem] w-[24rem] rounded-full bg-fuchsia-500/15 blur-[120px] md:h-[50rem] md:w-[38rem]" />
-        <div className="animate-float absolute top-[45%] -right-40 h-[28rem] w-[22rem] rounded-full bg-sky-500/12 blur-[100px] md:h-[44rem] md:w-[32rem]" />
-        <div className="animate-glow absolute bottom-0 left-1/2 h-[26rem] w-[40rem] -translate-x-1/2 translate-y-1/3 rounded-full bg-accent/10 blur-[130px] md:w-[64rem]" />
+        <div
+          className="animate-float absolute -top-[22rem] left-1/2 h-[44rem] w-[56rem] -translate-x-1/2 rounded-full blur-[150px] md:h-[56rem] md:w-[80rem]"
+          style={{ backgroundColor: 'var(--blob-top)' }}
+        />
+        <div
+          className="animate-float-slow absolute top-1/4 -left-40 h-[32rem] w-[24rem] rounded-full blur-[120px] md:h-[50rem] md:w-[38rem]"
+          style={{ backgroundColor: 'var(--blob-left)' }}
+        />
+        <div
+          className="animate-float absolute top-[45%] -right-40 h-[28rem] w-[22rem] rounded-full blur-[100px] md:h-[44rem] md:w-[32rem]"
+          style={{ backgroundColor: 'var(--blob-right)' }}
+        />
+        <div
+          className="animate-glow absolute bottom-0 left-1/2 h-[26rem] w-[40rem] -translate-x-1/2 translate-y-1/3 rounded-full blur-[130px] md:w-[64rem]"
+          style={{ backgroundColor: 'var(--blob-bottom)' }}
+        />
       </div>
 
       {/* Capa 4 — grilla técnica de 64px */}
