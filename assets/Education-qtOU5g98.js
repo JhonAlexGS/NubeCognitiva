@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-BhP0bjGQ.js";import{n as u,r as d,t as f}from"./Section-YHuZ4pgs.js";import{t as p}from"./SpotlightCard-BhSodx97.js";var m=`---\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-CkrQgw5Y.js";import{n as u,r as d,t as f}from"./Section-CJTiMtBo.js";import{t as p}from"./SpotlightCard-Hbm7SJvY.js";var m=`---\r
 # ---------------------------------------------------------------------------\r
 # EDUCATION — English.\r
 # \`programs\` are degrees and specialisations (large cards).\r
