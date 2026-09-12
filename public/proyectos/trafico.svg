@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Análisis de tráfico de red">
+  <defs>
+    <linearGradient id="tra-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1024"/><stop offset="100%" stop-color="#05060f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#tra-bg)"/>
+  <g stroke="#5E6AD2" stroke-opacity="0.07">
+    <path d="M0 90h640M0 180h640M0 270h640M160 0v360M320 0v360M480 0v360"/>
+  </g>
+
+  <!-- Paquetes en tránsito -->
+  <g fill="none" stroke="#5E6AD2" stroke-width="2">
+    <rect x="60" y="150" width="46" height="30" rx="5" opacity="0.9"/>
+    <rect x="126" y="150" width="46" height="30" rx="5" opacity="0.7"/>
+    <rect x="192" y="150" width="46" height="30" rx="5" opacity="0.5"/>
+  </g>
+  <path d="M60 200h178" stroke="#5E6AD2" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <!-- Paquete marcado como anómalo -->
+  <rect x="258" y="144" width="54" height="42" rx="6" fill="#ef4444" fill-opacity="0.12" stroke="#f87171" stroke-width="2"/>
+  <path d="M285 156v14M285 176v1.5" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Onda de señal -->
+  <path d="M340 165 l16 -32 16 64 16 -52 16 40 16 -24 16 34 16 -46 16 28 16 -12"
+        fill="none" stroke="#8A93E8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M340 200h240" stroke="#5E6AD2" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="60" y="300" font-family="ui-monospace, monospace" font-size="15" letter-spacing="3" fill="#5E6AD2">TRÁFICO</text>
+  <text x="60" y="324" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#8A8F98">PCAP · MODBUS · DETECCIÓN</text>
+</svg>

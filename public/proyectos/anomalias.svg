@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Detección de anomalías en series temporales">
+  <defs>
+    <linearGradient id="ano-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1024"/><stop offset="100%" stop-color="#05060f"/>
+    </linearGradient>
+    <linearGradient id="ano-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5E6AD2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#5E6AD2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#ano-bg)"/>
+  <g stroke="#5E6AD2" stroke-opacity="0.07">
+    <path d="M0 90h640M0 180h640M0 270h640M160 0v360M320 0v360M480 0v360"/>
+  </g>
+
+  <!-- Banda de normalidad -->
+  <path d="M60 140 Q160 118 260 140 T460 140 T580 132 L580 200 Q460 212 380 200 T180 200 T60 208 Z"
+        fill="#5E6AD2" fill-opacity="0.08"/>
+
+  <!-- Serie -->
+  <path d="M60 174 L100 162 L140 182 L180 158 L220 176 L260 164 L300 180 L340 62 L380 172 L420 160 L460 178 L500 166 L540 176 L580 164"
+        fill="none" stroke="#8A93E8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M60 174 L100 162 L140 182 L180 158 L220 176 L260 164 L300 180 L340 62 L380 172 L420 160 L460 178 L500 166 L540 176 L580 164 L580 240 L60 240 Z"
+        fill="url(#ano-fill)"/>
+
+  <!-- Punto anómalo -->
+  <circle cx="340" cy="62" r="11" fill="none" stroke="#f87171" stroke-width="2"/>
+  <circle cx="340" cy="62" r="4.5" fill="#f87171"/>
+  <circle cx="340" cy="62" r="20" fill="none" stroke="#f87171" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 5"/>
+
+  <path d="M60 240h520" stroke="#5E6AD2" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="60" y="300" font-family="ui-monospace, monospace" font-size="15" letter-spacing="3" fill="#5E6AD2">ANOMALÍAS</text>
+  <text x="60" y="324" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#8A8F98">IOT · SERIES TEMPORALES</text>
+</svg>

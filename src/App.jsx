@@ -11,6 +11,7 @@ import Hero from './sections/Hero/Hero'
 const About = lazy(() => import('./sections/About/About'))
 const Experience = lazy(() => import('./sections/Experience/Experience'))
 const Projects = lazy(() => import('./sections/Projects/Projects'))
+const Lab = lazy(() => import('./sections/Lab/Lab'))
 const Skills = lazy(() => import('./sections/Skills/Skills'))
 const Education = lazy(() => import('./sections/Education/Education'))
 const Testimonials = lazy(() => import('./sections/Testimonials/Testimonials'))
@@ -48,6 +49,9 @@ export default function App() {
         </LazySection>
         <LazySection>
           <Projects />
+        </LazySection>
+        <LazySection>
+          <Lab />
         </LazySection>
         <LazySection>
           <Skills />

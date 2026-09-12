@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# LAB — English. Project carousel.
+#
+# ⚠️  THE SIX BELOW ARE SUGGESTIONS, NOT YOUR WORK.
+#     They carry `placeholder: true`, which paints a "proposal" badge over the
+#     cover. When you actually build one — or swap it for something you really
+#     did — delete that line and the badge goes away.
+#     Only remove `placeholder` once the project is real: otherwise you would be
+#     claiming work you did not do.
+#
+# Fields per project:
+#   title    → project name
+#   summary  → short description (2-3 lines; shown in full on the card)
+#   skills   → skills or technologies learned
+#   image    → file inside `public/`, e.g. `proyectos/rag.svg`
+#              16:9 ratio. Leave it empty for a framed title instead.
+#   url      → project link (repo, demo, article…)
+#   linkLabel→ button text
+#   placeholder → true while it is a proposal rather than finished work
+# ---------------------------------------------------------------------------
+
+eyebrow: Lab
+title: What I am building
+lead: >-
+  Smaller projects where I try out ideas and learn new tools. Swipe to browse.
+
+proposalLabel: Proposal
+defaultLinkLabel: View project
+
+items:
+  - title: RAG over industrial cybersecurity standards
+    placeholder: true
+    image: proyectos/rag.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      An assistant that answers questions about IEC 62443 and OT security
+      guidelines, citing the exact paragraph the answer comes from. It joins
+      what I already know about industrial networks with retrieval augmentation.
+    skills: [Python, LangChain, pgvector, FastAPI, Embeddings]
+
+  - title: Real-time traffic classifier
+    placeholder: true
+    image: proyectos/trafico.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Taking the thesis model from a static dataset to a live stream: capture
+      ModBus with Scapy, classify packet by packet and raise the alarm before
+      the attack reaches the PLC.
+    skills: [Scapy, Kafka, TensorFlow, Docker, Streaming]
+
+  - title: Anomaly detection on IoT sensors
+    placeholder: true
+    image: proyectos/anomalias.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Industrial sensor time series analysed with autoencoders to spot odd
+      readings without labelling anything first. Unsupervised detection applied
+      to predictive maintenance.
+    skills: [scikit-learn, Autoencoders, Pandas, Time series]
+
+  - title: MLOps pipeline on AWS
+    placeholder: true
+    image: proyectos/mlops.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Retrain, version and deploy the intrusion detector with no manual steps:
+      experiment tracking with MLflow, infrastructure as code with Terraform and
+      automatic deployment whenever the model improves.
+    skills: [MLflow, Terraform, GitHub Actions, SageMaker, Docker]
+
+  - title: Semantic search over GNSS research
+    placeholder: true
+    image: proyectos/buscador.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      A search engine that understands intent rather than just words: it finds
+      GNSS and SDR papers by meaning, combining embeddings with Elastic's
+      full-text search.
+    skills: [Embeddings, Elastic Search, PostgreSQL, Python]
+
+  - title: Observability for the IDS on a Raspberry Pi
+    placeholder: true
+    image: proyectos/observabilidad.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Knowing what the detector does when nobody is watching: latency, CPU usage
+      and detection rate published to Prometheus and drawn on a Grafana board.
+    skills: [Prometheus, Grafana, Raspberry Pi, Docker Compose]
