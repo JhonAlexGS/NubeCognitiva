@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-M3WJgQ8R.js";import{n as u,r as d,t as f}from"./Section-CEh7NCqS.js";import{t as p}from"./SpotlightCard-CVllyTyf.js";var m=`---\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-DbWE5X3c.js";import{n as u,r as d,t as f}from"./Section-KDDI6yOU.js";import{t as p}from"./SpotlightCard-pnZG5pZc.js";var m=`---\r
 # ---------------------------------------------------------------------------\r
 # EDUCATION — English.\r
 # \`programs\` are degrees and specialisations (large cards).\r
@@ -75,14 +75,13 @@ certifications:\r
   - issuer: Platzi\r
     year: 2025–2026\r
     name: Statistics, prompt engineering, FastAPI, machine learning, linear algebra and linear regression with scikit-learn\r
+# Below this line you can write free Markdown text, shown between the degrees\r
+# and the certifications. Leave it empty —as it is now— and that block is not\r
+# rendered at all.\r
+#\r
+# It used to hold a paragraph about the thesis, removed because it repeated what\r
+# the SCADA IDS card already says under "Featured projects".\r
 ---\r
-\r
-The master's degree ended with a **thesis on industrial cybersecurity**:\r
-training models able to read **ModBus TCP/IP** traffic and recognise an attack\r
-before it reaches the PLC. The result —**99.49% accuracy**, **15.28 percentage\r
-points** above the state of the art— confirmed the idea I had been chasing since\r
-my bachelor's: the networks holding up critical infrastructure deserve the same\r
-artificial intelligence tooling that protects banking today.\r
 `,h=`---\r
 # ---------------------------------------------------------------------------\r
 # FORMACIÓN — español.\r
@@ -160,13 +159,11 @@ certifications:\r
   - issuer: Platzi\r
     year: 2025–2026\r
     name: Estadística, prompt engineering, FastAPI, machine learning, álgebra lineal y regresión lineal con scikit-learn\r
+# Debajo de esta línea puedes escribir un texto libre en Markdown, que aparece\r
+# entre las titulaciones y las certificaciones. Si lo dejas vacío —como ahora—\r
+# esa parte no se muestra.\r
+#\r
+# Estaba ocupado por un párrafo sobre la tesis, que se quitó porque repetía lo\r
+# que ya cuenta la tarjeta del IDS SCADA en «Proyectos destacados».\r
 ---\r
-\r
-La maestría cerró con una **tesis sobre ciberseguridad industrial**: entrenar\r
-modelos capaces de leer tráfico **ModBus TCP/IP** y reconocer un ataque antes de\r
-que llegue al PLC. El resultado —**99.49% de accuracy**, **15.28 puntos\r
-porcentuales** por encima del estado del arte— confirmó la idea que venía\r
-persiguiendo desde el pregrado: las redes que sostienen la infraestructura\r
-crítica merecen las mismas herramientas de inteligencia artificial que hoy\r
-protegen a la banca.\r
-`,g=e(t(),1),_=n(),v=Object.assign({"./content.en.md":m,"./content.es.md":h});function y(){let e=a(),{data:t,body:n}=(0,g.useMemo)(()=>o(v,e),[e]);return(0,_.jsxs)(f,{id:`education`,children:[(0,_.jsx)(u,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,_.jsx)(`div`,{className:`mt-12 grid gap-4 lg:mt-16 lg:grid-cols-2`,children:(t.programs??[]).map((e,t)=>{let n=l(e.icon);return(0,_.jsx)(d,{variants:i,delay:t*.07,className:`min-w-0`,children:(0,_.jsxs)(p,{className:`flex h-full flex-col gap-4 p-6 md:p-7`,children:[(0,_.jsxs)(`div`,{className:`flex items-start justify-between gap-4`,children:[(0,_.jsxs)(`div`,{className:`flex min-w-0 flex-col gap-1.5`,children:[(0,_.jsxs)(`span`,{className:`nc-eyebrow`,children:[e.level,` · `,e.period]}),(0,_.jsx)(`h3`,{className:`text-xl font-semibold tracking-tight text-balance text-ink`,children:e.program}),(0,_.jsxs)(`p`,{className:`text-sm text-ink-muted`,children:[e.institution,` · `,e.location]})]}),(0,_.jsx)(`span`,{className:`grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent`,children:(0,_.jsx)(n,{"aria-hidden":`true`,className:`h-5 w-5`})})]}),(0,_.jsx)(`ul`,{className:`flex flex-col gap-2`,children:(e.highlights??[]).map(e=>(0,_.jsxs)(`li`,{className:`relative pl-5 text-sm leading-relaxed text-ink-muted`,children:[(0,_.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-[0.55em] left-0 h-1 w-1 rounded-full bg-accent/70`}),e]},e))})]})},`${e.institution}-${e.program}`)})}),(0,_.jsx)(d,{className:`mt-10 max-w-3xl border-l-2 border-line-accent pl-6`,children:(0,_.jsx)(c,{children:n})}),t.certifications?.length?(0,_.jsxs)(`div`,{className:`mt-16`,children:[(0,_.jsx)(d,{children:(0,_.jsxs)(`h3`,{className:`mb-6 flex items-center gap-2.5 text-2xl font-semibold tracking-tight text-ink md:text-3xl`,children:[(0,_.jsx)(r.award,{"aria-hidden":`true`,className:`h-6 w-6 text-accent`}),t.certificationsTitle]})}),(0,_.jsx)(`ul`,{className:`grid gap-3 sm:grid-cols-2 lg:grid-cols-3`,children:t.certifications.map((e,n)=>{let r=n===t.certifications.length-1,i=r&&t.certifications.length%2==1,a=r&&t.certifications.length%3==1;return(0,_.jsxs)(d,{as:`li`,variants:s,delay:n*.05,className:`min-w-0 rounded-2xl border border-line bg-surface p-4 shadow-inner-top transition-colors duration-200 hover:border-line-accent hover:bg-surface-hover ${i?`sm:col-span-2`:``} ${a?`lg:col-span-3`:``}`,children:[(0,_.jsxs)(`p`,{className:`flex items-baseline justify-between gap-3 text-sm font-medium text-ink`,children:[e.issuer,(0,_.jsx)(`span`,{className:`shrink-0 font-mono text-[0.6875rem] text-accent`,children:e.year})]}),(0,_.jsx)(`p`,{className:`mt-1.5 text-sm leading-relaxed text-ink-muted`,children:e.name})]},`${e.issuer}-${e.year}-${e.name}`)})})]}):null]})}export{y as default};
+`,g=e(t(),1),_=n(),v=Object.assign({"./content.en.md":m,"./content.es.md":h});function y(){let e=a(),{data:t,body:n}=(0,g.useMemo)(()=>o(v,e),[e]);return(0,_.jsxs)(f,{id:`education`,children:[(0,_.jsx)(u,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,_.jsx)(`div`,{className:`mt-12 grid gap-4 lg:mt-16 lg:grid-cols-2`,children:(t.programs??[]).map((e,t)=>{let n=l(e.icon);return(0,_.jsx)(d,{variants:i,delay:t*.07,className:`min-w-0`,children:(0,_.jsxs)(p,{className:`flex h-full flex-col gap-4 p-6 md:p-7`,children:[(0,_.jsxs)(`div`,{className:`flex items-start justify-between gap-4`,children:[(0,_.jsxs)(`div`,{className:`flex min-w-0 flex-col gap-1.5`,children:[(0,_.jsxs)(`span`,{className:`nc-eyebrow`,children:[e.level,` · `,e.period]}),(0,_.jsx)(`h3`,{className:`text-xl font-semibold tracking-tight text-balance text-ink`,children:e.program}),(0,_.jsxs)(`p`,{className:`text-sm text-ink-muted`,children:[e.institution,` · `,e.location]})]}),(0,_.jsx)(`span`,{className:`grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent`,children:(0,_.jsx)(n,{"aria-hidden":`true`,className:`h-5 w-5`})})]}),(0,_.jsx)(`ul`,{className:`flex flex-col gap-2`,children:(e.highlights??[]).map(e=>(0,_.jsxs)(`li`,{className:`relative pl-5 text-sm leading-relaxed text-ink-muted`,children:[(0,_.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-[0.55em] left-0 h-1 w-1 rounded-full bg-accent/70`}),e]},e))})]})},`${e.institution}-${e.program}`)})}),n.trim()?(0,_.jsx)(d,{className:`mt-10 max-w-3xl border-l-2 border-line-accent pl-6`,children:(0,_.jsx)(c,{children:n})}):null,t.certifications?.length?(0,_.jsxs)(`div`,{className:`mt-16`,children:[(0,_.jsx)(d,{children:(0,_.jsxs)(`h3`,{className:`mb-6 flex items-center gap-2.5 text-2xl font-semibold tracking-tight text-ink md:text-3xl`,children:[(0,_.jsx)(r.award,{"aria-hidden":`true`,className:`h-6 w-6 text-accent`}),t.certificationsTitle]})}),(0,_.jsx)(`ul`,{className:`grid gap-3 sm:grid-cols-2 lg:grid-cols-3`,children:t.certifications.map((e,n)=>{let r=n===t.certifications.length-1,i=r&&t.certifications.length%2==1,a=r&&t.certifications.length%3==1;return(0,_.jsxs)(d,{as:`li`,variants:s,delay:n*.05,className:`min-w-0 rounded-2xl border border-line bg-surface p-4 shadow-inner-top transition-colors duration-200 hover:border-line-accent hover:bg-surface-hover ${i?`sm:col-span-2`:``} ${a?`lg:col-span-3`:``}`,children:[(0,_.jsxs)(`p`,{className:`flex items-baseline justify-between gap-3 text-sm font-medium text-ink`,children:[e.issuer,(0,_.jsx)(`span`,{className:`shrink-0 font-mono text-[0.6875rem] text-accent`,children:e.year})]}),(0,_.jsx)(`p`,{className:`mt-1.5 text-sm leading-relaxed text-ink-muted`,children:e.name})]},`${e.issuer}-${e.year}-${e.name}`)})})]}):null]})}export{y as default};
