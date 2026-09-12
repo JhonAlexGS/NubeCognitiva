@@ -15,23 +15,25 @@ export function Section({ id, className = '', children }) {
 /**
  * Encabezado de sección: etiqueta monoespaciada + titular con degradado +
  * entradilla opcional. Todos los textos llegan desde los archivos de contenido.
+ *
+ * La etiqueta lleva `mb-4`, que se suma al `gap-4` del contenedor: así queda
+ * separada del titular sin alterar la distancia entre titular y entradilla.
  */
 export function SectionHeading({ eyebrow, title, lead, align = 'left' }) {
-  const alignment = align === 'center' ? 'items-center text-center' : 'items-start text-left'
+  const centrado = align === 'center'
+  const alineacion = centrado ? 'mx-auto max-w-3xl items-center text-center' : 'items-start text-left'
 
   return (
-    <Reveal className={`flex max-w-3xl flex-col gap-4 ${alignment} ${align === 'center' ? 'mx-auto' : ''}`}>
+    <Reveal className={`flex flex-col gap-4 ${alineacion}`}>
       {eyebrow ? (
-        <span className="nc-eyebrow inline-flex items-center gap-2">
+        <span className="nc-eyebrow mb-4 inline-flex items-center gap-2">
           <span aria-hidden="true" className="h-px w-6 bg-line-accent" />
           {eyebrow}
         </span>
       ) : null}
 
-      {/* El encabezado de sección queda un escalón por debajo del titular del
-          hero: la jerarquía de la página depende de esa diferencia. */}
       {title ? (
-        <h2 className="nc-heading-gradient text-3xl font-semibold tracking-tight text-balance md:text-4xl">
+        <h2 className="nc-heading-gradient max-w-3xl text-3xl font-semibold tracking-tight text-balance md:text-4xl">
           {title}
         </h2>
       ) : null}

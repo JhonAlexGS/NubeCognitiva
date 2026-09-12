@@ -75,12 +75,10 @@ certifications:
   - issuer: Platzi
     year: 2025–2026
     name: Estadística, prompt engineering, FastAPI, machine learning, álgebra lineal y regresión lineal con scikit-learn
+# Debajo de esta línea puedes escribir un texto libre en Markdown, que aparece
+# entre las titulaciones y las certificaciones. Si lo dejas vacío —como ahora—
+# esa parte no se muestra.
+#
+# Estaba ocupado por un párrafo sobre la tesis, que se quitó porque repetía lo
+# que ya cuenta la tarjeta del IDS SCADA en «Proyectos destacados».
 ---
-
-La maestría cerró con una **tesis sobre ciberseguridad industrial**: entrenar
-modelos capaces de leer tráfico **ModBus TCP/IP** y reconocer un ataque antes de
-que llegue al PLC. El resultado —**99.49% de accuracy**, **15.28 puntos
-porcentuales** por encima del estado del arte— confirmó la idea que venía
-persiguiendo desde el pregrado: las redes que sostienen la infraestructura
-crítica merecen las mismas herramientas de inteligencia artificial que hoy
-protegen a la banca.

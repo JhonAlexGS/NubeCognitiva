@@ -140,7 +140,9 @@ export default function Hero() {
                 <motion.span
                   key={`${word}-${index}`}
                   variants={item}
-                  className="nc-accent-gradient mr-[0.25em] inline-block"
+                  // Un 12% más que la primera línea. Va en `em` y no en una
+                  // utilidad fija para que siga escalando en cada breakpoint.
+                  className="nc-accent-gradient mr-[0.25em] inline-block text-[1.12em]"
                 >
                   {word}
                 </motion.span>

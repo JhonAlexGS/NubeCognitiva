@@ -61,12 +61,7 @@ export default function Testimonials() {
 
   return (
     <Section id="testimonials">
-      <SectionHeading
-        eyebrow={content.eyebrow}
-        title={content.title}
-        lead={content.lead}
-        align="center"
-      />
+      <SectionHeading eyebrow={content.eyebrow} title={content.title} lead={content.lead} />
 
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-6">
         {items.map((testimonial, index) => {
