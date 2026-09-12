@@ -75,11 +75,10 @@ certifications:
   - issuer: Platzi
     year: 2025–2026
     name: Statistics, prompt engineering, FastAPI, machine learning, linear algebra and linear regression with scikit-learn
+# Below this line you can write free Markdown text, shown between the degrees
+# and the certifications. Leave it empty —as it is now— and that block is not
+# rendered at all.
+#
+# It used to hold a paragraph about the thesis, removed because it repeated what
+# the SCADA IDS card already says under "Featured projects".
 ---
-
-The master's degree ended with a **thesis on industrial cybersecurity**:
-training models able to read **ModBus TCP/IP** traffic and recognise an attack
-before it reaches the PLC. The result —**99.49% accuracy**, **15.28 percentage
-points** above the state of the art— confirmed the idea I had been chasing since
-my bachelor's: the networks holding up critical infrastructure deserve the same
-artificial intelligence tooling that protects banking today.

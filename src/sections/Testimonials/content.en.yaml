@@ -49,16 +49,16 @@ items:
     email: ''
     quote: "I had the privilege of working with Jhon García, and I can't say enough about his ability and commitment in the field of programming and telecommunications. Jhon is a highly effective professional, capable of identifying and solving complex problems with exceptional creativity and precision. His solutions-oriented approach and his ability to adapt to any challenge are admirable. Beyond his technical knowledge, Jhon has a great capacity for teamwork and sharing his knowledge, which always enriches the team and facilitates collaboration. Anyone who has the opportunity to work with him will have a great asset on their hands."
 
-  - name: Marco Tulio Terán de la Oz
-    initials: MT
-    role: Assistant professor and HW/SW designer
-    company: Universidad Sergio Arboleda
-    relationship: Thesis advisor
-    link: https://marcoteran.github.io/
-    photo: ''
-    phone: "+57 300 509 5849"
+  - name: Juan Diego Castellanos Bonilla 
+    initials: JC
+    role: Full stack senior 
+    company: University of the Andes
+    relationship: Coally's teammate
+    link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/
+    photo: 'testimonios/juan-castellanos.png'
+    phone: "+57 320 9260584"
     email: ''
-    quote: ''
+    quote: "Jhon is an active and proactive person who doesn't stop working until he finishes his duties. He is a very polished person and always tries to help his coworkers; he's also always fixing things whenever a coworker makes a mistake."
 
   - name: Jonattan Infante Vargas
     initials: JI

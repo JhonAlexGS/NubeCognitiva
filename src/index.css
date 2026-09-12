@@ -318,11 +318,15 @@
     );
   }
 
-  /* Etiqueta monoespaciada de sección. */
+  /* Etiqueta monoespaciada de sección.
+     A 11px y peso normal apenas se leía: el tamaño sube a 13px y el peso a 500
+     para que destaque sin dejar de ser una etiqueta secundaria. El interletraje
+     baja un poco porque a mayor tamaño 0.2em separaba demasiado las palabras. */
   .nc-eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.2em;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--accent);
   }

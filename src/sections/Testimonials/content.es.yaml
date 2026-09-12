@@ -49,16 +49,16 @@ items:
     email: ''
     quote: 'Tuve el privilegio de trabajar con Jhon García, y no puedo decir suficiente sobre su capacidad y compromiso en el área de programación y telecomunicaciones. Jhon es un profesional altamente eficaz, capaz de identificar y resolver problemas complejos con una creatividad y precisión excepcionales. Su enfoque orientado a soluciones y su habilidad para adaptarse a cualquier reto son admirables. Además de su conocimiento técnico, Jhon tiene una gran capacidad para trabajar en equipo y compartir sus conocimientos, lo cual siempre enriquece al equipo y facilita la colaboración. Cualquiera que tenga la oportunidad de trabajar con él tendrá a un gran activo en sus manos.'
 
-  - name: Marco Tulio Terán de la Oz
-    initials: MT
-    role: Profesor asistente y diseñador de HW/SW
-    company: Universidad Sergio Arboleda
-    relationship: Director de tesis
-    link: https://marcoteran.github.io/
-    photo: ''
-    phone: "+57 300 509 5849"
+  - name: Juan Diego Castellanos Bonilla 
+    initials: JC
+    role: Full stack senior 
+    company: Universidad de los Andes
+    relationship: Compañero de equipo en Coally
+    link: https://www.linkedin.com/in/juan-diego-castellanos-bonilla-ba40492a9/
+    photo: 'testimonios/juan-castellanos.png'
+    phone: "+57 320 9260584"
     email: ''
-    quote: ''
+    quote: 'Jhon es una persona activa y pro activa el cual no termina de trabajar sino hasta que él termine sus deberes es una persona muy pulida y siempre intenta ayudar a sus compañeros, también está arreglando siempre que algún compañero cometa un error '
 
   - name: Jonattan Infante Vargas
     initials: JI

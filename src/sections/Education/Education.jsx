@@ -71,10 +71,13 @@ export default function Education() {
         })}
       </div>
 
-      {/* Nota sobre la tesis (cuerpo del Markdown) */}
-      <Reveal className="mt-10 max-w-3xl border-l-2 border-line-accent pl-6">
-        <Markdown>{body}</Markdown>
-      </Reveal>
+      {/* Texto libre opcional entre las titulaciones y las certificaciones.
+          Si el cuerpo del Markdown está vacío no se dibuja nada, ni el borde. */}
+      {body.trim() ? (
+        <Reveal className="mt-10 max-w-3xl border-l-2 border-line-accent pl-6">
+          <Markdown>{body}</Markdown>
+        </Reveal>
+      ) : null}
 
       {/* Certificaciones */}
       {data.certifications?.length ? (
