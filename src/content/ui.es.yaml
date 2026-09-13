@@ -7,7 +7,8 @@ nav:
   about: Sobre mí
   experience: Experiencia
   projects: Proyectos
-  lab: Laboratorio
+  # Corto a propósito: con siete secciones, «Laboratorio» no cabía en el menú.
+  lab: Lab
   skills: Stack
   education: Formación
   testimonials: Testimonios

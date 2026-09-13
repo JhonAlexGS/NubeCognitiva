@@ -27,6 +27,8 @@ lead: >-
 
 proposalLabel: Propuesta
 defaultLinkLabel: Ver proyecto
+detailsLabel: Ver detalles
+skillsLabel: Lo que se aprende
 
 items:
   - title: RAG sobre normativa de ciberseguridad industrial

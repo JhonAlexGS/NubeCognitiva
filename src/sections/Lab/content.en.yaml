@@ -26,6 +26,8 @@ lead: >-
 
 proposalLabel: Proposal
 defaultLinkLabel: View project
+detailsLabel: View details
+skillsLabel: What it teaches
 
 items:
   - title: RAG over industrial cybersecurity standards

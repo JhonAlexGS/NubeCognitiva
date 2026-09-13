@@ -1,9 +1,10 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Reveal } from '../../components/ui/Reveal'
 import { Section, SectionHeading } from '../../components/ui/Section'
 import { useLang } from '../../hooks/useLang'
 import { pickYaml } from '../../lib/content'
 import { LabCarousel } from './LabCarousel/LabCarousel'
+import { LabModal } from './LabModal/LabModal'
 
 // Contenido editable de esta sección: `content.es.yaml` / `content.en.yaml`.
 const CONTENT = import.meta.glob('./content.*.yaml', {
@@ -17,6 +18,9 @@ export default function Lab() {
   const content = useMemo(() => pickYaml(CONTENT, lang) ?? {}, [lang])
   const items = content.items ?? []
 
+  // Índice del proyecto abierto en el diálogo; `null` cuando está cerrado.
+  const [abierto, setAbierto] = useState(null)
+
   if (items.length === 0) return null
 
   return (
@@ -27,9 +31,20 @@ export default function Lab() {
         <LabCarousel
           items={items}
           proposalLabel={content.proposalLabel}
-          defaultLinkLabel={content.defaultLinkLabel}
+          detailsLabel={content.detailsLabel}
+          onOpen={setAbierto}
         />
       </Reveal>
+
+      <LabModal
+        project={
+          abierto === null ? null : { ...items[abierto], skillsLabel: content.skillsLabel }
+        }
+        open={abierto !== null}
+        onClose={() => setAbierto(null)}
+        proposalLabel={content.proposalLabel}
+        defaultLinkLabel={content.defaultLinkLabel}
+      />
     </Section>
   )
 }

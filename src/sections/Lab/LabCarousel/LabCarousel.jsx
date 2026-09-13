@@ -34,7 +34,7 @@ function BotonFlecha({ hacia, deshabilitado, etiqueta, onClick }) {
   )
 }
 
-export function LabCarousel({ items, proposalLabel, defaultLinkLabel }) {
+export function LabCarousel({ items, proposalLabel, detailsLabel, onOpen }) {
   const { t } = useTranslation()
   const pista = useRef(null)
   const [activo, setActivo] = useState(0)
@@ -149,7 +149,8 @@ export function LabCarousel({ items, proposalLabel, defaultLinkLabel }) {
             <LabCard
               project={project}
               proposalLabel={proposalLabel}
-              defaultLinkLabel={defaultLinkLabel}
+              detailsLabel={detailsLabel}
+              onOpen={() => onOpen(index)}
             />
           </li>
         ))}
