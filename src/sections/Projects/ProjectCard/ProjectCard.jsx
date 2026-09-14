@@ -37,7 +37,12 @@ export function ProjectCard({ project, index = 0 }) {
       delay={index * 0.08}
       className={`${SIZES[project.size] ?? SIZES.wide} min-w-0`}
     >
-      <SpotlightCard className="flex h-full flex-col gap-4 p-6 md:p-7">
+      {/* `justify-between` reparte la altura sobrante entre todos los bloques.
+          Las tarjetas que ocupan dos filas de la grilla son más altas de lo que
+          pide su contenido, y antes ese sobrante se acumulaba en un único hueco
+          (111 px en la tarjeta de SCADA) porque las métricas usaban `mt-auto`.
+          Las tarjetas sin sobrante no se ven afectadas. */}
+      <SpotlightCard className="flex h-full flex-col justify-between gap-4 p-6 md:p-7">
         <header className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 flex-col gap-2">
             <span className="nc-eyebrow">{project.kicker}</span>
@@ -61,7 +66,7 @@ export function ProjectCard({ project, index = 0 }) {
         <Markdown className="gap-3">{project.summary ?? ''}</Markdown>
 
         {project.metrics?.length ? (
-          <dl className="mt-auto flex flex-wrap gap-3 pt-2">
+          <dl className="flex flex-wrap gap-3 pt-2">
             {project.metrics.map((metric) => (
               <div
                 key={metric.label}
@@ -77,7 +82,7 @@ export function ProjectCard({ project, index = 0 }) {
         ) : null}
 
         {project.tags?.length ? (
-          <ul className={`flex flex-wrap gap-1.5 ${project.metrics?.length ? '' : 'mt-auto pt-2'}`}>
+          <ul className={`flex flex-wrap gap-1.5 ${project.metrics?.length ? '' : 'pt-2'}`}>
             {project.tags.map((tag) => (
               <li
                 key={tag}
