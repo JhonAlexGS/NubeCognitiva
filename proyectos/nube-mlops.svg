@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Pipeline de MLOps en la nube">
+  <defs>
+    <linearGradient id="nml-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1024"/><stop offset="100%" stop-color="#05060f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#nml-bg)"/>
+  <g stroke="#5E6AD2" stroke-opacity="0.07">
+    <path d="M0 90h640M0 180h640M0 270h640M160 0v360M320 0v360M480 0v360"/>
+  </g>
+
+  <!-- Nube que envuelve el pipeline -->
+  <path d="M104 236a30 30 0 0 1-2-60 44 44 0 0 1 83 7 29 29 0 0 1 5 53 Z"
+        fill="none" stroke="#5E6AD2" stroke-width="2" stroke-linejoin="round" opacity="0.4"
+        transform="translate(0,-26) scale(1.9 1.25)"/>
+
+  <!-- Etapas -->
+  <g fill="none" stroke="#5E6AD2" stroke-width="2">
+    <rect x="72" y="126" width="86" height="50" rx="10"/>
+    <rect x="206" y="126" width="86" height="50" rx="10"/>
+    <rect x="340" y="126" width="86" height="50" rx="10"/>
+    <rect x="474" y="126" width="86" height="50" rx="10"/>
+  </g>
+  <g fill="#8A93E8" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1" text-anchor="middle">
+    <text x="115" y="156">S3</text>
+    <text x="249" y="156">TRAIN</text>
+    <text x="383" y="156">REGISTRY</text>
+    <text x="517" y="156">ENDPOINT</text>
+  </g>
+
+  <g stroke="#8A93E8" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M160 151h44M294 151h44M428 151h44"/>
+    <path d="M198 145l7 6-7 6M332 145l7 6-7 6M466 145l7 6-7 6"/>
+  </g>
+
+  <!-- Disparador automático -->
+  <path d="M517 178 C 517 224, 115 224, 115 180" fill="none" stroke="#5E6AD2" stroke-width="2" stroke-dasharray="5 7" opacity="0.8"/>
+  <path d="M109 190l6-10 6 10" fill="none" stroke="#5E6AD2" stroke-width="2" stroke-linecap="round"/>
+  <text x="316" y="240" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2" fill="#5E6AD2" text-anchor="middle">SIN INTERVENCIÓN MANUAL</text>
+
+  <text x="72" y="300" font-family="ui-monospace, monospace" font-size="15" letter-spacing="3" fill="#5E6AD2">MLOPS EN LA NUBE</text>
+  <text x="72" y="324" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#8A8F98">SAGEMAKER · STEP FUNCTIONS</text>
+</svg>
