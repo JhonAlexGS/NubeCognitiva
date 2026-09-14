@@ -1,3 +1,4 @@
+import { Button } from '../../../components/ui/Button'
 import { Modal } from '../../../components/ui/Modal'
 import { ICONS } from '../../../components/ui/icons'
 import { publicUrl } from '../../../lib/profile'
@@ -70,16 +71,22 @@ export function LabModal({
               </div>
             ) : null}
 
+            {/* Zona de acción: separada por una línea para que se lea como el
+                cierre del diálogo y no como un párrafo más. Antes era un enlace
+                de texto y pasaba desapercibido. */}
             {project.url ? (
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-bright"
-              >
-                {project.linkLabel || defaultLinkLabel}
-                <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </a>
+              <div className="mt-1 border-t border-line pt-6">
+                <Button
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
+                  {project.linkLabel || defaultLinkLabel}
+                  <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
+                </Button>
+              </div>
             ) : null}
           </div>
         </div>
