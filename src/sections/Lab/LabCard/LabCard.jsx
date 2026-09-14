@@ -10,7 +10,7 @@ import { publicUrl } from '../../../lib/profile'
  * La tarjeta es un resumen: la descripción se recorta a tres líneas con puntos
  * suspensivos. Al pulsarla se abre el diálogo con el texto completo y el enlace.
  */
-export function LabCard({ project, proposalLabel, detailsLabel, onOpen }) {
+export function LabCard({ project, proposalLabel, detailsLabel, levelLabel, level, onOpen }) {
   const portada = publicUrl(project.image)
   const inicioDelPuntero = useRef(null)
 
@@ -62,8 +62,15 @@ export function LabCard({ project, proposalLabel, detailsLabel, onOpen }) {
             </div>
           )}
 
+          {/* Nivel de la ruta, arriba a la izquierda; propuesta, a la derecha */}
+          {level ? (
+            <span className="absolute top-3 left-3 rounded-full border border-line-accent bg-accent/15 px-2.5 py-1 font-mono text-[0.625rem] tracking-widest text-accent uppercase backdrop-blur-md">
+              {levelLabel} {level.id} · {level.name}
+            </span>
+          ) : null}
+
           {project.placeholder ? (
-            <span className="absolute top-3 left-3 rounded-full border border-line bg-canvas-base/80 px-2.5 py-1 font-mono text-[0.625rem] tracking-widest text-ink uppercase backdrop-blur-md">
+            <span className="absolute top-3 right-3 rounded-full border border-line bg-canvas-base/80 px-2.5 py-1 font-mono text-[0.625rem] tracking-widest text-ink uppercase backdrop-blur-md">
               {proposalLabel}
             </span>
           ) : null}

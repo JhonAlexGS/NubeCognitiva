@@ -34,7 +34,7 @@ function BotonFlecha({ hacia, deshabilitado, etiqueta, onClick }) {
   )
 }
 
-export function LabCarousel({ items, proposalLabel, detailsLabel, onOpen }) {
+export function LabCarousel({ items, proposalLabel, detailsLabel, levelLabel, levels, onOpen }) {
   const { t } = useTranslation()
   const pista = useRef(null)
   const [activo, setActivo] = useState(0)
@@ -150,6 +150,8 @@ export function LabCarousel({ items, proposalLabel, detailsLabel, onOpen }) {
               project={project}
               proposalLabel={proposalLabel}
               detailsLabel={detailsLabel}
+              levelLabel={levelLabel}
+              level={levels.find((n) => n.id === project.level)}
               onOpen={() => onOpen(index)}
             />
           </li>

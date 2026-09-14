@@ -32,6 +32,8 @@ export default function Lab() {
           items={items}
           proposalLabel={content.proposalLabel}
           detailsLabel={content.detailsLabel}
+          levelLabel={content.levelLabel}
+          levels={content.levels ?? []}
           onOpen={setAbierto}
         />
       </Reveal>
@@ -40,6 +42,12 @@ export default function Lab() {
         project={
           abierto === null ? null : { ...items[abierto], skillsLabel: content.skillsLabel }
         }
+        level={
+          abierto === null
+            ? null
+            : (content.levels ?? []).find((n) => n.id === items[abierto].level)
+        }
+        levelLabel={content.levelLabel}
         open={abierto !== null}
         onClose={() => setAbierto(null)}
         proposalLabel={content.proposalLabel}

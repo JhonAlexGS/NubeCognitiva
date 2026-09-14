@@ -1,96 +1,134 @@
 # ---------------------------------------------------------------------------
 # LAB — English. Project carousel.
 #
-# ⚠️  THE SIX BELOW ARE SUGGESTIONS, NOT YOUR WORK.
-#     They carry `placeholder: true`, which paints a "proposal" badge over the
-#     cover. When you actually build one — or swap it for something you really
-#     did — delete that line and the badge goes away.
-#     Only remove `placeholder` once the project is real: otherwise you would be
-#     claiming work you did not do.
+# ⚠️  Projects with `placeholder: true` are PROPOSALS, not finished work.
+#     The card shows a "proposal" badge while that line is there. Delete it
+#     ONLY once the project is real, and set its actual `url`.
 #
 # Fields per project:
 #   title    → project name
-#   summary  → short description (2-3 lines; shown in full on the card)
-#   skills   → skills or technologies learned
-#   image    → file inside `public/`, e.g. `proyectos/rag.svg`
-#              16:9 ratio. Leave it empty for a framed title instead.
-#   url      → project link (repo, demo, article…)
+#   level    → 1, 2 or 3. Must match an `id` in the `levels` list
+#   summary  → description (clamped to 3 lines on the card)
+#   skills   → what it teaches (the card shows 4 plus a counter)
+#   image    → file inside `public/`, 16:9 ratio
+#   url      → project link
 #   linkLabel→ button text
-#   placeholder → true while it is a proposal rather than finished work
+#   placeholder → true while it is a proposal
 # ---------------------------------------------------------------------------
 
 eyebrow: Lab
 title: What I am building
 lead: >-
-  Smaller projects where I try out ideas and learn new tools. Swipe to browse.
+  A roadmap in three levels: first understand the pieces locally, then automate
+  them, and finally take them to the cloud.
 
 proposalLabel: Proposal
 defaultLinkLabel: View project
 detailsLabel: View details
 skillsLabel: What it teaches
+levelLabel: Level
+
+# The three steps of the roadmap. `id` is what links to the `level` field.
+levels:
+  - id: 1
+    name: Understand
+    note: All local, no cloud
+  - id: 2
+    name: Automate
+    note: Reproducibility and orchestration
+  - id: 3
+    name: Deploy
+    note: To production on AWS
 
 items:
-  - title: RAG over industrial cybersecurity standards
-    placeholder: true
-    image: proyectos/rag.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
-    linkLabel: View project
-    summary: >-
-      An assistant that answers questions about IEC 62443 and OT security
-      guidelines, citing the exact paragraph the answer comes from. It joins
-      what I already know about industrial networks with retrieval augmentation.
-    skills: [Python, LangChain, pgvector, FastAPI, Embeddings]
-
-  - title: Real-time traffic classifier
+  # ---------------------------- Level 1 ----------------------------
+  - title: Network traffic classifier
+    level: 1
     placeholder: true
     image: proyectos/trafico.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
+    url: https://github.com/JhonAlexGS/Network-Traffic-Classifier/tree/main
     linkLabel: View project
     summary: >-
-      Taking the thesis model from a static dataset to a live stream: capture
-      ModBus with Scapy, classify packet by packet and raise the alarm before
-      the attack reaches the PLC.
-    skills: [Scapy, Kafka, TensorFlow, Docker, Streaming]
+      Classifying IT traffic by attack type using public Kaggle data. The
+      challenge is not overall accuracy but the rare classes: some attacks show
+      up in 0.07% of the rows, and a model can score well on average while
+      catching none of them.
+    skills: [Python, scikit-learn, Pandas, Imbalanced classes, Metrics]
 
-  - title: Anomaly detection on IoT sensors
-    placeholder: true
-    image: proyectos/anomalias.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
-    linkLabel: View project
-    summary: >-
-      Industrial sensor time series analysed with autoencoders to spot odd
-      readings without labelling anything first. Unsupervised detection applied
-      to predictive maintenance.
-    skills: [scikit-learn, Autoencoders, Pandas, Time series]
-
-  - title: MLOps pipeline on AWS
-    placeholder: true
-    image: proyectos/mlops.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
-    linkLabel: View project
-    summary: >-
-      Retrain, version and deploy the intrusion detector with no manual steps:
-      experiment tracking with MLflow, infrastructure as code with Terraform and
-      automatic deployment whenever the model improves.
-    skills: [MLflow, Terraform, GitHub Actions, SageMaker, Docker]
-
-  - title: Semantic search over GNSS research
+  - title: Semantic search over job postings
+    level: 1
     placeholder: true
     image: proyectos/buscador.svg
     url: https://jhonalexgs.github.io/NubeCognitiva/
     linkLabel: View project
     summary: >-
-      A search engine that understands intent rather than just words: it finds
-      GNSS and SDR papers by meaning, combining embeddings with Elastic's
-      full-text search.
-    skills: [Embeddings, Elastic Search, PostgreSQL, Python]
+      Searching for "work with models in production" and finding postings that
+      say "MLOps engineer", without sharing a single word. Embeddings and
+      similarity search, no LLM yet, benchmarked against classic keyword search.
+    skills: [Embeddings, Vector search, pgvector, Python]
 
-  - title: Observability for the IDS on a Raspberry Pi
+  - title: RAG over technical documentation
+    level: 1
     placeholder: true
-    image: proyectos/observabilidad.svg
+    image: proyectos/rag.svg
     url: https://jhonalexgs.github.io/NubeCognitiva/
     linkLabel: View project
     summary: >-
-      Knowing what the detector does when nobody is watching: latency, CPU usage
-      and detection rate published to Prometheus and drawn on a Grafana board.
-    skills: [Prometheus, Grafana, Raspberry Pi, Docker Compose]
+      The previous search engine becomes the retrieval layer and generation is
+      added on top. What sets it apart from any chatbot is that every answer
+      cites the document and page it came from. All local, with Ollama, spending
+      nothing on APIs.
+    skills: [LangChain, Ollama, Chunking, Citations, FastAPI]
+
+  # ---------------------------- Level 2 ----------------------------
+  - title: MLOps running locally
+    level: 2
+    placeholder: true
+    image: proyectos/mlops.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Industrialising the level 1 classifier: version the data, track every
+      experiment and retrain only when things change. The goal is being able to
+      say six months from now which data, which commit and which
+      hyperparameters produced the model in production.
+    skills: [MLflow, DVC, GitHub Actions, Docker, Reproducibility]
+
+  - title: AI-driven automation
+    level: 2
+    placeholder: true
+    image: proyectos/automatizacion.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      A workflow that reads new job postings every morning, runs them through
+      the semantic search, filters the ones that fit and sends a summary written
+      by a model. It connects two pieces that already exist instead of building
+      a third from scratch.
+    skills: [n8n, Webhooks, Orchestration, LLM, APIs]
+
+  # ---------------------------- Level 3 ----------------------------
+  - title: The RAG deployed on AWS
+    level: 3
+    placeholder: true
+    image: proyectos/despliegue.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      Taking something that already works to production: Lambda for inference,
+      S3 for the documents, API Gateway as the entry point and Terraform
+      describing the whole infrastructure. Serverless, so it costs nothing while
+      idle.
+    skills: [AWS Lambda, API Gateway, S3, Terraform, Serverless]
+
+  - title: MLOps pipeline on AWS
+    level: 3
+    placeholder: true
+    image: proyectos/nube-mlops.svg
+    url: https://jhonalexgs.github.io/NubeCognitiva/
+    linkLabel: View project
+    summary: >-
+      The end of the road: the level 2 pipeline running by itself in the cloud.
+      Retraining triggered by new data, a model registry and automatic
+      deployment only when the metric improves.
+    skills: [SageMaker, Step Functions, Terraform, CI/CD, Model Registry]

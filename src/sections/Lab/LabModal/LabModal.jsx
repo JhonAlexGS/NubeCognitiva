@@ -6,7 +6,15 @@ import { publicUrl } from '../../../lib/profile'
  * Sub-componente de «Laboratorio»: no tiene contenido propio.
  * Muestra el proyecto completo, con la descripción sin recortar.
  */
-export function LabModal({ project, open, onClose, proposalLabel, defaultLinkLabel }) {
+export function LabModal({
+  project,
+  level,
+  levelLabel,
+  open,
+  onClose,
+  proposalLabel,
+  defaultLinkLabel,
+}) {
   const portada = publicUrl(project?.image)
 
   return (
@@ -31,6 +39,12 @@ export function LabModal({ project, open, onClose, proposalLabel, defaultLinkLab
           ) : null}
 
           <div className="flex flex-col gap-5 p-6 sm:p-8">
+            {level ? (
+              <span className="nc-eyebrow">
+                {levelLabel} {level.id} · {level.name} — {level.note}
+              </span>
+            ) : null}
+
             <h3
               id="proyecto-titulo"
               className="text-2xl font-semibold tracking-tight text-balance text-ink"
