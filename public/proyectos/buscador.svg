@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Buscador semántico">
+  <defs>
+    <linearGradient id="bus-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1024"/><stop offset="100%" stop-color="#05060f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bus-bg)"/>
+  <g stroke="#5E6AD2" stroke-opacity="0.07">
+    <path d="M0 90h640M0 180h640M0 270h640M160 0v360M320 0v360M480 0v360"/>
+  </g>
+
+  <!-- Nubes de puntos agrupadas -->
+  <g fill="#5E6AD2" fill-opacity="0.45">
+    <circle cx="110" cy="98" r="4"/><circle cx="140" cy="120" r="3"/><circle cx="96" cy="132" r="3.5"/>
+    <circle cx="128" cy="86" r="2.5"/><circle cx="158" cy="104" r="3"/>
+  </g>
+  <g fill="#8A93E8">
+    <circle cx="262" cy="158" r="5"/><circle cx="296" cy="142" r="6"/><circle cx="286" cy="182" r="4.5"/>
+    <circle cx="252" cy="192" r="4"/><circle cx="318" cy="172" r="4"/><circle cx="276" cy="124" r="3.5"/>
+  </g>
+  <g fill="#5E6AD2" fill-opacity="0.45">
+    <circle cx="456" cy="116" r="4"/><circle cx="488" cy="136" r="3"/><circle cx="444" cy="148" r="3.5"/>
+    <circle cx="506" cy="106" r="2.5"/><circle cx="472" cy="92" r="3"/>
+  </g>
+  <g fill="#5E6AD2" fill-opacity="0.35">
+    <circle cx="176" cy="222" r="3.5"/><circle cx="206" cy="242" r="3"/><circle cx="150" cy="246" r="2.5"/>
+    <circle cx="452" cy="228" r="3.5"/><circle cx="486" cy="246" r="3"/><circle cx="420" cy="244" r="2.5"/>
+  </g>
+
+  <!-- Grupo resaltado: el resultado -->
+  <circle cx="286" cy="160" r="62" fill="#5E6AD2" fill-opacity="0.08" stroke="#8A93E8" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- Lupa -->
+  <g stroke="#8A93E8" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="400" cy="238" r="26"/>
+    <path d="M420 258l22 22"/>
+  </g>
+
+  <text x="60" y="300" font-family="ui-monospace, monospace" font-size="15" letter-spacing="3" fill="#5E6AD2">BÚSQUEDA SEMÁNTICA</text>
+  <text x="60" y="324" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2" fill="#8A8F98">EMBEDDINGS · ELASTIC · RANKING</text>
+</svg>

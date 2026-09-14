@@ -87,7 +87,10 @@ export function Navbar() {
                   <a
                     href={`#${item.id}`}
                     aria-current={isActive ? 'true' : undefined}
-                    className={`relative rounded-lg px-3 py-2 text-sm transition-colors duration-200 hover:bg-surface hover:text-ink ${
+                    // `whitespace-nowrap`: sin esto, la única etiqueta con
+                    // espacio («Sobre mí») se parte en dos líneas cuando el
+                    // menú va justo de sitio.
+                    className={`relative rounded-lg px-3 py-2 text-sm whitespace-nowrap transition-colors duration-200 hover:bg-surface hover:text-ink ${
                       isActive ? 'text-ink' : 'text-ink-muted'
                     }`}
                   >
@@ -105,9 +108,11 @@ export function Navbar() {
             })}
           </ul>
 
-          {/* Acciones */}
+          {/* Acciones. Los iconos de redes se ocultan cuando aparece el menú
+              horizontal: con siete secciones ya no cabían, y GitHub y LinkedIn
+              siguen estando en el pie y en la sección de contacto. */}
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-1 sm:flex">
+            <div className="hidden items-center gap-1 sm:flex xl:hidden">
               {headerSocialLinks.map((link) => {
                 const Icon = getIcon(link.icon)
                 return (
