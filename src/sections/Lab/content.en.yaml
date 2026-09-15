@@ -44,22 +44,22 @@ items:
   # ---------------------------- Level 1 ----------------------------
   - title: Network traffic classifier
     level: 1
-    placeholder: true
     image: proyectos/trafico.svg
     url: https://github.com/JhonAlexGS/Network-Traffic-Classifier/tree/main
     linkLabel: View project
     summary: >-
-      Classifying IT traffic by attack type using public Kaggle data. The
-      challenge is not overall accuracy but the rare classes: some attacks show
-      up in 0.07% of the rows, and a model can score well on average while
-      catching none of them.
-    skills: [Python, scikit-learn, Pandas, Imbalanced classes, Metrics]
+      Classifying network traffic by attack type: the ones slipping through drop
+      from 8.7% to 0.8%, at the cost of doubling false alarms. The challenge was
+      never overall accuracy but the rare classes — some attacks show up in 0.07%
+      of the rows. Along the way it turned out the dataset's official split
+      carries 25.3% leakage and 1,397 vectors with contradictory labels.
+    skills: [Python, scikit-learn, Imbalanced classes, Data leakage, Metrics]
 
   - title: Semantic search over job postings
     level: 1
     placeholder: true
     image: proyectos/buscador.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
+    url: https://github.com/JhonAlexGS/Semantic-search-over-job-postings
     linkLabel: View project
     summary: >-
       Searching for "work with models in production" and finding postings that
