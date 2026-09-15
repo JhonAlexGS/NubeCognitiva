@@ -30,6 +30,15 @@ actions:
   readFull: Leer completo
   readFullOf: Leer el testimonio completo de {{name}}
 
+resume:
+  label: Hoja de vida
+  open: Descargar hoja de vida
+  close: Cerrar descargas
+  standard: CV en PDF
+  standardNote: Versión con diseño, para leer
+  ats: Versión para ATS
+  atsNote: Texto plano, para filtros automáticos
+
 language:
   current: Español
   short: ES

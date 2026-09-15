@@ -1,16 +1,19 @@
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { useScrolledPast } from '../../hooks/useScrolledPast'
 import { EASE_EXPO } from '../../lib/motion'
 import { ICONS } from '../ui/icons'
 
-/** Botón flotante «volver arriba»: aparece tras desplazarse ~600px. */
+/**
+ * Botón flotante «volver arriba»: aparece tras desplazarse ~600px.
+ *
+ * Ocupa la esquina inferior derecha. Cuando aparece, el botón de la hoja de
+ * vida se aparta al lado opuesto — los dos usan `useScrolledPast` para que el
+ * relevo ocurra en el mismo punto exacto.
+ */
 export function BackToTop() {
   const { t } = useTranslation()
-  const [visible, setVisible] = useState(false)
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, 'change', (value) => setVisible(value > 600))
+  const visible = useScrolledPast(600)
 
   const scrollToTop = () => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
