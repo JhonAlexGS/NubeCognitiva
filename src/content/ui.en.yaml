@@ -29,6 +29,15 @@ actions:
   readFull: Read in full
   readFullOf: Read the full testimonial from {{name}}
 
+resume:
+  label: Résumé
+  open: Download résumé
+  close: Close downloads
+  standard: Résumé (PDF)
+  standardNote: Designed version, for reading
+  ats: ATS-friendly version
+  atsNote: Plain text, for automated screening
+
 language:
   current: English
   short: EN

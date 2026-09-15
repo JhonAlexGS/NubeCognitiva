@@ -4,6 +4,7 @@ import { BackToTop } from './components/BackToTop/BackToTop'
 import { SectionErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
 import { Footer } from './components/Footer/Footer'
 import { Navbar } from './components/Navbar/Navbar'
+import { ResumeDownload } from './components/ResumeDownload/ResumeDownload'
 import Hero from './sections/Hero/Hero'
 
 // El hero se carga con la página; el resto se divide en chunks (code splitting)
@@ -68,6 +69,11 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* Los dos se posicionan solos y se reparten las esquinas: «volver
+          arriba» ocupa la inferior derecha en cuanto aparece, y la hoja de vida
+          se traslada entonces a la superior derecha. */}
+      <ResumeDownload />
       <BackToTop />
     </>
   )
