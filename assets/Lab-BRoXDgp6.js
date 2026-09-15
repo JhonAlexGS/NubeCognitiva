@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{M as i}from"./vendor-CiaQW6Ys.js";import{c as a,d as o,i as s,l as c,n as l,s as u}from"./index-Di8epIVe.js";import{n as d,r as f,t as p}from"./Section-CwgCElvx.js";import{t as m}from"./SpotlightCard-Dno_5EQs.js";import{t as h}from"./Modal-DO7igUsR.js";var g=`# ---------------------------------------------------------------------------
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{M as i}from"./vendor-CiaQW6Ys.js";import{c as a,d as o,i as s,l as c,n as l,s as u}from"./index-DQHk4mEg.js";import{n as d,r as f,t as p}from"./Section-BVRIqSb0.js";import{t as m}from"./SpotlightCard-8uzuOrrp.js";import{t as h}from"./Modal-CuBofy8O.js";var g=`# ---------------------------------------------------------------------------
 # LAB — English. Project carousel.
 #
 # ⚠️  Projects with \`placeholder: true\` are PROPOSALS, not finished work.
@@ -44,22 +44,22 @@ items:
   # ---------------------------- Level 1 ----------------------------
   - title: Network traffic classifier
     level: 1
-    placeholder: true
     image: proyectos/trafico.svg
     url: https://github.com/JhonAlexGS/Network-Traffic-Classifier/tree/main
     linkLabel: View project
     summary: >-
-      Classifying IT traffic by attack type using public Kaggle data. The
-      challenge is not overall accuracy but the rare classes: some attacks show
-      up in 0.07% of the rows, and a model can score well on average while
-      catching none of them.
-    skills: [Python, scikit-learn, Pandas, Imbalanced classes, Metrics]
+      Classifying network traffic by attack type: the ones slipping through drop
+      from 8.7% to 0.8%, at the cost of doubling false alarms. The challenge was
+      never overall accuracy but the rare classes — some attacks show up in 0.07%
+      of the rows. Along the way it turned out the dataset's official split
+      carries 25.3% leakage and 1,397 vectors with contradictory labels.
+    skills: [Python, scikit-learn, Imbalanced classes, Data leakage, Metrics]
 
   - title: Semantic search over job postings
     level: 1
     placeholder: true
     image: proyectos/buscador.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
+    url: https://github.com/JhonAlexGS/Semantic-search-over-job-postings
     linkLabel: View project
     summary: >-
       Searching for "work with models in production" and finding postings that
@@ -178,22 +178,22 @@ items:
   # ---------------------------- Nivel 1 ----------------------------
   - title: Clasificador de tráfico de red
     level: 1
-    placeholder: true
     image: proyectos/trafico.svg
     url: https://github.com/JhonAlexGS/Network-Traffic-Classifier/tree/main
     linkLabel: Ver proyecto
     summary: >-
-      Clasificar tráfico IT por tipo de ataque sobre datos públicos de Kaggle.
-      El reto no es el accuracy global sino las clases raras: hay ataques que
-      aparecen en el 0,07 % de las filas, y un modelo puede sacar buena nota
-      media sin detectar ni uno solo de ellos.
-    skills: [Python, scikit-learn, Pandas, Clases desequilibradas, Métricas]
+      Clasificar tráfico de red por tipo de ataque: los que pasan desapercibidos
+      caen del 8,7 % al 0,8 %, a costa de duplicar las falsas alarmas. El reto no
+      era el accuracy global sino las clases raras — hay ataques en el 0,07 % de
+      las filas. Por el camino apareció que la división oficial del dataset trae
+      un 25,3 % de fuga y 1 397 vectores con etiquetas contradictorias.
+    skills: [Python, scikit-learn, Clases desequilibradas, Fuga de datos, Métricas]
 
   - title: Buscador semántico de ofertas de empleo
     level: 1
     placeholder: true
     image: proyectos/buscador.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
+    url: https://github.com/JhonAlexGS/Semantic-search-over-job-postings/
     linkLabel: Ver proyecto
     summary: >-
       Buscar «trabajo con modelos en producción» y que encuentre ofertas que
