@@ -14,7 +14,7 @@ photoAlt: Portrait of Jhon Alexander García Sierra
 
 # The headline animates word by word. `headlineAccent` gets the accent gradient.
 headline: "Engineering that learns:"
-headlineAccent: from the signal to the model in production
+headlineAccent: making the numbers mean something
 
 # Highlighted metrics (three at most so mobile does not break).
 stats:
@@ -28,6 +28,7 @@ stats:
 scrollHint: Scroll to explore
 ---
 
-Full Stack Developer with two years shipping product in agile teams using
-**React**, **Express** and **AWS**, plus a master's degree spent taking machine
-learning where it is hardest to run: **industrial networks**.
+From experiment to deployment. Two years shipping product in agile teams using
+**React**, **Express** and **AWS**, a master's degree that took machine learning
+into **industrial networks**, and specialisation in **GCP**, **AWS**, **Azure**
+and automation with **n8n** and **UiPath**.

@@ -15,7 +15,7 @@ photoAlt: Retrato de Jhon Alexander García Sierra
 # El titular se anima palabra por palabra. `headlineAccent` se pinta con el
 # degradado de acento.
 headline: "Ingeniería que aprende:"
-headlineAccent: de la señal al modelo en producción
+headlineAccent: que los números signifiquen algo
 
 # Métricas destacadas (máximo 3 para que no se rompa en móvil).
 stats:
@@ -29,6 +29,7 @@ stats:
 scrollHint: Desliza para explorar
 ---
 
-Full Stack Developer con dos años construyendo producto en equipos ágiles con
-**React**, **Express** y **AWS**, y una maestría dedicada a llevar el machine
-learning hasta donde más cuesta: las **redes industriales**.
+Del experimento al despliegue. Dos años construyendo producto en equipos ágiles
+con **React**, **Express** y **AWS**, una maestría que llevó el machine learning
+hasta las **redes industriales**, y especialización en **GCP**, **AWS**,
+**Azure** y automatización con **n8n** y **UiPath**.

@@ -44,13 +44,28 @@ programs:
       - "Stack: S3, EC2, EFS, RDS, VPC, IAM, Lambda, CloudFormation, Auto Scaling and Elastic Load Balancing."
 
   - level: Spec
-    institution: Global & Tecylab
-    program: Cloud Computing, DevOps and Artificial Intelligence
-    period: Jan 2026 – Jun 2026
-    location: Bogotá, Colombia
+    institution: Escuela Global
+    program: Cloud Computing, Data Management and Artificial Intelligence
+    period: Jan 2026 – May 2026
+    location: 350 hours · 8 modules
+    icon: cloud
+    highlights:
+      - "GCP infrastructure: IAM, virtual machines, monitoring and cost control."
+      - "Data and BI: BigQuery, Cloud SQL and dashboards with Looker Studio."
+      - "Applied AI: Vertex AI, machine learning engineering and automation with Python."
+      - "Multicloud: AWS architecture, Azure administration with PowerShell and zero-trust security."
+
+  - level: Spec
+    institution: Escuela Global
+    program: Intelligent Automation and Robotic Agents
+    period: Mar 2026 – Aug 2026
+    location: 350 hours · 6 modules
     icon: devops
     highlights:
-      - "Stack: Python, SQL, Terraform, Docker, Kubernetes, CI/CD, GCP, AWS, Azure, machine learning and business intelligence."
+      - "Orchestration with n8n, from basic workflows to complex AI-driven pipelines."
+      - "Robotic process automation with UiPath and Power Platform, each with a final project."
+      - "Google Sheets with Apps Script: triggers, external APIs and deployment."
+      - "Integrating all three platforms, GDPR compliance and CI/CD with GitHub or Azure DevOps."
 
 certificationsTitle: Certifications
 certifications:

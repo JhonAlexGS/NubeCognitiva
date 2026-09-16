@@ -84,9 +84,11 @@ export default function Hero() {
           {photoUrl ? (
             <motion.div
               style={prefersReducedMotion ? undefined : { y: portraitY }}
-              // Oculto por debajo de 640px: en móvil el retrato empujaba todo el
-              // texto fuera de la primera pantalla y aportaba poco a ese tamaño.
-              className="order-first w-full max-sm:hidden lg:order-last"
+              // Oculto por debajo de `lg`, que es justo donde la rejilla pasa a
+              // dos columnas. Por debajo de ese ancho no hay columna para el
+              // retrato: se colocaba encima del texto, pegado al encabezado, y
+              // empujaba el titular fuera de la primera pantalla.
+              className="order-first w-full max-lg:hidden lg:order-last"
             >
               <motion.div variants={item}>
                 <PortraitCard
@@ -140,9 +142,11 @@ export default function Hero() {
                 <motion.span
                   key={`${word}-${index}`}
                   variants={item}
-                  // Un 12% más que la primera línea. Va en `em` y no en una
-                  // utilidad fija para que siga escalando en cada breakpoint.
-                  className="nc-accent-gradient mr-[0.25em] inline-block text-[1.12em]"
+                  // Algo más pequeña que la primera línea: es la frase larga, y
+                  // agrandarla la partía en demasiados renglones. Va en `em` y
+                  // no en una utilidad fija para que siga escalando en cada
+                  // breakpoint.
+                  className="nc-accent-gradient mr-[0.25em] inline-block text-[0.92em]"
                 >
                   {word}
                 </motion.span>
