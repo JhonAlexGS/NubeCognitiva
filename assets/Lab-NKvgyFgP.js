@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{N as i}from"./vendor-CLLkG1WV.js";import{c as a,d as o,i as s,l as c,n as l,s as u}from"./index-CoAmwVRw.js";import{n as d,r as f,t as p}from"./Section-KQuvGR3Y.js";import{t as m}from"./SpotlightCard-CiIztj6c.js";import{t as h}from"./Modal-Bhn8X1hY.js";var g=`# ---------------------------------------------------------------------------
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{c as t,d as n,u as r}from"./motion-D4psEU6N.js";import{N as i}from"./vendor-CLLkG1WV.js";import{c as a,d as o,i as s,l as c,n as l,s as u}from"./index-DdjNX3VT.js";import{n as d,r as f,t as p}from"./Section-aOTRlD_r.js";import{t as m}from"./SpotlightCard-wFKn46AK.js";import{t as h}from"./Modal-D6lSOebP.js";var g=`# ---------------------------------------------------------------------------
 # LAB — English. Project carousel.
 #
 # ⚠️  Projects with \`placeholder: true\` are PROPOSALS, not finished work.

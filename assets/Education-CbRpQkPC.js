@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-CoAmwVRw.js";import{n as u,r as d,t as f}from"./Section-KQuvGR3Y.js";import{t as p}from"./SpotlightCard-CiIztj6c.js";var m=`---\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{l as r,m as i,n as a,o,p as s,t as c,u as l}from"./index-DdjNX3VT.js";import{n as u,r as d,t as f}from"./Section-aOTRlD_r.js";import{t as p}from"./SpotlightCard-wFKn46AK.js";var m=`---\r
 # ---------------------------------------------------------------------------\r
 # EDUCATION — English.\r
 # \`programs\` are degrees and specialisations (large cards).\r
@@ -44,13 +44,28 @@ programs:\r
       - "Stack: S3, EC2, EFS, RDS, VPC, IAM, Lambda, CloudFormation, Auto Scaling and Elastic Load Balancing."\r
 \r
   - level: Spec\r
-    institution: Global & Tecylab\r
-    program: Cloud Computing, DevOps and Artificial Intelligence\r
-    period: Jan 2026 – Jun 2026\r
-    location: Bogotá, Colombia\r
+    institution: Escuela Global\r
+    program: Cloud Computing, Data Management and Artificial Intelligence\r
+    period: Jan 2026 – May 2026\r
+    location: 350 hours · 8 modules\r
+    icon: cloud\r
+    highlights:\r
+      - "GCP infrastructure: IAM, virtual machines, monitoring and cost control."\r
+      - "Data and BI: BigQuery, Cloud SQL and dashboards with Looker Studio."\r
+      - "Applied AI: Vertex AI, machine learning engineering and automation with Python."\r
+      - "Multicloud: AWS architecture, Azure administration with PowerShell and zero-trust security."\r
+\r
+  - level: Spec\r
+    institution: Escuela Global\r
+    program: Intelligent Automation and Robotic Agents\r
+    period: Mar 2026 – Aug 2026\r
+    location: 350 hours · 6 modules\r
     icon: devops\r
     highlights:\r
-      - "Stack: Python, SQL, Terraform, Docker, Kubernetes, CI/CD, GCP, AWS, Azure, machine learning and business intelligence."\r
+      - "Orchestration with n8n, from basic workflows to complex AI-driven pipelines."\r
+      - "Robotic process automation with UiPath and Power Platform, each with a final project."\r
+      - "Google Sheets with Apps Script: triggers, external APIs and deployment."\r
+      - "Integrating all three platforms, GDPR compliance and CI/CD with GitHub or Azure DevOps."\r
 \r
 certificationsTitle: Certifications\r
 certifications:\r
@@ -128,13 +143,28 @@ programs:\r
       - "Stack: S3, EC2, EFS, RDS, VPC, IAM, Lambda, CloudFormation, Auto Scaling y Elastic Load Balancing."\r
 \r
   - level: Espec\r
-    institution: Global & Tecylab\r
-    program: Cloud Computing, DevOps e Inteligencia Artificial\r
-    period: Ene 2026 – Jun 2026\r
-    location: Bogotá, Colombia\r
+    institution: Escuela Global\r
+    program: Cloud Computing, Gestión de Datos e Inteligencia Artificial\r
+    period: Ene 2026 – May 2026\r
+    location: 350 horas · 8 módulos\r
+    icon: cloud\r
+    highlights:\r
+      - "Infraestructura en GCP: IAM, máquinas virtuales, monitoreo y control de costes."\r
+      - "Datos y BI: BigQuery, Cloud SQL y visualización con Looker Studio."\r
+      - "IA aplicada: Vertex AI, machine learning engineering y automatización con Python."\r
+      - "Multicloud: arquitectura en AWS, administración de Azure con PowerShell y seguridad zero trust."\r
+\r
+  - level: Espec\r
+    institution: Escuela Global\r
+    program: Automatización Inteligente y Agentes Robotizados\r
+    period: Mar 2026 – Ago 2026\r
+    location: 350 horas · 6 módulos\r
     icon: devops\r
     highlights:\r
-      - "Stack: Python, SQL, Terraform, Docker, Kubernetes, CI/CD, GCP, AWS, Azure, machine learning y business intelligence."\r
+      - "Orquestación con n8n, de los flujos básicos a pipelines complejos con IA."\r
+      - "Automatización robotizada con UiPath y Power Platform, con proyecto final en cada una."\r
+      - "Google Sheets con Apps Script: disparadores, APIs externas y despliegue."\r
+      - "Integración de las tres plataformas, cumplimiento GDPR y CI/CD con GitHub o Azure DevOps."\r
 \r
 certificationsTitle: Certificaciones\r
 certifications:\r
