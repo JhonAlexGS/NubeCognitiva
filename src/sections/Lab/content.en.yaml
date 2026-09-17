@@ -71,7 +71,7 @@ items:
     level: 1
     placeholder: true
     image: proyectos/rag.svg
-    url: https://jhonalexgs.github.io/NubeCognitiva/
+    url: https://github.com/JhonAlexGS/Rag-documentacion-tecnica
     linkLabel: View project
     summary: >-
       The previous search engine becomes the retrieval layer and generation is
