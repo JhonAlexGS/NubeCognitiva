@@ -57,15 +57,16 @@ items:
 
   - title: Semantic search over job postings
     level: 1
-    placeholder: true
     image: proyectos/buscador.svg
     url: https://github.com/JhonAlexGS/Semantic-search-over-job-postings
     linkLabel: View project
     summary: >-
-      Searching for "work with models in production" and finding postings that
-      say "MLOps engineer", without sharing a single word. Embeddings and
-      similarity search, no LLM yet, benchmarked against classic keyword search.
-    skills: [Embeddings, Vector search, pgvector, Python]
+      Searching for "handling customer problems over the phone" and getting
+      postings titled "Customer Support Legend", without a single shared word.
+      Against keyword search, P@10 is 1.75x higher across 10,145 postings. Along
+      the way: the hybrid looked like an 11% gain and was worth nothing — the
+      parameter had been tuned on the evaluation set itself.
+    skills: [Embeddings, Vector search, BM25, Retrieval evaluation, Python]
 
   - title: RAG over technical documentation
     level: 1
@@ -74,11 +75,11 @@ items:
     url: https://github.com/JhonAlexGS/Rag-documentacion-tecnica
     linkLabel: View project
     summary: >-
-      The previous search engine becomes the retrieval layer and generation is
-      added on top. What sets it apart from any chatbot is that every answer
-      cites the document and page it came from. All local, with Ollama, spending
-      nothing on APIs.
-    skills: [LangChain, Ollama, Chunking, Citations, FastAPI]
+      Asking questions over 6,503 documentation chunks and getting answers that
+      cite their source. What gets measured is not accuracy, it's how often the
+      system admits it doesn't know: across 150 unanswerable questions,
+      abstention swings from 96% to 16% by changing the model alone.
+    skills: [Ollama, RAG, Citations, Abstention, Generation evaluation]
 
   # ---------------------------- Level 2 ----------------------------
   - title: MLOps running locally

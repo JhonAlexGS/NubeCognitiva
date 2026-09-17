@@ -57,29 +57,29 @@ items:
 
   - title: Buscador semántico de ofertas de empleo
     level: 1
-    placeholder: true
     image: proyectos/buscador.svg
     url: https://github.com/JhonAlexGS/Semantic-search-over-job-postings/
     linkLabel: Ver proyecto
     summary: >-
-      Buscar «trabajo con modelos en producción» y que encuentre ofertas que
-      dicen «MLOps engineer», sin compartir una sola palabra. Embeddings y
-      búsqueda por similitud, sin LLM todavía, comparado contra la búsqueda
-      clásica por palabras clave.
-    skills: [Embeddings, Búsqueda vectorial, pgvector, Python]
+      Buscar «resolver problemas de clientes por teléfono» y que salgan ofertas
+      tituladas «Customer Support Legend», sin una palabra en común. Frente a la
+      búsqueda por palabras clave, el P@10 se multiplica por 1,75 sobre 10 145
+      ofertas. Por el camino: el híbrido parecía mejorar un 11 % y no mejoraba
+      nada — el parámetro se había ajustado mirando la propia evaluación.
+    skills: [Embeddings, Búsqueda vectorial, BM25, Evaluación de recuperación, Python]
 
   - title: RAG sobre documentación técnica
     level: 1
-    placeholder: true
+    # placeholder: true
     image: proyectos/rag.svg
     url: https://github.com/JhonAlexGS/Rag-documentacion-tecnica
     linkLabel: Ver proyecto
     summary: >-
-      El buscador anterior pasa a ser el motor de recuperación y encima se añade
-      generación. Lo que lo separa de un chatbot cualquiera es que cada
-      respuesta cita el documento y la página de donde salió. Todo local, con
-      Ollama, sin gastar en APIs.
-    skills: [LangChain, Ollama, Chunking, Citas, FastAPI]
+      Preguntar sobre 6 503 fragmentos de documentación y recibir respuestas que
+      citan su fuente. Lo que se mide no es el acierto, es cuántas veces el
+      sistema reconoce que no sabe: con 150 preguntas imposibles, la abstención
+      va del 96 % al 16 % solo cambiando el modelo, con todo lo demás igual.
+    skills: [Ollama, RAG, Citas, Abstención, Evaluación de generación]
 
   # ---------------------------- Nivel 2 ----------------------------
   - title: MLOps en local
