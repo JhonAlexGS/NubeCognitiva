@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-DdjNX3VT.js";import{n as o,r as s,t as c}from"./Section-aOTRlD_r.js";var l=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-n4YLm47e.js";import{n as o,r as s,t as c}from"./Section-DpIQGdR_.js";var l=`# ---------------------------------------------------------------------------\r
 # WORK EXPERIENCE — English.\r
 #\r
 # \`items\` is the job list, most recent first. To add one, copy a whole block\r
