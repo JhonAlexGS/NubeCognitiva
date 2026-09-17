@@ -70,7 +70,7 @@ items:
 
   - title: RAG over technical documentation
     level: 1
-    placeholder: true
+    # placeholder: true
     image: proyectos/rag.svg
     url: https://github.com/JhonAlexGS/Rag-documentacion-tecnica
     linkLabel: View project
