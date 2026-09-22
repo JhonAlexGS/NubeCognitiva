@@ -25,9 +25,12 @@ export function ExperienceTimeline({ jobs }) {
           </span>
 
           <div className="flex flex-col gap-1.5">
-            <span className="font-mono text-[0.6875rem] tracking-widest text-accent uppercase">
-              {job.period}
-            </span>
+            {/* Sin `period` en el YAML, la línea de fechas no se pinta. */}
+            {job.period ? (
+              <span className="font-mono text-[0.6875rem] tracking-widest text-accent uppercase">
+                {job.period}
+              </span>
+            ) : null}
             <h3 className="text-lg font-semibold tracking-tight text-ink">
               {job.role}
               <span className="text-ink-muted"> · {job.company}</span>

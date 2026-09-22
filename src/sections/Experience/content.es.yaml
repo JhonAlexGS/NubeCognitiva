@@ -8,7 +8,7 @@
 #   company    → nombre de la empresa
 #   role       → tu cargo
 #   location   → ciudad y país
-#   period     → fechas
+#   period     → fechas (opcional: si se omite, no se muestra la línea de fechas)
 #   highlights → lo que hiciste ahí (una línea por logro)
 #   stack      → tecnologías que usaste
 # ---------------------------------------------------------------------------
@@ -20,6 +20,18 @@ lead: >-
   trabajado, qué construí y con qué lo hice.
 
 items:
+  - company: Grupo Empresarial GED SAS
+    role: Desarrollador Web Full Stack
+    location: Remoto · Colombia
+    # period: Pendiente de confirmar — quita el `#` cuando tengas las fechas.
+    highlights:
+      - Desarrollo del sitio web corporativo con React y JavaScript para presentar las líneas de energía solar, empaques ecológicos y publicidad.
+      - Diseño de interfaces web responsivas orientadas a la captación de clientes.
+      - Despliegue y administración del sitio, dominio y correo corporativo en cPanel.
+      - Modelado y almacenamiento de datos de clientes, proyectos y servicios.
+      - Procesamiento y organización de datos para el seguimiento de proyectos de la empresa.
+    stack: [JavaScript, React, HTML, CSS, SQL, cPanel, Procesamiento de datos]
+
   - company: Coally
     role: Full Stack Developer
     location: Bogotá, Colombia

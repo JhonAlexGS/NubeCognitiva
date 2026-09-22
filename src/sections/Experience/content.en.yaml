@@ -8,7 +8,7 @@
 #   company    → company name
 #   role       → your job title
 #   location   → city and country
-#   period     → dates
+#   period     → dates (optional: if omitted, the dates line is not shown)
 #   highlights → what you did there (one line per achievement)
 #   stack      → technologies you used
 # ---------------------------------------------------------------------------
@@ -20,6 +20,18 @@ lead: >-
   worked, what I built and what I built it with.
 
 items:
+  - company: Grupo Empresarial GED SAS
+    role: Full Stack Web Developer
+    location: Remote · Colombia
+    # period: To be confirmed — remove the `#` once the dates are known.
+    highlights:
+      - Built the corporate website with React and JavaScript to showcase the solar energy, eco-friendly packaging and advertising lines.
+      - Designed responsive web interfaces focused on customer acquisition.
+      - Deployed and managed the site, domain and corporate email through cPanel.
+      - Modelled and stored customer, project and service data.
+      - Processed and organised data to track the company's projects.
+    stack: [JavaScript, React, HTML, CSS, SQL, cPanel, Data processing]
+
   - company: Coally
     role: Full Stack Developer
     location: Bogotá, Colombia
