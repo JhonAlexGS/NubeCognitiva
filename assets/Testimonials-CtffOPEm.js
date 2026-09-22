@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{N as r}from"./vendor-CLLkG1WV.js";import{i,l as a,m as o,n as s,s as c}from"./index-9FJClQZA.js";import{n as l,r as u,t as d}from"./Section-Dbkt-jrR.js";import{t as f}from"./SpotlightCard-D61l0xC-.js";import{t as p}from"./Modal-CQpeRB3k.js";var m=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{N as r}from"./vendor-CLLkG1WV.js";import{i,l as a,m as o,n as s,s as c}from"./index-TcEsjWXC.js";import{n as l,r as u,t as d}from"./Section-CsKWY2zQ.js";import{t as f}from"./SpotlightCard-phUmNWA6.js";import{t as p}from"./Modal-3VX4H50e.js";var m=`# ---------------------------------------------------------------------------\r
 # TESTIMONIALS — English.\r
 #\r
 # ⚠️  A CARD ONLY SHOWS UP ON THE SITE ONCE IT HAS A \`quote\`.\r

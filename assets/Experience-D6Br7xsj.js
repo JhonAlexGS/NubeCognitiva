@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-9FJClQZA.js";import{n as o,r as s,t as c}from"./Section-Dbkt-jrR.js";var l=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-TcEsjWXC.js";import{n as o,r as s,t as c}from"./Section-CsKWY2zQ.js";var l=`# ---------------------------------------------------------------------------\r
 # WORK EXPERIENCE — English.\r
 #\r
 # \`items\` is the job list, most recent first. To add one, copy a whole block\r
@@ -8,7 +8,7 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./m
 #   company    → company name\r
 #   role       → your job title\r
 #   location   → city and country\r
-#   period     → dates\r
+#   period     → dates (optional: if omitted, the dates line is not shown)\r
 #   highlights → what you did there (one line per achievement)\r
 #   stack      → technologies you used\r
 # ---------------------------------------------------------------------------\r
@@ -20,6 +20,18 @@ lead: >-\r
   worked, what I built and what I built it with.\r
 \r
 items:\r
+  - company: Grupo Empresarial GED SAS\r
+    role: Full Stack Web Developer\r
+    location: Remote · Colombia\r
+    # period: To be confirmed — remove the \`#\` once the dates are known.\r
+    highlights:\r
+      - Built the corporate website with React and JavaScript to showcase the solar energy, eco-friendly packaging and advertising lines.\r
+      - Designed responsive web interfaces focused on customer acquisition.\r
+      - Deployed and managed the site, domain and corporate email through cPanel.\r
+      - Modelled and stored customer, project and service data.\r
+      - Processed and organised data to track the company's projects.\r
+    stack: [JavaScript, React, HTML, CSS, SQL, cPanel, Data processing]\r
+\r
   - company: Coally\r
     role: Full Stack Developer\r
     location: Bogotá, Colombia\r
@@ -66,7 +78,7 @@ items:\r
 #   company    → nombre de la empresa\r
 #   role       → tu cargo\r
 #   location   → ciudad y país\r
-#   period     → fechas\r
+#   period     → fechas (opcional: si se omite, no se muestra la línea de fechas)\r
 #   highlights → lo que hiciste ahí (una línea por logro)\r
 #   stack      → tecnologías que usaste\r
 # ---------------------------------------------------------------------------\r
@@ -78,6 +90,18 @@ lead: >-\r
   trabajado, qué construí y con qué lo hice.\r
 \r
 items:\r
+  - company: Grupo Empresarial GED SAS\r
+    role: Desarrollador Web Full Stack\r
+    location: Remoto · Colombia\r
+    # period: Pendiente de confirmar — quita el \`#\` cuando tengas las fechas.\r
+    highlights:\r
+      - Desarrollo del sitio web corporativo con React y JavaScript para presentar las líneas de energía solar, empaques ecológicos y publicidad.\r
+      - Diseño de interfaces web responsivas orientadas a la captación de clientes.\r
+      - Despliegue y administración del sitio, dominio y correo corporativo en cPanel.\r
+      - Modelado y almacenamiento de datos de clientes, proyectos y servicios.\r
+      - Procesamiento y organización de datos para el seguimiento de proyectos de la empresa.\r
+    stack: [JavaScript, React, HTML, CSS, SQL, cPanel, Procesamiento de datos]\r
+\r
   - company: Coally\r
     role: Full Stack Developer\r
     location: Bogotá, Colombia\r
@@ -114,4 +138,4 @@ items:\r
     highlights:\r
       - Desarrollo, revisión y supervisión de nuevas funcionalidades del chatbot de la compañía Zurich.\r
     stack: [Chatbot, QA]\r
-`,d=e(t(),1),f=n();function p({jobs:e}){return(0,f.jsx)(`ol`,{className:`relative flex flex-col gap-8 border-l border-line pl-6 md:gap-10 md:pl-8`,children:e.map((e,t)=>(0,f.jsxs)(s,{as:`li`,variants:i,delay:t*.06,className:`relative`,children:[(0,f.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-1.5 -left-[1.6875rem] grid h-3 w-3 place-items-center rounded-full border border-line-accent bg-canvas-base md:-left-[2.1875rem]`,children:(0,f.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-accent`})}),(0,f.jsxs)(`div`,{className:`flex flex-col gap-1.5`,children:[(0,f.jsx)(`span`,{className:`font-mono text-[0.6875rem] tracking-widest text-accent uppercase`,children:e.period}),(0,f.jsxs)(`h3`,{className:`text-lg font-semibold tracking-tight text-ink`,children:[e.role,(0,f.jsxs)(`span`,{className:`text-ink-muted`,children:[` · `,e.company]})]}),(0,f.jsx)(`p`,{className:`text-xs text-ink-subtle`,children:e.location})]}),(0,f.jsx)(`ul`,{className:`mt-3 flex flex-col gap-2`,children:(e.highlights??[]).map(e=>(0,f.jsxs)(`li`,{className:`relative pl-5 text-sm leading-relaxed text-ink-muted`,children:[(0,f.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-[0.55em] left-0 h-1 w-1 rounded-full bg-accent/70`}),e]},e))}),e.stack?.length?(0,f.jsx)(`ul`,{className:`mt-4 flex flex-wrap gap-1.5`,children:e.stack.map(e=>(0,f.jsx)(`li`,{className:`rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 hover:border-line-accent hover:text-ink`,children:e},e))}):null]},`${e.company}-${e.period}`))})}var m=Object.assign({"./content.en.yaml":l,"./content.es.yaml":u});function h(){let e=r(),t=(0,d.useMemo)(()=>a(m,e)??{},[e]),n=t.items??[];return n.length===0?null:(0,f.jsxs)(c,{id:`experience`,children:[(0,f.jsx)(o,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,f.jsx)(`div`,{className:`mt-12 lg:mt-16`,children:(0,f.jsx)(p,{jobs:n})})]})}export{h as default};
+`,d=e(t(),1),f=n();function p({jobs:e}){return(0,f.jsx)(`ol`,{className:`relative flex flex-col gap-8 border-l border-line pl-6 md:gap-10 md:pl-8`,children:e.map((e,t)=>(0,f.jsxs)(s,{as:`li`,variants:i,delay:t*.06,className:`relative`,children:[(0,f.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-1.5 -left-[1.6875rem] grid h-3 w-3 place-items-center rounded-full border border-line-accent bg-canvas-base md:-left-[2.1875rem]`,children:(0,f.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-accent`})}),(0,f.jsxs)(`div`,{className:`flex flex-col gap-1.5`,children:[e.period?(0,f.jsx)(`span`,{className:`font-mono text-[0.6875rem] tracking-widest text-accent uppercase`,children:e.period}):null,(0,f.jsxs)(`h3`,{className:`text-lg font-semibold tracking-tight text-ink`,children:[e.role,(0,f.jsxs)(`span`,{className:`text-ink-muted`,children:[` · `,e.company]})]}),(0,f.jsx)(`p`,{className:`text-xs text-ink-subtle`,children:e.location})]}),(0,f.jsx)(`ul`,{className:`mt-3 flex flex-col gap-2`,children:(e.highlights??[]).map(e=>(0,f.jsxs)(`li`,{className:`relative pl-5 text-sm leading-relaxed text-ink-muted`,children:[(0,f.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-[0.55em] left-0 h-1 w-1 rounded-full bg-accent/70`}),e]},e))}),e.stack?.length?(0,f.jsx)(`ul`,{className:`mt-4 flex flex-wrap gap-1.5`,children:e.stack.map(e=>(0,f.jsx)(`li`,{className:`rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 hover:border-line-accent hover:text-ink`,children:e},e))}):null]},`${e.company}-${e.period}`))})}var m=Object.assign({"./content.en.yaml":l,"./content.es.yaml":u});function h(){let e=r(),t=(0,d.useMemo)(()=>a(m,e)??{},[e]),n=t.items??[];return n.length===0?null:(0,f.jsxs)(c,{id:`experience`,children:[(0,f.jsx)(o,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,f.jsx)(`div`,{className:`mt-12 lg:mt-16`,children:(0,f.jsx)(p,{jobs:n})})]})}export{h as default};
