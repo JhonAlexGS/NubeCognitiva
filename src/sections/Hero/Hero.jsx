@@ -126,8 +126,9 @@ export default function Hero() {
 
             {/* Titular animado palabra por palabra.
                 El degradado se aplica a cada `span` porque cada palabra anima
-                su propia entrada y necesita su propio relleno recortado. */}
-            <p className="text-4xl leading-[1.05] font-semibold tracking-[-0.03em] text-balance md:text-5xl">
+                su propia entrada y necesita su propio relleno recortado.
+                En móvil va centrado y un punto más pequeño. */}
+            <p className="text-3xl leading-[1.05] font-semibold tracking-[-0.03em] text-balance max-md:self-stretch max-md:text-center md:text-5xl">
               {headlineWords.map((word, index) => (
                 <motion.span
                   key={`${word}-${index}`}
@@ -153,18 +154,31 @@ export default function Hero() {
               ))}
             </p>
 
-            {/* Entradilla (cuerpo del Markdown) */}
-            <motion.div variants={item} className="max-w-2xl">
+            {/* Entradilla (cuerpo del Markdown). En móvil, centrada y en `text-sm`:
+                `[&_p]` hace falta porque el `<p>` de Markdown fija su propio tamaño. */}
+            <motion.div
+              variants={item}
+              className="max-w-2xl max-md:self-stretch max-md:text-center max-md:[&_p]:text-sm"
+            >
               <Markdown>{body}</Markdown>
             </motion.div>
 
-            {/* Llamados a la acción */}
-            <motion.div variants={item} className="flex flex-wrap items-center gap-3">
-              <Button href={CONTACT_ANCHOR} size="lg">
+            {/* Llamados a la acción. En móvil, uno al lado del otro y centrados;
+                se reduce el relleno para que quepan juntos en pantallas de 320 px. */}
+            <motion.div
+              variants={item}
+              className="flex flex-wrap items-center gap-3 max-md:flex-nowrap max-md:justify-center max-md:self-stretch"
+            >
+              <Button href={CONTACT_ANCHOR} size="lg" className="max-md:px-4 max-md:text-sm">
                 {t('actions.contact')}
                 <ICONS.arrowUpRight aria-hidden="true" className="h-4 w-4" />
               </Button>
-              <Button href="#projects" variant="secondary" size="lg">
+              <Button
+                href="#projects"
+                variant="secondary"
+                size="lg"
+                className="max-md:px-4 max-md:text-sm"
+              >
                 {t('actions.viewProjects')}
               </Button>
             </motion.div>
