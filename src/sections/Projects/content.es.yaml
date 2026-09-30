@@ -11,6 +11,10 @@
 #   metrics  → cifras destacadas (opcional, máximo 2)
 #   tags     → tecnologías
 #   icon     → cpu, radio, code, database, cloud, shield, server, terminal...
+#   image    → portada (opcional): archivo dentro de `public/`, idealmente
+#              16:9. La tarjeta grande (`hero`) la recorta a 21:9.
+#   imagePosition → (opcional) qué parte de la portada conservar al recortarla:
+#              top, bottom, left, right o center (por defecto).
 #   size     → hero | tall | wide  (controla el tamaño en la grilla)
 #   links    → lista de enlaces, cada uno con `label` y `url`.
 #              Puedes poner varios (repo, publicación, demo…) o ninguno:
@@ -30,6 +34,7 @@ items:
     kicker: Tesis de maestría · Ciberseguridad industrial
     period: Ene 2024 – Jun 2026
     icon: shield
+    image: proyectos/destacados/scada-ids.webp
     size: hero
     links:
       - label: Ver el código
@@ -52,6 +57,7 @@ items:
     kicker: Investigación · Publicación IEEE 2023
     period: Ene 2020 – Dic 2023
     icon: radio
+    image: proyectos/destacados/gnss-sdr.webp
     size: tall
     links:
       - label: Ver el código
@@ -73,6 +79,8 @@ items:
     kicker: Full Stack · Producto
     period: Ene 2024 – Dic 2025
     icon: code
+    image: proyectos/destacados/coally.webp
+    imagePosition: top
     size: wide
     links:
       - label: Ver el sitio
@@ -88,6 +96,7 @@ items:
     kicker: Full Stack · Datos
     period: Ene 2023 – Dic 2024
     icon: database
+    image: proyectos/destacados/booklick.webp
     size: wide
     links:
       - label: Ver el sitio

@@ -3,6 +3,7 @@ import { Reveal } from '../../../components/ui/Reveal'
 import { SpotlightCard } from '../../../components/ui/SpotlightCard'
 import { ICONS } from '../../../components/ui/icons'
 import { Markdown } from '../../../components/ui/Markdown'
+import { publicUrl } from '../../../lib/profile'
 import { scaleIn } from '../../../lib/motion'
 
 /**
@@ -21,6 +22,7 @@ export function ProjectCard({ project, index = 0 }) {
   const { t } = useTranslation()
   const Icon = ICONS[project.icon] ?? ICONS.layers
   const isHero = project.size === 'hero'
+  const cover = publicUrl(project.image)
   // Un proyecto puede tener varios enlaces (repo, publicación, demo). Se admite
   // también el campo `url` suelto de la versión anterior del YAML.
   const links =
@@ -43,6 +45,33 @@ export function ProjectCard({ project, index = 0 }) {
           (111 px en la tarjeta de SCADA) porque las métricas usaban `mt-auto`.
           Las tarjetas sin sobrante no se ven afectadas. */}
       <SpotlightCard className="flex h-full flex-col justify-between gap-4 p-6 md:p-7">
+        {/* Portada. Va dentro del relleno de la tarjeta, como una ventana con
+            su propio borde, en lugar de ocupar el canto superior: la tarjeta
+            no puede recortar lo que se sale (`overflow: hidden`) porque
+            taparía el borde eléctrico y las llamas. El velo inferior la funde
+            con la tarjeta y suaviza las imágenes claras en modo oscuro. */}
+        {cover ? (
+          <div
+            className={`relative overflow-hidden rounded-xl border border-line bg-canvas-deep ${
+              isHero ? 'aspect-[21/9]' : 'aspect-video'
+            }`}
+          >
+            <img
+              src={cover}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              // `imagePosition` (YAML) elige qué parte se conserva al recortar.
+              style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] dark:brightness-[0.85]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-canvas-deep/50 via-transparent to-transparent"
+            />
+          </div>
+        ) : null}
+
         <header className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 flex-col gap-2">
             <span className="nc-eyebrow">{project.kicker}</span>
