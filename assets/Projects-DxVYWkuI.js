@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{gt as r}from"./vendor-CkKBd864.js";import{i,l as a,m as o,n as s,s as c,t as l}from"./index-BRmO9Jmr.js";import{n as u,r as d,t as f}from"./Section-DIf2GEhA.js";import{t as p}from"./SpotlightCard-BdCj4uQ2.js";var m=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{vt as r}from"./vendor-BDeL4pLW.js";import{i,l as a,m as o,n as s,s as c,t as l}from"./index-zyeK3CI1.js";import{n as u,r as d,t as f}from"./Section-BSDnDQDs.js";import{t as p}from"./SpotlightCard-8-elRe8E.js";var m=`# ---------------------------------------------------------------------------\r
 # FEATURED PROJECTS — English.\r
 # \`items\` is the list of cards. To add a project, copy a whole block and keep\r
 # the indentation.\r
