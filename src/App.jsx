@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { AmbientBackground } from './components/AmbientBackground/AmbientBackground'
 import { BackToTop } from './components/BackToTop/BackToTop'
 import { SectionErrorBoundary } from './components/ErrorBoundary/ErrorBoundary'
+import { ElectricBorderFilter } from './components/ui/ElectricBorderFilter'
 import { Footer } from './components/Footer/Footer'
 import { Navbar } from './components/Navbar/Navbar'
 import { ResumeDownload } from './components/ResumeDownload/ResumeDownload'
@@ -35,6 +36,7 @@ export default function App() {
   return (
     <>
       <AmbientBackground />
+      <ElectricBorderFilter />
       <Navbar />
 
       <main id="main">

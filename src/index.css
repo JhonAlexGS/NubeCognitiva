@@ -306,6 +306,117 @@
     box-shadow: var(--elevation-card-hover);
   }
 
+  /* Borde eléctrico de las tarjetas: la línea de acento se deforma con el
+     filtro SVG `#nc-electric-border` (lo declara `ElectricBorderFilter`).
+     Sólo se ve al pasar el cursor, y el filtro —que es costoso— únicamente se
+     aplica mientras la tarjeta está activa. */
+  .nc-electric {
+    position: absolute;
+    /* -1px: la línea va justo encima del borde de la tarjeta, no por dentro. */
+    inset: -1px;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1));
+  }
+
+  .nc-electric::before,
+  .nc-electric::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid var(--accent-bright);
+  }
+
+  .nc-electric::after {
+    /* Copia desenfocada: es la que da el halo alrededor de la línea. */
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+
+  .nc-electric[data-active='true'] {
+    opacity: 0.85;
+  }
+
+  .nc-electric[data-active='true']::before,
+  .nc-electric[data-active='true']::after {
+    filter: url(#nc-electric-border);
+  }
+
+  .nc-electric[data-active='true']::after {
+    filter: url(#nc-electric-border) blur(2px);
+  }
+
+  /* Llamas: misma idea que el borde eléctrico, pero con el filtro que sube y
+     en tonos azules. Va por debajo de la línea eléctrica y bastante más
+     difuminada, así parece fuego alrededor del borde y no un segundo trazo. */
+  .nc-flame {
+    position: absolute;
+    /* Deja aire alrededor de la tarjeta —más arriba que a los lados— porque es
+       donde se estiran las lenguas. */
+    inset: -30px -16px -16px -16px;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transition: opacity 400ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1));
+  }
+
+  /* El fuego es un anillo con degradado propio, recortado a la línea del borde
+     con `mask-composite`. No depende del filtro SVG para verse: éste solo lo
+     deforma. El degradado se desplaza hacia arriba, que es lo que da la
+     sensación de llamas subiendo. */
+  .nc-flame::before,
+  .nc-flame::after {
+    content: '';
+    position: absolute;
+    inset: 29px 15px 15px 15px;
+    border-radius: 1rem;
+    padding: 2px;
+    background-image: linear-gradient(
+      to top,
+      #1d4ed8 0%,
+      #3b82f6 25%,
+      #7dd3fc 45%,
+      #3b82f6 65%,
+      #1d4ed8 100%
+    );
+    background-size: 100% 300%;
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    mask-clip: content-box, border-box;
+    mask-composite: exclude;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-composite: xor;
+    animation: flame-rise 2.4s linear infinite;
+  }
+
+  .nc-flame::after {
+    /* Copia desenfocada: el halo de calor alrededor del anillo. */
+    opacity: 0.85;
+    filter: blur(8px);
+    animation-duration: 3.1s;
+  }
+
+  .nc-flame[data-active='true'] {
+    opacity: 0.75;
+  }
+
+  .nc-flame[data-active='true']::before {
+    filter: url(#nc-flame-border) blur(1px);
+  }
+
+  .nc-flame[data-active='true']::after {
+    filter: url(#nc-flame-border) blur(9px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nc-electric,
+    .nc-flame {
+      display: none;
+    }
+  }
+
   /* Línea divisoria degradada entre secciones. */
   .nc-divider {
     height: 1px;
@@ -464,3 +575,13 @@
 /*   --blob-right: rgb(99 102 241 / 0.14);                               */
 /*   --blob-bottom: rgb(59 130 246 / 0.10);                              */
 /* ------------------------------------------------------------------ */
+
+/* El degradado del anillo de fuego sube en bucle. */
+@keyframes flame-rise {
+  from {
+    background-position: 50% 0%;
+  }
+  to {
+    background-position: 50% -200%;
+  }
+}
