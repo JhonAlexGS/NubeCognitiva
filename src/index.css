@@ -454,11 +454,81 @@
     padding-right: var(--marquee-gap);
   }
 
-  /* Píldoras del carrusel: el logo va siempre en su color de marca, atenuado,
-     y al pasar el cursor se enciende con un halo del mismo color. Las marcas
-     sin color (Express) usan el acento. */
+  /* Letrero de cada carril del carrusel. En móvil no lleva panel —sólo ícono y
+     texto— porque con seis carriles apilados el fondo cargaba demasiado la
+     pantalla. Desde escritorio es un panel con un velo de acento que se apaga
+     hacia la derecha, barra a la izquierda y una línea que lo conecta con su
+     carril. */
+  .nc-lane-title {
+    position: relative;
+    transition:
+      border-color 300ms var(--ease-expo),
+      box-shadow 300ms var(--ease-expo);
+  }
+
+  @media (min-width: 1024px) {
+    .nc-lane-title {
+      background-image: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--accent) 7%, transparent),
+        transparent 70%
+      ), var(--card-gradient);
+    }
+
+    .nc-lane-title::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 22%;
+      bottom: 22%;
+      width: 2px;
+      border-radius: 9999px;
+      background: var(--accent);
+      opacity: 0.7;
+    }
+  }
+
+  .nc-lane-title__icon {
+    background-color: var(--surface);
+    box-shadow: var(--elevation-inner-top);
+    transition: box-shadow 300ms var(--ease-expo);
+  }
+
+  @media (min-width: 1024px) {
+    .nc-lane-title::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1.5rem;
+      width: 1.5rem;
+      height: 1px;
+      background: linear-gradient(to right, var(--line-accent), transparent);
+    }
+  }
+
+  .group\/lane:hover .nc-lane-title {
+    border-color: var(--line-accent);
+  }
+
+  .group\/lane:hover .nc-lane-title__icon {
+    box-shadow:
+      0 0 14px -4px var(--accent-glow),
+      var(--elevation-inner-top);
+  }
+
+  /* Píldoras del carrusel: el logo va en su color de marca, casi pleno, y la
+     píldora lleva un tinte muy leve de ese color en el fondo y el borde. Al
+     pasar el cursor se enciende del todo con un halo. Las marcas sin color
+     (Express) usan el acento. */
   .nc-logo-pill {
     --pill-color: var(--brand, var(--accent-bright));
+    color: var(--ink);
+    border-color: color-mix(in srgb, var(--pill-color) 20%, var(--line));
+    background-image: linear-gradient(
+      to bottom right,
+      color-mix(in srgb, var(--pill-color) 10%, transparent),
+      transparent 70%
+    );
     transition:
       border-color 250ms var(--ease-expo),
       box-shadow 250ms var(--ease-expo),
@@ -468,7 +538,7 @@
 
   .nc-logo-pill svg {
     color: var(--pill-color);
-    opacity: 0.6;
+    opacity: 0.9;
     transition:
       opacity 250ms var(--ease-expo),
       filter 250ms var(--ease-expo);

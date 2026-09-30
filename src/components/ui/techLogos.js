@@ -39,13 +39,14 @@ import { VscAzure, VscAzureDevops } from 'react-icons/vsc'
 
 /**
  * Logos de tecnologías, indexados por el nombre que se escribe en los YAML
- * (sin distinguir mayúsculas). `color` es el de la marca: los logos se ven
- * en gris y toman ese color al pasar el cursor. Las marcas negras (Express)
- * no llevan color para que no desaparezcan en modo oscuro.
+ * (sin distinguir mayúsculas). `color` es el de la marca, con el que se
+ * tiñen el logo y su píldora en el carrusel. Las marcas negras (Express) no
+ * llevan color para que no desaparezcan en modo oscuro.
  *
- * Si una tecnología no está aquí, su chip se muestra sin logo y no entra en
- * el carrusel. Simple Icons ya no publica los logos de AWS ni de Azure, por
- * eso esos dos salen de Font Awesome y de los íconos de VS Code.
+ * Si una tecnología no está aquí, el carrusel le pone el logo de su carril
+ * (`brand` en el YAML) o, si no hay, sólo el nombre. Simple Icons ya no publica
+ * los logos de AWS ni de Azure, por eso esos dos salen de Font Awesome y de
+ * los íconos de VS Code.
  */
 const LOGOS = {
   python: { icon: SiPython, color: '#3776AB' },

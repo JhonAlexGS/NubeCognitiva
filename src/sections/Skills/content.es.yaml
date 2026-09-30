@@ -1,13 +1,17 @@
 # ---------------------------------------------------------------------------
 # STACK TÉCNICO — español.
-# Cada bloque de `groups` es una tarjeta. Añade o quita tecnologías dentro de
-# `items` sin tocar el código.
-# `icon` acepta: terminal, layers, devops, cloud, server, database, tool, cpu.
+# Cada bloque de `marquee` es un carril del carrusel (alternan de sentido).
+# Añade o quita tecnologías dentro de `items` sin tocar el código.
 #
-# `size` controla el ancho de la tarjeta en escritorio (rejilla de 6 columnas):
-#   narrow = 2 columnas · half = 3 columnas · wide = 4 columnas
-# Procura que los tamaños de cada fila sumen 6, así no quedan huecos.
-# El reparto actual es: 2+2+2 · 3+3 · 2+4
+#   icon   ícono del letrero: terminal, layers, devops, cloud, server,
+#          database, tool, cpu.
+#   title  nombre del carril.
+#   brand  (opcional) logo para las tecnologías del carril que no tienen uno
+#          propio; p. ej. `aws` hace que S3 o Lambda lleven el logo de AWS.
+#   items  tecnologías. Las que tienen logo en `src/components/ui/techLogos.js`
+#          lo muestran; las demás salen sólo con el nombre.
+#
+# `marqueeCount` es el texto del contador de cada carril.
 # ---------------------------------------------------------------------------
 
 eyebrow: Stack técnico
@@ -16,50 +20,23 @@ lead: >-
   Un stack que cubre el recorrido completo: del lenguaje y el framework al
   contenedor, la nube y el tablero que mide si todo eso sirvió para algo.
 
-# `marquee` son las filas del carrusel de logos que va encima de las
-# tarjetas (las filas alternan de sentido); cada una lleva `icon`,
-# `title` e `items`. Sólo aparecen las tecnologías que tienen logo en
-# `src/components/ui/techLogos.js`. `marqueeCount` es el texto del contador.
 marquee:
   - icon: terminal
     title: Lenguajes y web
-    items: [Python, TypeScript, JavaScript, Java, C++, R, HTML/CSS, React, Node.js, Express.js]
+    items: [Python, TypeScript, JavaScript, Java, C++, R, Matlab, SQL, HCL, HTML/CSS, React, Node.js, Express.js]
   - icon: layers
     title: Frameworks y ML
     items: [Spring Boot, FastAPI, TensorFlow, scikit-learn, Jupyter, Databricks, PyCharm, VS Code, NetBeans]
-  - icon: cloud
-    title: Cloud y DevOps
-    items: [AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, SonarQube, Azure Pipelines]
-  - icon: database
-    title: Datos y herramientas
-    items: [PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Elastic Search, Postman, Insomnia, Wireshark]
-
-marqueeCount: tecnologías
-
-groups:
-  - icon: terminal
-    size: narrow
-    title: Lenguajes
-    items: [Python, JavaScript, TypeScript, Java, C++, SQL, HTML/CSS, R, Matlab, HCL]
-
-  - icon: layers
-    size: narrow
-    title: Frameworks
-    items: [React, Express.js, Node.js, Spring Boot, TensorFlow, scikit-learn, FastAPI]
-
   - icon: devops
-    size: narrow
     title: DevOps y CI/CD
-    items: [Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, SonarQube, Azure Pipelines]
-
+    items: [Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, SonarQube, Azure Pipelines]
   - icon: cloud
-    size: half
-    title: Cloud · AWS
-    items: [S3, EC2, ECR, ECS, RDS, Athena, QuickSight, Lambda, SageMaker, Glue, Cloud9]
-
+    title: Servicios AWS
+    brand: aws
+    items: [S3, EC2, ECR, ECS, RDS, Lambda, Athena, Glue, QuickSight, SageMaker, Cloud9]
   - icon: server
-    size: half
-    title: Cloud · Azure
+    title: Servicios Azure
+    brand: azure
     items:
       - Virtual Machines
       - Blob Storage
@@ -69,29 +46,13 @@ groups:
       - Active Directory
       - Data Factory
       - Synapse Analytics
-      - Databricks
       - Machine Learning
       - DevOps
-
   - icon: database
-    size: narrow
-    title: Bases de datos
-    items: [MongoDB, MySQL, MariaDB, PostgreSQL, Elastic Search, Redis]
+    title: Datos y herramientas
+    items: [PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Elastic Search, Power BI, Postman, Insomnia, Wireshark, GNU Radio, GNSS-SDR]
 
-  - icon: tool
-    size: wide
-    title: Herramientas
-    items:
-      - Power BI
-      - Wireshark
-      - Postman
-      - Insomnia
-      - GNU Radio
-      - GNSS-SDR
-      - Jupyter
-      - PyCharm
-      - VS Code
-      - NetBeans
+marqueeCount: tecnologías
 
 languagesTitle: Idiomas
 languages:
