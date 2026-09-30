@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{gt as r}from"./vendor-CkKBd864.js";import{l as i,m as a,n as o,s,t as c}from"./index-CDsiXANK.js";import{n as l,r as u,t as d}from"./Section--bKcI-Q1.js";import{t as f}from"./SpotlightCard-DZiT5fWG.js";var p=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{gt as r}from"./vendor-CkKBd864.js";import{i,l as a,m as o,n as s,s as c,t as l}from"./index-BRmO9Jmr.js";import{n as u,r as d,t as f}from"./Section-DIf2GEhA.js";import{t as p}from"./SpotlightCard-BdCj4uQ2.js";var m=`# ---------------------------------------------------------------------------\r
 # FEATURED PROJECTS — English.\r
 # \`items\` is the list of cards. To add a project, copy a whole block and keep\r
 # the indentation.\r
@@ -11,6 +11,10 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./m
 #   metrics  → highlighted figures (optional, two at most)\r
 #   tags     → technologies\r
 #   icon     → cpu, radio, code, database, cloud, shield, server, terminal...\r
+#   image    → cover (optional): a file inside \`public/\`, ideally 16:9.\r
+#              The large card (\`hero\`) crops it to 21:9.\r
+#   imagePosition → (optional) which part of the cover to keep when cropping:\r
+#              top, bottom, left, right or center (default).\r
 #   size     → hero | tall | wide  (controls the grid footprint)\r
 #   links    → list of links, each with \`label\` and \`url\`.\r
 #              You can add several (repo, paper, demo…) or none: with an empty\r
@@ -30,6 +34,7 @@ items:\r
     kicker: Master's thesis · Industrial cybersecurity\r
     period: Jan 2024 – Jun 2026\r
     icon: shield\r
+    image: proyectos/destacados/scada-ids.webp\r
     size: hero\r
     links:\r
       - label: View the code\r
@@ -52,6 +57,7 @@ items:\r
     kicker: Research · IEEE publication 2023\r
     period: Jan 2020 – Dec 2023\r
     icon: radio\r
+    image: proyectos/destacados/gnss-sdr.webp\r
     size: tall\r
     links:\r
       - label: View the code\r
@@ -72,6 +78,8 @@ items:\r
     kicker: Full Stack · Product\r
     period: Jan 2024 – Dec 2025\r
     icon: code\r
+    image: proyectos/destacados/coally.webp\r
+    imagePosition: top\r
     size: wide\r
     links:\r
       - label: Visit the site\r
@@ -87,6 +95,7 @@ items:\r
     kicker: Full Stack · Data\r
     period: Jan 2023 – Dec 2024\r
     icon: database\r
+    image: proyectos/destacados/booklick.webp\r
     size: wide\r
     links:\r
       - label: Visit the site\r
@@ -96,7 +105,7 @@ items:\r
       **Elastic Search** on **AWS**, plus **Power BI** dashboards to measure how\r
       the platform services are actually used.\r
     tags: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]\r
-`,m=`# ---------------------------------------------------------------------------\r
+`,h=`# ---------------------------------------------------------------------------\r
 # PROYECTOS DESTACADOS — español.\r
 # \`items\` es la lista de tarjetas. Para añadir un proyecto, copia un bloque\r
 # completo respetando la indentación.\r
@@ -109,6 +118,10 @@ items:\r
 #   metrics  → cifras destacadas (opcional, máximo 2)\r
 #   tags     → tecnologías\r
 #   icon     → cpu, radio, code, database, cloud, shield, server, terminal...\r
+#   image    → portada (opcional): archivo dentro de \`public/\`, idealmente\r
+#              16:9. La tarjeta grande (\`hero\`) la recorta a 21:9.\r
+#   imagePosition → (opcional) qué parte de la portada conservar al recortarla:\r
+#              top, bottom, left, right o center (por defecto).\r
 #   size     → hero | tall | wide  (controla el tamaño en la grilla)\r
 #   links    → lista de enlaces, cada uno con \`label\` y \`url\`.\r
 #              Puedes poner varios (repo, publicación, demo…) o ninguno:\r
@@ -128,6 +141,7 @@ items:\r
     kicker: Tesis de maestría · Ciberseguridad industrial\r
     period: Ene 2024 – Jun 2026\r
     icon: shield\r
+    image: proyectos/destacados/scada-ids.webp\r
     size: hero\r
     links:\r
       - label: Ver el código\r
@@ -150,6 +164,7 @@ items:\r
     kicker: Investigación · Publicación IEEE 2023\r
     period: Ene 2020 – Dic 2023\r
     icon: radio\r
+    image: proyectos/destacados/gnss-sdr.webp\r
     size: tall\r
     links:\r
       - label: Ver el código\r
@@ -171,6 +186,8 @@ items:\r
     kicker: Full Stack · Producto\r
     period: Ene 2024 – Dic 2025\r
     icon: code\r
+    image: proyectos/destacados/coally.webp\r
+    imagePosition: top\r
     size: wide\r
     links:\r
       - label: Ver el sitio\r
@@ -186,6 +203,7 @@ items:\r
     kicker: Full Stack · Datos\r
     period: Ene 2023 – Dic 2024\r
     icon: database\r
+    image: proyectos/destacados/booklick.webp\r
     size: wide\r
     links:\r
       - label: Ver el sitio\r
@@ -195,4 +213,4 @@ items:\r
       **Elastic Search** sobre **AWS**, más tableros en **Power BI** para medir\r
       el uso real de los servicios de la plataforma.\r
     tags: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]\r
-`,h=e(t(),1),g=n(),_={hero:`md:col-span-6 lg:col-span-4 lg:row-span-2`,tall:`md:col-span-6 lg:col-span-2 lg:row-span-2`,wide:`md:col-span-3 lg:col-span-3`};function v({project:e,index:t=0}){let{t:n}=r(),o=i[e.icon]??i.layers,s=e.size===`hero`,l=e.links?.length>0?e.links:e.url?[{label:n(`actions.viewProject`),url:e.url}]:[];return(0,g.jsx)(u,{as:`article`,variants:a,delay:t*.08,className:`${_[e.size]??_.wide} min-w-0`,children:(0,g.jsxs)(f,{className:`flex h-full flex-col justify-between gap-4 p-6 md:p-7`,children:[(0,g.jsxs)(`header`,{className:`flex items-start justify-between gap-4`,children:[(0,g.jsxs)(`div`,{className:`flex min-w-0 flex-col gap-2`,children:[(0,g.jsx)(`span`,{className:`nc-eyebrow`,children:e.kicker}),(0,g.jsx)(`h3`,{className:`font-semibold tracking-tight text-balance text-ink ${s?`text-2xl md:text-3xl`:`text-xl`}`,children:e.title})]}),(0,g.jsx)(`span`,{className:`grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent`,children:(0,g.jsx)(o,{"aria-hidden":`true`,className:`h-5 w-5`})})]}),(0,g.jsx)(`p`,{className:`font-mono text-[0.6875rem] tracking-widest text-ink-subtle uppercase`,children:e.period}),(0,g.jsx)(c,{className:`gap-3`,children:e.summary??``}),e.metrics?.length?(0,g.jsx)(`dl`,{className:`flex flex-wrap gap-3 pt-2`,children:e.metrics.map(e=>(0,g.jsxs)(`div`,{className:`min-w-0 flex-1 rounded-xl border border-line bg-surface px-4 py-3 shadow-inner-top`,children:[(0,g.jsx)(`dt`,{className:`text-[0.6875rem] tracking-wide text-ink-subtle`,children:e.label}),(0,g.jsx)(`dd`,{className:`font-mono text-lg font-semibold tracking-tight text-ink`,children:e.value})]},e.label))}):null,e.tags?.length?(0,g.jsx)(`ul`,{className:`flex flex-wrap gap-1.5 ${e.metrics?.length?``:`pt-2`}`,children:e.tags.map(e=>(0,g.jsx)(`li`,{className:`rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 group-hover:border-line-accent group-hover:text-ink`,children:e},e))}):null,l.length>0?(0,g.jsx)(`ul`,{className:`flex flex-wrap items-center gap-x-5 gap-y-2 pt-1`,children:l.map(e=>(0,g.jsx)(`li`,{children:(0,g.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noreferrer noopener`,className:`inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-bright`,children:[e.label,(0,g.jsx)(i.arrowUpRight,{"aria-hidden":`true`,className:`h-4 w-4`})]})},e.url))}):null]})})}var y=Object.assign({"./content.en.yaml":p,"./content.es.yaml":m});function b(){let e=o(),t=(0,h.useMemo)(()=>s(y,e)??{},[e]),n=t.items??[];return(0,g.jsxs)(d,{id:`projects`,children:[(0,g.jsx)(l,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,g.jsx)(`div`,{className:`mt-12 grid auto-rows-min grid-cols-1 gap-4 md:grid-cols-6 lg:mt-16 lg:auto-rows-[minmax(11.25rem,auto)]`,children:n.map((e,t)=>(0,g.jsx)(v,{project:e,index:t},e.id??e.title))})]})}export{b as default};
+`,g=e(t(),1),_=n(),v={hero:`md:col-span-6 lg:col-span-4 lg:row-span-2`,tall:`md:col-span-6 lg:col-span-2 lg:row-span-2`,wide:`md:col-span-3 lg:col-span-3`};function y({project:e,index:t=0}){let{t:n}=r(),s=a[e.icon]??a.layers,c=e.size===`hero`,u=i(e.image),f=e.links?.length>0?e.links:e.url?[{label:n(`actions.viewProject`),url:e.url}]:[];return(0,_.jsx)(d,{as:`article`,variants:o,delay:t*.08,className:`${v[e.size]??v.wide} min-w-0`,children:(0,_.jsxs)(p,{className:`flex h-full flex-col justify-between gap-4 p-6 md:p-7`,children:[u?(0,_.jsxs)(`div`,{className:`relative overflow-hidden rounded-xl border border-line bg-canvas-deep ${c?`aspect-[21/9]`:`aspect-video`}`,children:[(0,_.jsx)(`img`,{src:u,alt:``,loading:`lazy`,decoding:`async`,style:e.imagePosition?{objectPosition:e.imagePosition}:void 0,className:`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] dark:brightness-[0.85]`}),(0,_.jsx)(`div`,{"aria-hidden":`true`,className:`pointer-events-none absolute inset-0 bg-gradient-to-t from-canvas-deep/50 via-transparent to-transparent`})]}):null,(0,_.jsxs)(`header`,{className:`flex items-start justify-between gap-4`,children:[(0,_.jsxs)(`div`,{className:`flex min-w-0 flex-col gap-2`,children:[(0,_.jsx)(`span`,{className:`nc-eyebrow`,children:e.kicker}),(0,_.jsx)(`h3`,{className:`font-semibold tracking-tight text-balance text-ink ${c?`text-2xl md:text-3xl`:`text-xl`}`,children:e.title})]}),(0,_.jsx)(`span`,{className:`grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent`,children:(0,_.jsx)(s,{"aria-hidden":`true`,className:`h-5 w-5`})})]}),(0,_.jsx)(`p`,{className:`font-mono text-[0.6875rem] tracking-widest text-ink-subtle uppercase`,children:e.period}),(0,_.jsx)(l,{className:`gap-3`,children:e.summary??``}),e.metrics?.length?(0,_.jsx)(`dl`,{className:`flex flex-wrap gap-3 pt-2`,children:e.metrics.map(e=>(0,_.jsxs)(`div`,{className:`min-w-0 flex-1 rounded-xl border border-line bg-surface px-4 py-3 shadow-inner-top`,children:[(0,_.jsx)(`dt`,{className:`text-[0.6875rem] tracking-wide text-ink-subtle`,children:e.label}),(0,_.jsx)(`dd`,{className:`font-mono text-lg font-semibold tracking-tight text-ink`,children:e.value})]},e.label))}):null,e.tags?.length?(0,_.jsx)(`ul`,{className:`flex flex-wrap gap-1.5 ${e.metrics?.length?``:`pt-2`}`,children:e.tags.map(e=>(0,_.jsx)(`li`,{className:`rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 group-hover:border-line-accent group-hover:text-ink`,children:e},e))}):null,f.length>0?(0,_.jsx)(`ul`,{className:`flex flex-wrap items-center gap-x-5 gap-y-2 pt-1`,children:f.map(e=>(0,_.jsx)(`li`,{children:(0,_.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noreferrer noopener`,className:`inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-bright`,children:[e.label,(0,_.jsx)(a.arrowUpRight,{"aria-hidden":`true`,className:`h-4 w-4`})]})},e.url))}):null]})})}var b=Object.assign({"./content.en.yaml":m,"./content.es.yaml":h});function x(){let e=s(),t=(0,g.useMemo)(()=>c(b,e)??{},[e]),n=t.items??[];return(0,_.jsxs)(f,{id:`projects`,children:[(0,_.jsx)(u,{eyebrow:t.eyebrow,title:t.title,lead:t.lead}),(0,_.jsx)(`div`,{className:`mt-12 grid auto-rows-min grid-cols-1 gap-4 md:grid-cols-6 lg:mt-16 lg:auto-rows-[minmax(11.25rem,auto)]`,children:n.map((e,t)=>(0,_.jsx)(y,{project:e,index:t},e.id??e.title))})]})}export{x as default};

@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{m as r,n as i,o as a,t as o,u as s}from"./index-CDsiXANK.js";import{n as c,r as l,t as u}from"./Section--bKcI-Q1.js";import{t as d}from"./SpotlightCard-DZiT5fWG.js";var f=`---\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{m as r,n as i,o as a,t as o,u as s}from"./index-BRmO9Jmr.js";import{n as c,r as l,t as u}from"./Section-DIf2GEhA.js";import{t as d}from"./SpotlightCard-BdCj4uQ2.js";var f=`---\r
 # ---------------------------------------------------------------------------\r
 # ABOUT content in English.\r
 # Work experience has its own section: \`src/sections/Experience/\`.\r
