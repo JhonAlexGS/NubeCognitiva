@@ -41,6 +41,13 @@ export function SpotlightCard({ className = '', lift = true, children, ...rest }
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
       />
+
+      {/* Borde eléctrico y llamas: la línea de acento vibra y el fuego la
+          lame de abajo hacia arriba mientras el cursor está encima. Los
+          filtros solo se aplican en ese momento —son caros— y con movimiento
+          reducido ninguna de las dos capas se dibuja (ver `src/index.css`). */}
+      <span aria-hidden="true" className="nc-flame" data-active={hovered ? 'true' : 'false'} />
+      <span aria-hidden="true" className="nc-electric" data-active={hovered ? 'true' : 'false'} />
       {children}
     </motion.div>
   )
