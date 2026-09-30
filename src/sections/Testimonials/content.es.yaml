@@ -38,6 +38,31 @@ lead: >-
 placeholderLabel: Contenido de ejemplo
 
 items:
+  - name: Julio Esteban Jordan Losada
+    initials: EJ
+    role: Ingeniero Mecatrónico · MSc en Inteligencia Artificial
+    company: Grupo Empresarial Colombia GED
+    relationship: Jefe en GED
+    link: ''
+    photo: 'testimonios/esteban-jordan.webp'
+    phone: ''
+    email: ''
+    quote: >-
+      Trabajar con Jhon en Grupo Empresarial Colombia GED fue una gran
+      experiencia. Teníamos tres líneas de negocio muy distintas (energía
+      solar, empaques ecológicos y publicidad) y él logró reunirlas en un solo
+      sitio corporativo, construido con React y JavaScript y pensado para que
+      los clientes nos encuentren y contacten fácilmente desde el celular o el
+      computador.
+
+      Además, se encargó de todo lo que sostiene la página: hosting, dominio y
+      correo corporativo en cPanel, con el servicio siempre disponible. También
+      organizó y automatizó los datos de clientes y proyectos, y hoy el equipo
+      tiene un seguimiento mucho más claro para tomar decisiones.
+
+      Puntual, cumplido y honesto, trabaja muy bien en equipo y sabe liderar
+      cuando hace falta. Lo recomiendo sin dudar.
+
   - name: Juan Felipe Osorio Téllez
     initials: JO
     role: Ingeniero de Sistemas y Telecomunicaciones

@@ -29,6 +29,9 @@ actions:
   close: Cerrar
   readFull: Leer completo
   readFullOf: Leer el testimonio completo de {{name}}
+  previous: Anterior
+  next: Siguiente
+  goToTestimonial: Ver el testimonio de {{name}}
 
 resume:
   label: Hoja de vida

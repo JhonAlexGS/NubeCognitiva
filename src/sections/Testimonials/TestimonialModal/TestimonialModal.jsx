@@ -62,14 +62,21 @@ export function TestimonialModal({ testimonial, open, onClose, placeholderLabel 
           <div className="nc-divider" />
 
           {/* Reseña completa */}
-          <blockquote className="relative pl-6 text-base leading-relaxed text-ink-muted">
+          {/* Las reseñas largas pueden tener varios párrafos (separados por una
+              línea en blanco en el YAML): cada uno se pinta aparte. */}
+          <blockquote className="relative flex flex-col gap-4 pl-6 text-base leading-relaxed text-ink-muted">
             <span
               aria-hidden="true"
               className="absolute top-0 left-0 font-serif text-4xl leading-none text-accent/40 select-none"
             >
               &ldquo;
             </span>
-            {testimonial.quote}
+            {String(testimonial.quote)
+              .split(/\n+/)
+              .filter((parrafo) => parrafo.trim())
+              .map((parrafo, indice) => (
+                <p key={indice}>{parrafo}</p>
+              ))}
           </blockquote>
 
           {enlace ? (

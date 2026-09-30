@@ -38,6 +38,32 @@ lead: >-
 placeholderLabel: Example content
 
 items:
+  - name: Julio Esteban Jordan Losada
+    initials: EJ
+    role: Mechatronics Engineer · MSc in Artificial Intelligence
+    company: Grupo Empresarial Colombia GED
+    relationship: Manager at GED
+    link: ''
+    photo: 'testimonios/esteban-jordan.webp'
+    phone: ''
+    email: ''
+    # Traducción al inglés del testimonio original en español.
+    quote: >-
+      Working with Jhon at Grupo Empresarial Colombia GED was a great
+      experience. We had three very different business lines (solar energy,
+      eco-friendly packaging and advertising), and he managed to bring them
+      together in a single corporate website, built with React and JavaScript
+      and designed so that clients can easily find and contact us from their
+      phone or computer.
+
+      He also took care of everything that keeps the site running: hosting,
+      domain and corporate email on cPanel, with the service always available.
+      He also organized and automated our client and project data, and today
+      the team has much clearer tracking to make decisions.
+
+      Punctual, reliable and honest, he works very well in a team and knows how
+      to lead when needed. I recommend him without hesitation.
+
   - name: Juan Felipe Osorio Téllez
     initials: JO
     role: Systems and Telecommunications Engineer
