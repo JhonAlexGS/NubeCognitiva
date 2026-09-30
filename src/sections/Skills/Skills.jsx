@@ -1,12 +1,9 @@
-import { motion } from 'framer-motion'
 import { useMemo } from 'react'
 import { Reveal } from '../../components/ui/Reveal'
 import { Section, SectionHeading } from '../../components/ui/Section'
-import { SpotlightCard } from '../../components/ui/SpotlightCard'
-import { getIcon } from '../../components/ui/icons'
 import { useLang } from '../../hooks/useLang'
 import { pickYaml } from '../../lib/content'
-import { EASE_EXPO, scaleIn } from '../../lib/motion'
+import { TechMarquee } from './TechMarquee'
 
 // Contenido editable de esta sección: `content.es.yaml` / `content.en.yaml`.
 const CONTENT = import.meta.glob('./content.*.yaml', {
@@ -15,63 +12,19 @@ const CONTENT = import.meta.glob('./content.*.yaml', {
   eager: true,
 })
 
-// Rejilla bento de 6 columnas en escritorio: el ancho de cada tarjeta lo
-// decide su campo `size` en el YAML, igual que en la sección de proyectos.
-const SIZES = {
-  narrow: 'lg:col-span-2',
-  half: 'lg:col-span-3',
-  wide: 'lg:col-span-4',
-}
-
 export default function Skills() {
   const lang = useLang()
   const content = useMemo(() => pickYaml(CONTENT, lang) ?? {}, [lang])
-  const groups = content.groups ?? []
 
   return (
     <Section id="skills">
       <SectionHeading eyebrow={content.eyebrow} title={content.title} lead={content.lead} />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-6">
-        {groups.map((group, index) => {
-          const Icon = getIcon(group.icon)
-          // Con un número impar de tarjetas, la última quedaría sola en su fila
-          // de dos columnas; se estira para cerrar el hueco.
-          const cierraFila = index === groups.length - 1 && groups.length % 2 === 1
-          return (
-            <Reveal
-              key={group.title}
-              variants={scaleIn}
-              delay={index * 0.06}
-              className={`min-w-0 ${SIZES[group.size] ?? SIZES.narrow} ${cierraFila ? 'sm:col-span-2' : ''}`}
-            >
-              <SpotlightCard className="flex h-full flex-col gap-4 p-6">
-                <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-surface text-accent shadow-inner-top transition-colors duration-200 group-hover:border-line-accent">
-                    <Icon aria-hidden="true" className="h-[1.15rem] w-[1.15rem]" />
-                  </span>
-                  <h3 className="text-base font-semibold tracking-tight text-ink">
-                    {group.title}
-                  </h3>
-                </div>
-
-                <ul className="flex flex-wrap gap-1.5">
-                  {(group.items ?? []).map((item) => (
-                    <motion.li
-                      key={item}
-                      whileHover={{ y: -2 }}
-                      transition={{ duration: 0.2, ease: EASE_EXPO }}
-                      className="rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 hover:border-line-accent hover:text-ink"
-                    >
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
-              </SpotlightCard>
-            </Reveal>
-          )
-        })}
-      </div>
+      {content.marquee?.length ? (
+        <Reveal className="mt-12 lg:mt-16">
+          <TechMarquee rows={content.marquee} countLabel={content.marqueeCount} />
+        </Reveal>
+      ) : null}
 
       {/* Idiomas */}
       {content.languages?.length ? (

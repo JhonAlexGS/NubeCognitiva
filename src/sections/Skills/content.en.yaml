@@ -1,13 +1,17 @@
 # ---------------------------------------------------------------------------
 # TECH STACK — English.
-# Every block inside `groups` is a card. Add or remove technologies inside
-# `items` without touching any code.
-# `icon` accepts: terminal, layers, devops, cloud, server, database, tool, cpu.
+# Every block inside `marquee` is a carousel lane (lanes alternate direction).
+# Add or remove technologies inside `items` without touching any code.
 #
-# `size` controls the card width on desktop (6-column grid):
-#   narrow = 2 columns · half = 3 columns · wide = 4 columns
-# Keep each row's sizes adding up to 6 so no gaps are left behind.
-# Current split: 2+2+2 · 3+3 · 2+4
+#   icon   sign icon: terminal, layers, devops, cloud, server, database,
+#          tool, cpu.
+#   title  lane name.
+#   brand  (optional) logo for the lane's technologies that have none of their
+#          own; e.g. `aws` gives S3 or Lambda the AWS logo.
+#   items  technologies. Those with a logo in `src/components/ui/techLogos.js`
+#          show it; the rest show just their name.
+#
+# `marqueeCount` is the counter label of each lane.
 # ---------------------------------------------------------------------------
 
 eyebrow: Tech stack
@@ -17,30 +21,23 @@ lead: >-
   the container, the cloud and the dashboard that tells you whether any of it
   worked.
 
-groups:
+marquee:
   - icon: terminal
-    size: narrow
-    title: Languages
-    items: [Python, JavaScript, TypeScript, Java, C++, SQL, HTML/CSS, R, Matlab, HCL]
-
+    title: Languages and web
+    items: [Python, TypeScript, JavaScript, Java, C++, R, Matlab, SQL, HCL, HTML/CSS, React, Node.js, Express.js]
   - icon: layers
-    size: narrow
-    title: Frameworks
-    items: [React, Express.js, Node.js, Spring Boot, TensorFlow, scikit-learn, FastAPI]
-
+    title: Frameworks and ML
+    items: [Spring Boot, FastAPI, TensorFlow, scikit-learn, Jupyter, Databricks, PyCharm, VS Code, NetBeans]
   - icon: devops
-    size: narrow
     title: DevOps and CI/CD
-    items: [Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, SonarQube, Azure Pipelines]
-
+    items: [Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, SonarQube, Azure Pipelines]
   - icon: cloud
-    size: half
-    title: Cloud · AWS
-    items: [S3, EC2, ECR, ECS, RDS, Athena, QuickSight, Lambda, SageMaker, Glue, Cloud9]
-
+    title: AWS services
+    brand: aws
+    items: [S3, EC2, ECR, ECS, RDS, Lambda, Athena, Glue, QuickSight, SageMaker, Cloud9]
   - icon: server
-    size: half
-    title: Cloud · Azure
+    title: Azure services
+    brand: azure
     items:
       - Virtual Machines
       - Blob Storage
@@ -50,29 +47,13 @@ groups:
       - Active Directory
       - Data Factory
       - Synapse Analytics
-      - Databricks
       - Machine Learning
       - DevOps
-
   - icon: database
-    size: narrow
-    title: Databases
-    items: [MongoDB, MySQL, MariaDB, PostgreSQL, Elastic Search, Redis]
+    title: Data and tools
+    items: [PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Elastic Search, Power BI, Postman, Insomnia, Wireshark, GNU Radio, GNSS-SDR]
 
-  - icon: tool
-    size: wide
-    title: Tools
-    items:
-      - Power BI
-      - Wireshark
-      - Postman
-      - Insomnia
-      - GNU Radio
-      - GNSS-SDR
-      - Jupyter
-      - PyCharm
-      - VS Code
-      - NetBeans
+marqueeCount: technologies
 
 languagesTitle: Languages
 languages:

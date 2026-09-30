@@ -417,6 +417,169 @@
     }
   }
 
+  /* Carrusel infinito de logos (lo pinta `TechMarquee`). Cada pista lleva la
+     lista dos veces y se desplaza la mitad de su ancho, así el final de la
+     copia encaja con el principio. El espacio entre listas va como
+     `padding-right` —no como `gap` de la pista— para que las dos mitades midan
+     exactamente lo mismo. Los bordes se funden con una máscara. Cada fila es
+     su propio `.nc-marquee`, así el título queda fuera de la máscara y sólo
+     se pausa la fila que está bajo el cursor. */
+  .nc-marquee {
+    --marquee-gap: 0.75rem;
+    overflow: hidden;
+    /* Aire arriba y abajo para que el halo de los logos no se corte con el
+       `overflow`; el margen negativo lo compensa en el diseño. */
+    padding-block: 0.75rem;
+    margin-block: -0.75rem;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .nc-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .nc-marquee__track[data-reverse='true'] {
+    animation-direction: reverse;
+  }
+
+  .nc-marquee:hover .nc-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .nc-marquee__list {
+    display: flex;
+    gap: var(--marquee-gap);
+    padding-right: var(--marquee-gap);
+  }
+
+  /* Letrero de cada carril del carrusel. En móvil no lleva panel —sólo ícono y
+     texto— porque con seis carriles apilados el fondo cargaba demasiado la
+     pantalla. Desde escritorio es un panel con un velo de acento que se apaga
+     hacia la derecha, barra a la izquierda y una línea que lo conecta con su
+     carril. */
+  .nc-lane-title {
+    position: relative;
+    transition:
+      border-color 300ms var(--ease-expo),
+      box-shadow 300ms var(--ease-expo);
+  }
+
+  @media (min-width: 1024px) {
+    .nc-lane-title {
+      background-image: linear-gradient(
+        to right,
+        color-mix(in srgb, var(--accent) 7%, transparent),
+        transparent 70%
+      ), var(--card-gradient);
+    }
+
+    .nc-lane-title::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 22%;
+      bottom: 22%;
+      width: 2px;
+      border-radius: 9999px;
+      background: var(--accent);
+      opacity: 0.7;
+    }
+  }
+
+  .nc-lane-title__icon {
+    background-color: var(--surface);
+    box-shadow: var(--elevation-inner-top);
+    transition: box-shadow 300ms var(--ease-expo);
+  }
+
+  @media (min-width: 1024px) {
+    .nc-lane-title::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1.5rem;
+      width: 1.5rem;
+      height: 1px;
+      background: linear-gradient(to right, var(--line-accent), transparent);
+    }
+  }
+
+  .group\/lane:hover .nc-lane-title {
+    border-color: var(--line-accent);
+  }
+
+  .group\/lane:hover .nc-lane-title__icon {
+    box-shadow:
+      0 0 14px -4px var(--accent-glow),
+      var(--elevation-inner-top);
+  }
+
+  /* Píldoras del carrusel: el logo va en su color de marca, casi pleno, y la
+     píldora lleva un tinte muy leve de ese color en el fondo y el borde. Al
+     pasar el cursor se enciende del todo con un halo. Las marcas sin color
+     (Express) usan el acento. */
+  .nc-logo-pill {
+    --pill-color: var(--brand, var(--accent-bright));
+    color: var(--ink);
+    border-color: color-mix(in srgb, var(--pill-color) 20%, var(--line));
+    background-image: linear-gradient(
+      to bottom right,
+      color-mix(in srgb, var(--pill-color) 10%, transparent),
+      transparent 70%
+    );
+    transition:
+      border-color 250ms var(--ease-expo),
+      box-shadow 250ms var(--ease-expo),
+      color 250ms var(--ease-expo),
+      transform 250ms var(--ease-expo);
+  }
+
+  .nc-logo-pill svg {
+    color: var(--pill-color);
+    opacity: 0.9;
+    transition:
+      opacity 250ms var(--ease-expo),
+      filter 250ms var(--ease-expo);
+  }
+
+  .nc-logo-pill:hover {
+    color: var(--ink);
+    border-color: color-mix(in srgb, var(--pill-color) 45%, transparent);
+    box-shadow:
+      0 0 24px -6px color-mix(in srgb, var(--pill-color) 55%, transparent),
+      var(--elevation-inner-top);
+    transform: translateY(-2px);
+  }
+
+  .nc-logo-pill:hover svg {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--pill-color) 70%, transparent));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nc-marquee {
+      mask-image: none;
+    }
+
+    .nc-marquee__track {
+      width: auto;
+      animation: none;
+    }
+
+    .nc-marquee__list {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    .nc-marquee__list[data-copy],
+    .nc-marquee__list [data-repeat] {
+      display: none;
+    }
+  }
+
   /* Línea divisoria degradada entre secciones. */
   .nc-divider {
     height: 1px;
@@ -534,6 +697,12 @@
   50% {
     opacity: 0.9;
     transform: scale(1.06);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
