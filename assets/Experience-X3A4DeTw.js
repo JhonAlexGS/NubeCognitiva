@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-2Rzjriou.js";import{n as o,r as s,t as c}from"./Section-BxYROP5F.js";var l=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,u as n}from"./motion-D4psEU6N.js";import{n as r,p as i,s as a}from"./index-CDsiXANK.js";import{n as o,r as s,t as c}from"./Section--bKcI-Q1.js";var l=`# ---------------------------------------------------------------------------\r
 # WORK EXPERIENCE — English.\r
 #\r
 # \`items\` is the job list, most recent first. To add one, copy a whole block\r
@@ -20,6 +20,18 @@ lead: >-\r
   worked, what I built and what I built it with.\r
 \r
 items:\r
+  - company: Grupo Empresarial Colombia GED\r
+    role: Full Stack Web Developer\r
+    location: Neiva, Huila, Colombia · Remote\r
+    period: Sep 2025 – Aug 2026\r
+    highlights:\r
+      - Built the corporate website with React and JavaScript, bringing the solar energy, eco-friendly packaging and advertising business lines together on a single platform.\r
+      - Designed conversion-focused responsive interfaces that improved lead capture on mobile and desktop.\r
+      - Managed the whole cPanel infrastructure (hosting, domain and corporate email), keeping the service available and running.\r
+      - Modeled and structured the client, project and service databases, laying the groundwork for a scalable tracking system.\r
+      - Automated the processing and organization of project data, making tracking and team decision-making easier.\r
+    stack: [React, JavaScript, cPanel, Databases, Automation]\r
+\r
   - company: Coally\r
     role: Full Stack Developer\r
     location: Bogotá, Colombia\r
@@ -78,6 +90,18 @@ lead: >-\r
   trabajado, qué construí y con qué lo hice.\r
 \r
 items:\r
+  - company: Grupo Empresarial Colombia GED\r
+    role: Desarrollador Web Full Stack\r
+    location: Neiva, Huila, Colombia · Remoto\r
+    period: Sep 2025 – Ago 2026\r
+    highlights:\r
+      - Desarrollo del sitio web corporativo con React y JavaScript, que reúne en una sola plataforma las líneas de negocio de energía solar, empaques ecológicos y publicidad.\r
+      - Diseño de interfaces responsivas enfocadas en conversión, que mejoraron la captación de clientes desde móvil y escritorio.\r
+      - Administración de toda la infraestructura en cPanel (hosting, dominio y correo corporativo), garantizando la disponibilidad y continuidad del servicio.\r
+      - Modelado y estructuración de bases de datos de clientes, proyectos y servicios, como base de un sistema de seguimiento escalable.\r
+      - Automatización del procesamiento y la organización de los datos de proyectos para facilitar el seguimiento y la toma de decisiones del equipo.\r
+    stack: [React, JavaScript, cPanel, Bases de datos, Automatización]\r
+\r
   - company: Coally\r
     role: Full Stack Developer\r
     location: Bogotá, Colombia\r
