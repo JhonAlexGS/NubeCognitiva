@@ -20,6 +20,18 @@ lead: >-
   worked, what I built and what I built it with.
 
 items:
+  - company: Grupo Empresarial Colombia GED
+    role: Full Stack Web Developer
+    location: Neiva, Huila, Colombia · Remote
+    period: Sep 2025 – Aug 2026
+    highlights:
+      - Built the corporate website with React and JavaScript, bringing the solar energy, eco-friendly packaging and advertising business lines together on a single platform.
+      - Designed conversion-focused responsive interfaces that improved lead capture on mobile and desktop.
+      - Managed the whole cPanel infrastructure (hosting, domain and corporate email), keeping the service available and running.
+      - Modeled and structured the client, project and service databases, laying the groundwork for a scalable tracking system.
+      - Automated the processing and organization of project data, making tracking and team decision-making easier.
+    stack: [React, JavaScript, cPanel, Databases, Automation]
+
   - company: Coally
     role: Full Stack Developer
     location: Bogotá, Colombia

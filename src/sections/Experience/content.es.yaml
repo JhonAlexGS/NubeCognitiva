@@ -20,6 +20,18 @@ lead: >-
   trabajado, qué construí y con qué lo hice.
 
 items:
+  - company: Grupo Empresarial Colombia GED
+    role: Desarrollador Web Full Stack
+    location: Neiva, Huila, Colombia · Remoto
+    period: Sep 2025 – Ago 2026
+    highlights:
+      - Desarrollo del sitio web corporativo con React y JavaScript, que reúne en una sola plataforma las líneas de negocio de energía solar, empaques ecológicos y publicidad.
+      - Diseño de interfaces responsivas enfocadas en conversión, que mejoraron la captación de clientes desde móvil y escritorio.
+      - Administración de toda la infraestructura en cPanel (hosting, dominio y correo corporativo), garantizando la disponibilidad y continuidad del servicio.
+      - Modelado y estructuración de bases de datos de clientes, proyectos y servicios, como base de un sistema de seguimiento escalable.
+      - Automatización del procesamiento y la organización de los datos de proyectos para facilitar el seguimiento y la toma de decisiones del equipo.
+    stack: [React, JavaScript, cPanel, Bases de datos, Automatización]
+
   - company: Coally
     role: Full Stack Developer
     location: Bogotá, Colombia
