@@ -417,6 +417,99 @@
     }
   }
 
+  /* Carrusel infinito de logos (lo pinta `TechMarquee`). Cada pista lleva la
+     lista dos veces y se desplaza la mitad de su ancho, así el final de la
+     copia encaja con el principio. El espacio entre listas va como
+     `padding-right` —no como `gap` de la pista— para que las dos mitades midan
+     exactamente lo mismo. Los bordes se funden con una máscara. Cada fila es
+     su propio `.nc-marquee`, así el título queda fuera de la máscara y sólo
+     se pausa la fila que está bajo el cursor. */
+  .nc-marquee {
+    --marquee-gap: 0.75rem;
+    overflow: hidden;
+    /* Aire arriba y abajo para que el halo de los logos no se corte con el
+       `overflow`; el margen negativo lo compensa en el diseño. */
+    padding-block: 0.75rem;
+    margin-block: -0.75rem;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .nc-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .nc-marquee__track[data-reverse='true'] {
+    animation-direction: reverse;
+  }
+
+  .nc-marquee:hover .nc-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .nc-marquee__list {
+    display: flex;
+    gap: var(--marquee-gap);
+    padding-right: var(--marquee-gap);
+  }
+
+  /* Píldoras del carrusel: el logo va siempre en su color de marca, atenuado,
+     y al pasar el cursor se enciende con un halo del mismo color. Las marcas
+     sin color (Express) usan el acento. */
+  .nc-logo-pill {
+    --pill-color: var(--brand, var(--accent-bright));
+    transition:
+      border-color 250ms var(--ease-expo),
+      box-shadow 250ms var(--ease-expo),
+      color 250ms var(--ease-expo),
+      transform 250ms var(--ease-expo);
+  }
+
+  .nc-logo-pill svg {
+    color: var(--pill-color);
+    opacity: 0.6;
+    transition:
+      opacity 250ms var(--ease-expo),
+      filter 250ms var(--ease-expo);
+  }
+
+  .nc-logo-pill:hover {
+    color: var(--ink);
+    border-color: color-mix(in srgb, var(--pill-color) 45%, transparent);
+    box-shadow:
+      0 0 24px -6px color-mix(in srgb, var(--pill-color) 55%, transparent),
+      var(--elevation-inner-top);
+    transform: translateY(-2px);
+  }
+
+  .nc-logo-pill:hover svg {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--pill-color) 70%, transparent));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nc-marquee {
+      mask-image: none;
+    }
+
+    .nc-marquee__track {
+      width: auto;
+      animation: none;
+    }
+
+    .nc-marquee__list {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    .nc-marquee__list[data-copy],
+    .nc-marquee__list [data-repeat] {
+      display: none;
+    }
+  }
+
   /* Línea divisoria degradada entre secciones. */
   .nc-divider {
     height: 1px;
@@ -534,6 +627,12 @@
   50% {
     opacity: 0.9;
     transform: scale(1.06);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

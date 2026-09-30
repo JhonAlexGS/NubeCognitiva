@@ -17,6 +17,26 @@ lead: >-
   the container, the cloud and the dashboard that tells you whether any of it
   worked.
 
+# `marquee` holds the rows of the logo carousel above the cards (rows alternate
+# direction); each one has an `icon`, a `title` and `items`. Only technologies
+# with a logo in `src/components/ui/techLogos.js` are shown. `marqueeCount` is
+# the counter label.
+marquee:
+  - icon: terminal
+    title: Languages and web
+    items: [Python, TypeScript, JavaScript, Java, C++, R, HTML/CSS, React, Node.js, Express.js]
+  - icon: layers
+    title: Frameworks and ML
+    items: [Spring Boot, FastAPI, TensorFlow, scikit-learn, Jupyter, Databricks, PyCharm, VS Code, NetBeans]
+  - icon: cloud
+    title: Cloud and DevOps
+    items: [AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, SonarQube, Azure Pipelines]
+  - icon: database
+    title: Data and tools
+    items: [PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Elastic Search, Postman, Insomnia, Wireshark]
+
+marqueeCount: technologies
+
 groups:
   - icon: terminal
     size: narrow

@@ -4,9 +4,11 @@ import { Reveal } from '../../components/ui/Reveal'
 import { Section, SectionHeading } from '../../components/ui/Section'
 import { SpotlightCard } from '../../components/ui/SpotlightCard'
 import { getIcon } from '../../components/ui/icons'
+import { getTechLogo } from '../../components/ui/techLogos'
 import { useLang } from '../../hooks/useLang'
 import { pickYaml } from '../../lib/content'
 import { EASE_EXPO, scaleIn } from '../../lib/motion'
+import { TechMarquee } from './TechMarquee'
 
 // Contenido editable de esta sección: `content.es.yaml` / `content.en.yaml`.
 const CONTENT = import.meta.glob('./content.*.yaml', {
@@ -32,7 +34,13 @@ export default function Skills() {
     <Section id="skills">
       <SectionHeading eyebrow={content.eyebrow} title={content.title} lead={content.lead} />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-6">
+      {content.marquee?.length ? (
+        <Reveal className="mt-12 lg:mt-16">
+          <TechMarquee rows={content.marquee} countLabel={content.marqueeCount} />
+        </Reveal>
+      ) : null}
+
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-12 lg:grid-cols-6">
         {groups.map((group, index) => {
           const Icon = getIcon(group.icon)
           // Con un número impar de tarjetas, la última quedaría sola en su fila
@@ -56,16 +64,29 @@ export default function Skills() {
                 </div>
 
                 <ul className="flex flex-wrap gap-1.5">
-                  {(group.items ?? []).map((item) => (
-                    <motion.li
-                      key={item}
-                      whileHover={{ y: -2 }}
-                      transition={{ duration: 0.2, ease: EASE_EXPO }}
-                      className="rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 hover:border-line-accent hover:text-ink"
-                    >
-                      {item}
-                    </motion.li>
-                  ))}
+                  {(group.items ?? []).map((item) => {
+                    // Logo de la marca, si lo hay: gris y con su color al pasar
+                    // el cursor (ver `techLogos.js`).
+                    const logo = getTechLogo(item)
+                    const Logo = logo?.icon
+                    return (
+                      <motion.li
+                        key={item}
+                        whileHover={{ y: -2 }}
+                        transition={{ duration: 0.2, ease: EASE_EXPO }}
+                        style={logo?.color ? { '--brand': logo.color } : undefined}
+                        className="group/chip flex items-center gap-1.5 rounded-full border border-line bg-surface px-2.5 py-1 font-mono text-[0.6875rem] text-ink-subtle transition-colors duration-200 hover:border-line-accent hover:text-ink"
+                      >
+                        {Logo ? (
+                          <Logo
+                            aria-hidden="true"
+                            className="h-3.5 w-3.5 shrink-0 transition-colors duration-200 group-hover/chip:text-[color:var(--brand,currentColor)]"
+                          />
+                        ) : null}
+                        {item}
+                      </motion.li>
+                    )
+                  })}
                 </ul>
               </SpotlightCard>
             </Reveal>

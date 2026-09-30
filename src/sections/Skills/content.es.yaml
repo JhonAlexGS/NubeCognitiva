@@ -16,6 +16,26 @@ lead: >-
   Un stack que cubre el recorrido completo: del lenguaje y el framework al
   contenedor, la nube y el tablero que mide si todo eso sirvió para algo.
 
+# `marquee` son las filas del carrusel de logos que va encima de las
+# tarjetas (las filas alternan de sentido); cada una lleva `icon`,
+# `title` e `items`. Sólo aparecen las tecnologías que tienen logo en
+# `src/components/ui/techLogos.js`. `marqueeCount` es el texto del contador.
+marquee:
+  - icon: terminal
+    title: Lenguajes y web
+    items: [Python, TypeScript, JavaScript, Java, C++, R, HTML/CSS, React, Node.js, Express.js]
+  - icon: layers
+    title: Frameworks y ML
+    items: [Spring Boot, FastAPI, TensorFlow, scikit-learn, Jupyter, Databricks, PyCharm, VS Code, NetBeans]
+  - icon: cloud
+    title: Cloud y DevOps
+    items: [AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Jenkins, SonarQube, Azure Pipelines]
+  - icon: database
+    title: Datos y herramientas
+    items: [PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Elastic Search, Postman, Insomnia, Wireshark]
+
+marqueeCount: tecnologías
+
 groups:
   - icon: terminal
     size: narrow
