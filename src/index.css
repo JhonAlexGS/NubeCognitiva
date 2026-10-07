@@ -726,6 +726,43 @@
     }
   }
 
+  /* Tarjetas de pilares de «Sobre mí» (las pinta `PillarCard`). `--pillar` es
+     el tono de cada una, definido en el YAML: tiñe el ícono, su halo y una
+     línea superior que se enciende al pasar el cursor. */
+  .nc-pillar::after {
+    content: '';
+    position: absolute;
+    inset-inline: 1.25rem;
+    top: -1px;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, transparent, var(--pillar), transparent);
+    opacity: 0;
+    transition: opacity 400ms var(--ease-expo);
+    pointer-events: none;
+  }
+
+  .nc-pillar:hover::after {
+    opacity: 1;
+  }
+
+  .nc-pillar__icon {
+    color: var(--pillar);
+    border: 1px solid color-mix(in srgb, var(--pillar) 35%, transparent);
+    background-color: color-mix(in srgb, var(--pillar) 12%, transparent);
+    box-shadow:
+      0 0 18px -6px color-mix(in srgb, var(--pillar) 60%, transparent),
+      var(--elevation-inner-top);
+    transition: box-shadow 400ms var(--ease-expo), transform 400ms var(--ease-expo);
+  }
+
+  .nc-pillar:hover .nc-pillar__icon {
+    transform: scale(1.06);
+    box-shadow:
+      0 0 26px -4px color-mix(in srgb, var(--pillar) 75%, transparent),
+      var(--elevation-inner-top);
+  }
+
   /* Línea divisoria degradada entre secciones. */
   .nc-divider {
     height: 1px;

@@ -12,19 +12,47 @@ lead: >-
 
 # Profile pillars. `icon` accepts: cloud, cpu, code, shield, database, devops,
 # radio, server, terminal, layers, tool, globe.
+# `color` is the tone of each card's icon and glow.
+# `tech` are the technologies in the footer: those with a logo in
+# `src/components/ui/techLogos.js` show it; the rest show just their name.
 pillars:
   - icon: code
     title: Full stack product
     text: React, Express and Node in Scrum and Kanban teams, from the endpoint to the UI detail.
+    color: '#5E6AD2'
+    tech: [React, Node.js, Express.js, TypeScript, MongoDB]
   - icon: cpu
     title: Applied artificial intelligence
     text: Machine learning and deep learning with Python, TensorFlow and scikit-learn.
+    color: '#A78BFA'
+    tech: [Python, TensorFlow, scikit-learn, Jupyter]
   - icon: cloud
     title: Cloud and DevOps
     text: AWS and Azure architectures, containers, Terraform and CI/CD pipelines.
+    color: '#38BDF8'
+    tech: [AWS, Azure, Docker, Kubernetes, Terraform]
   - icon: radio
     title: Networks and signals
     text: Telecommunications, ModBus TCP/IP, GNSS and software defined radio.
+    color: '#34D399'
+    tech: [Wireshark, Raspberry Pi, GNU Radio, GNSS-SDR]
+
+# Quick facts under the text (they fill the height next to the cards).
+# `icon` accepts the same names as the pillars, plus: location, award,
+# check, globe.
+facts:
+  - icon: location
+    label: Location
+    value: Bogotá, Colombia
+  - icon: award
+    label: Education
+    value: Engineering + MSc in AI
+  - icon: check
+    label: Availability
+    value: Open to new challenges
+  - icon: globe
+    label: Languages
+    value: Spanish · English B1
 ---
 
 I am a **Systems and Telecommunications Engineer** with a **master's degree in
