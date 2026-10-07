@@ -23,7 +23,7 @@ export default function Experience() {
       <SectionHeading eyebrow={content.eyebrow} title={content.title} lead={content.lead} />
 
       <div className="mt-12 lg:mt-16">
-        <ExperienceTimeline jobs={jobs} />
+        <ExperienceTimeline jobs={jobs} labels={content.labels} />
       </div>
     </Section>
   )

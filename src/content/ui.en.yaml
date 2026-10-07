@@ -28,6 +28,9 @@ actions:
   close: Close
   readFull: Read in full
   readFullOf: Read the full testimonial from {{name}}
+  previous: Previous
+  next: Next
+  goToTestimonial: See the testimonial from {{name}}
 
 resume:
   label: Résumé

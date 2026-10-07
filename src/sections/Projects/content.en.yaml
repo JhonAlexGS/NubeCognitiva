@@ -11,6 +11,10 @@
 #   metrics  → highlighted figures (optional, two at most)
 #   tags     → technologies
 #   icon     → cpu, radio, code, database, cloud, shield, server, terminal...
+#   image    → cover (optional): a file inside `public/`, ideally 16:9.
+#              The large card (`hero`) crops it to 21:9.
+#   imagePosition → (optional) which part of the cover to keep when cropping:
+#              top, bottom, left, right or center (default).
 #   size     → hero | tall | wide  (controls the grid footprint)
 #   links    → list of links, each with `label` and `url`.
 #              You can add several (repo, paper, demo…) or none: with an empty
@@ -30,6 +34,7 @@ items:
     kicker: Master's thesis · Industrial cybersecurity
     period: Jan 2024 – Jun 2026
     icon: shield
+    image: proyectos/destacados/scada-ids.webp
     size: hero
     links:
       - label: View the code
@@ -52,6 +57,7 @@ items:
     kicker: Research · IEEE publication 2023
     period: Jan 2020 – Dec 2023
     icon: radio
+    image: proyectos/destacados/gnss-sdr.webp
     size: tall
     links:
       - label: View the code
@@ -72,6 +78,8 @@ items:
     kicker: Full Stack · Product
     period: Jan 2024 – Dec 2025
     icon: code
+    image: proyectos/destacados/coally.webp
+    imagePosition: top
     size: wide
     links:
       - label: Visit the site
@@ -87,6 +95,7 @@ items:
     kicker: Full Stack · Data
     period: Jan 2023 – Dec 2024
     icon: database
+    image: proyectos/destacados/booklick.webp
     size: wide
     links:
       - label: Visit the site

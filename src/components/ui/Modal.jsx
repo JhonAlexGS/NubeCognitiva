@@ -85,7 +85,7 @@ export function Modal({ open, onClose, titleId, children }) {
             transition={{ duration: 0.2, ease: 'easeOut' }}
             onClick={onClose}
             aria-hidden="true"
-            className="absolute inset-0 bg-canvas-deep/75 backdrop-blur-md"
+            className="absolute inset-0 bg-canvas-deep/85 backdrop-blur-md"
           />
 
           <motion.div
@@ -98,7 +98,7 @@ export function Modal({ open, onClose, titleId, children }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.3, ease: EASE_EXPO }}
-            className="nc-card nc-scroll-area relative max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-b-none sm:rounded-2xl"
+            className="nc-card nc-scroll-area relative max-h-[88vh] bg-canvas-elevated w-full max-w-2xl overflow-y-auto rounded-b-none sm:rounded-2xl"
           >
             <button
               type="button"

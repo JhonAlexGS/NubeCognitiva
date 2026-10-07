@@ -6,9 +6,12 @@
 #
 # Campos de cada empleo:
 #   company    → nombre de la empresa
+#   short      → sigla para el monograma (opcional; si falta, se usan las
+#                iniciales de la empresa)
 #   role       → tu cargo
 #   location   → ciudad y país
-#   period     → fechas
+#   period     → fechas, p. ej. «Sep 2025 – Ago 2026». La duración («1 año»)
+#                se calcula sola; para un empleo activo usa «Actualidad» como fin.
 #   highlights → lo que hiciste ahí (una línea por logro)
 #   stack      → tecnologías que usaste
 # ---------------------------------------------------------------------------
@@ -19,8 +22,34 @@ lead: >-
   De un CRUD para concesionarias a un motor de búsqueda sobre AWS: dónde he
   trabajado, qué construí y con qué lo hice.
 
+labels:
+  current: Actual
+  latest: Más reciente
+  periodLabel: Periodo
+  durationLabel: Duración
+  locationLabel: Ubicación
+  duration:
+    year: año
+    years: años
+    month: mes
+    months: meses
+
 items:
+  - company: Grupo Empresarial Colombia GED
+    short: GED
+    role: Desarrollador Web Full Stack
+    location: Neiva, Huila, Colombia · Remoto
+    period: Sep 2025 – Ago 2026
+    highlights:
+      - Desarrollo del sitio web corporativo con React y JavaScript, que reúne en una sola plataforma las líneas de negocio de energía solar, empaques ecológicos y publicidad.
+      - Diseño de interfaces responsivas enfocadas en conversión, que mejoraron la captación de clientes desde móvil y escritorio.
+      - Administración de toda la infraestructura en cPanel (hosting, dominio y correo corporativo), garantizando la disponibilidad y continuidad del servicio.
+      - Modelado y estructuración de bases de datos de clientes, proyectos y servicios, como base de un sistema de seguimiento escalable.
+      - Automatización del procesamiento y la organización de los datos de proyectos para facilitar el seguimiento y la toma de decisiones del equipo.
+    stack: [React, JavaScript, cPanel, Bases de datos, Automatización]
+
   - company: Coally
+    short: CO
     role: Full Stack Developer
     location: Bogotá, Colombia
     period: Ene 2024 – Dic 2025
@@ -32,6 +61,7 @@ items:
     stack: [JavaScript, Express.js, MongoDB, JWT, HubSpot, OAuth2]
 
   - company: BookLick
+    short: BL
     role: Full Stack Developer
     location: Bogotá, Colombia
     period: Ene 2023 – Dic 2024
@@ -42,6 +72,7 @@ items:
     stack: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]
 
   - company: MinTIC · MisiónTIC
+    short: MT
     role: Monitor y Centro de Apoyo
     location: Bogotá, Colombia
     period: Ene 2022 – Dic 2023
@@ -50,6 +81,7 @@ items:
     stack: [SQL, Oracle VM, Web]
 
   - company: NTT Data
+    short: NTT
     role: Programador Junior
     location: Bogotá, Colombia
     period: Ene 2022 – Dic 2022

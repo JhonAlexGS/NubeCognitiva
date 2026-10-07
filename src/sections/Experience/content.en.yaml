@@ -6,9 +6,12 @@
 #
 # Fields per job:
 #   company    → company name
+#   short      → acronym for the monogram (optional; defaults to the
+#                company's initials)
 #   role       → your job title
 #   location   → city and country
-#   period     → dates
+#   period     → dates, e.g. "Sep 2025 – Aug 2026". The duration ("1 yr")
+#                is computed; for a current job use "Present" as the end.
 #   highlights → what you did there (one line per achievement)
 #   stack      → technologies you used
 # ---------------------------------------------------------------------------
@@ -19,8 +22,34 @@ lead: >-
   From a dealership CRUD to a search engine running on AWS: where I have
   worked, what I built and what I built it with.
 
+labels:
+  current: Current
+  latest: Most recent
+  periodLabel: Period
+  durationLabel: Duration
+  locationLabel: Location
+  duration:
+    year: yr
+    years: yrs
+    month: mo
+    months: mos
+
 items:
+  - company: Grupo Empresarial Colombia GED
+    short: GED
+    role: Full Stack Web Developer
+    location: Neiva, Huila, Colombia · Remote
+    period: Sep 2025 – Aug 2026
+    highlights:
+      - Built the corporate website with React and JavaScript, bringing the solar energy, eco-friendly packaging and advertising business lines together on a single platform.
+      - Designed conversion-focused responsive interfaces that improved lead capture on mobile and desktop.
+      - Managed the whole cPanel infrastructure (hosting, domain and corporate email), keeping the service available and running.
+      - Modeled and structured the client, project and service databases, laying the groundwork for a scalable tracking system.
+      - Automated the processing and organization of project data, making tracking and team decision-making easier.
+    stack: [React, JavaScript, cPanel, Databases, Automation]
+
   - company: Coally
+    short: CO
     role: Full Stack Developer
     location: Bogotá, Colombia
     period: Jan 2024 – Dec 2025
@@ -32,6 +61,7 @@ items:
     stack: [JavaScript, Express.js, MongoDB, JWT, HubSpot, OAuth2]
 
   - company: BookLick
+    short: BL
     role: Full Stack Developer
     location: Bogotá, Colombia
     period: Jan 2023 – Dec 2024
@@ -42,6 +72,7 @@ items:
     stack: [Python, TypeScript, PostgreSQL, Elastic Search, AWS, Power BI]
 
   - company: MinTIC · MisiónTIC
+    short: MT
     role: Teaching Assistant & Support Centre
     location: Bogotá, Colombia
     period: Jan 2022 – Dec 2023
@@ -50,6 +81,7 @@ items:
     stack: [SQL, Oracle VM, Web]
 
   - company: NTT Data
+    short: NTT
     role: Junior Developer
     location: Bogotá, Colombia
     period: Jan 2022 – Dec 2022

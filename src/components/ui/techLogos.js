@@ -25,6 +25,7 @@ import {
   SiPython,
   SiR,
   SiReact,
+  SiRaspberrypi,
   SiRedis,
   SiScikitlearn,
   SiSonarqubeserver,
@@ -86,6 +87,8 @@ const LOGOS = {
   redis: { icon: SiRedis, color: '#FF4438' },
 
   wireshark: { icon: SiWireshark, color: '#1679A7' },
+  'raspberry pi': { icon: SiRaspberrypi, color: '#C51A4A' },
+  'raspberry pi 5': { icon: SiRaspberrypi, color: '#C51A4A' },
   postman: { icon: SiPostman, color: '#FF6C37' },
   insomnia: { icon: SiInsomnia, color: '#4000BF' },
   jupyter: { icon: SiJupyter, color: '#F37626' },
