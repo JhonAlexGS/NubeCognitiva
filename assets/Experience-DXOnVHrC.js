@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,f as n,l as r,n as i,r as a,s as o,t as s}from"./motion-HkNTX_OB.js";import{l as c,n as l,p as u,s as d}from"./index-BHWR0Kqf.js";import{n as f,r as p,t as m}from"./Section-CMq1SNlt.js";import{t as h}from"./SpotlightCard-BtrGxXR_.js";import{t as g}from"./techLogos-D5smqKfp.js";var _=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,f as n,l as r,n as i,r as a,s as o,t as s}from"./motion-HkNTX_OB.js";import{l as c,n as l,p as u,s as d}from"./index-C6X1j9lX.js";import{n as f,r as p,t as m}from"./Section-B4T510pQ.js";import{t as h}from"./SpotlightCard-Cw1CjDyi.js";import{t as g}from"./techLogos--T5sTjQU.js";var _=`# ---------------------------------------------------------------------------\r
 # WORK EXPERIENCE — English.\r
 #\r
 # \`items\` is the job list, most recent first. To add one, copy a whole block\r

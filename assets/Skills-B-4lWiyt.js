@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,f as n}from"./motion-HkNTX_OB.js";import{n as r,s as i,u as a}from"./index-BHWR0Kqf.js";import{n as o,r as s,t as c}from"./Section-CMq1SNlt.js";import{t as l}from"./techLogos-D5smqKfp.js";var u=`# ---------------------------------------------------------------------------\r
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{d as t,f as n}from"./motion-HkNTX_OB.js";import{n as r,s as i,u as a}from"./index-C6X1j9lX.js";import{n as o,r as s,t as c}from"./Section-B4T510pQ.js";import{t as l}from"./techLogos--T5sTjQU.js";var u=`# ---------------------------------------------------------------------------\r
 # TECH STACK — English.\r
 # Every block inside \`marquee\` is a carousel lane (lanes alternate direction).\r
 # Add or remove technologies inside \`items\` without touching any code.\r
